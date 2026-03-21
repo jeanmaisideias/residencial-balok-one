@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    --background: 34 21% 94%;
-    --foreground: 0 0% 5%;
+    --background: 210 10% 96%;
+    --foreground: 210 10% 10%;
 
-    --card: 30 15% 97%;
-    --card-foreground: 0 0% 5%;
+    --card: 210 10% 99%;
+    --card-foreground: 210 10% 10%;
 
-    --popover: 30 15% 97%;
-    --popover-foreground: 0 0% 5%;
+    --popover: 210 10% 99%;
+    --popover-foreground: 210 10% 10%;
 
-    --primary: 33 29% 27%;
-    --primary-foreground: 34 21% 94%;
+    --primary: 210 8% 20%;
+    --primary-foreground: 210 10% 96%;
 
-    --secondary: 27 10% 88%;
-    --secondary-foreground: 0 0% 5%;
+    --secondary: 210 8% 90%;
+    --secondary-foreground: 210 10% 10%;
 
-    --muted: 27 10% 85%;
-    --muted-foreground: 28 8% 42%;
+    --muted: 210 6% 85%;
+    --muted-foreground: 210 5% 45%;
 
-    --accent: 145 63% 42%;
+    --accent: 152 56% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 34 21% 94%;
+    --destructive-foreground: 210 10% 96%;
 
-    --border: 27 12% 82%;
-    --input: 27 12% 82%;
-    --ring: 33 29% 27%;
+    --border: 210 8% 82%;
+    --input: 210 8% 82%;
+    --ring: 152 56% 42%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 30 15% 97%;
-    --sidebar-foreground: 0 0% 5%;
-    --sidebar-primary: 33 29% 27%;
-    --sidebar-primary-foreground: 34 21% 94%;
-    --sidebar-accent: 27 10% 88%;
-    --sidebar-accent-foreground: 0 0% 5%;
-    --sidebar-border: 27 12% 82%;
-    --sidebar-ring: 33 29% 27%;
+    --sidebar-background: 210 10% 99%;
+    --sidebar-foreground: 210 10% 10%;
+    --sidebar-primary: 210 8% 20%;
+    --sidebar-primary-foreground: 210 10% 96%;
+    --sidebar-accent: 210 8% 90%;
+    --sidebar-accent-foreground: 210 10% 10%;
+    --sidebar-border: 210 8% 82%;
+    --sidebar-ring: 152 56% 42%;
 
     /* Custom tokens */
-    --navy: 33 29% 27%;
-    --navy-light: 28 8% 42%;
-    --green-whatsapp: 145 63% 42%;
-    --green-whatsapp-hover: 145 63% 36%;
-    --slate: 28 8% 42%;
-    --warm-white: 34 21% 94%;
+    --navy: 210 8% 20%;
+    --navy-light: 210 5% 45%;
+    --green-whatsapp: 152 56% 42%;
+    --green-whatsapp-hover: 152 56% 36%;
+    --slate: 210 5% 45%;
+    --warm-white: 210 10% 96%;
   }
 }
 
