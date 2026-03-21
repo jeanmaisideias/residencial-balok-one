@@ -34,7 +34,9 @@ export function LeisureSection() {
           {amenities.map((a, i) => (
             <SectionReveal key={a.title} delay={i * 60}>
               <div className="flex gap-4 p-5 bg-secondary rounded-2xl h-full">
-                <span className="text-xl shrink-0">{a.emoji}</span>
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <a.icon className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <h3 className="text-sm font-bold text-primary mb-1">{a.title}</h3>
                   <p className="text-xs text-muted-foreground text-pretty">{a.desc}</p>
