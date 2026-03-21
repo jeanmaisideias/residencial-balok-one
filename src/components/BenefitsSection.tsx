@@ -1,12 +1,12 @@
-import { LayoutGrid, MapPin, Building2, ShieldCheck } from "lucide-react";
+import { LayoutGrid, MapPin, Building2, ShieldCheck, CalendarDays } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 
 const benefits = [
   { icon: LayoutGrid, title: "Plantas inteligentes", desc: "Espaços otimizados para o seu conforto" },
   { icon: MapPin, title: "Localização estratégica", desc: "Perto de tudo que você precisa" },
-  { icon: Building2, title: "Estrutura completa", desc: "Lazer e conveniência no seu condomínio" },
-  { icon: ShieldCheck, title: "Segurança para sua família", desc: "Condomínio fechado com monitoramento" },
+  { icon: Building2, title: "Lazer completo", desc: "Piscina, academia, salão e muito mais" },
+  { icon: ShieldCheck, title: "Segurança", desc: "Condomínio fechado com monitoramento" },
 ];
 
 export function BenefitsSection() {
@@ -19,7 +19,7 @@ export function BenefitsSection() {
           </h2>
         </SectionReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
           {benefits.map((b, i) => (
             <SectionReveal key={b.title} delay={i * 80}>
               <div className="flex flex-col items-center text-center p-5 rounded-2xl bg-card shadow-sm hover:shadow-md transition-shadow">
@@ -33,10 +33,18 @@ export function BenefitsSection() {
           ))}
         </div>
 
-        <SectionReveal>
+        {/* Highlight */}
+        <SectionReveal delay={350}>
+          <div className="flex items-center justify-center gap-3 bg-primary/5 rounded-xl px-6 py-4 mb-8 max-w-md mx-auto">
+            <CalendarDays className="w-5 h-5 text-whatsapp shrink-0" />
+            <span className="text-sm font-bold text-primary">Entrada parcelada em até 60x</span>
+          </div>
+        </SectionReveal>
+
+        <SectionReveal delay={400}>
           <div className="text-center">
-            <WhatsAppButton message="Quero simular minha condição no WhatsApp">
-              Simular minha condição no WhatsApp
+            <WhatsAppButton message="Venho do site do Balok One e quero simular minha condição">
+              Simular minha condição
             </WhatsAppButton>
           </div>
         </SectionReveal>

@@ -10,12 +10,8 @@ export function VideoSection() {
         <SectionReveal>
           <p className="text-xs font-semibold tracking-wider uppercase text-whatsapp mb-3">Acompanhe a obra</p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 text-balance">
-            Acompanhe cada etapa da obra
+            Acompanhe a evolução da obra
           </h2>
-          <p className="text-muted-foreground text-pretty mb-8">
-            Transparência total do início à entrega.
-            Saiba exatamente como está evoluindo o seu futuro imóvel.
-          </p>
         </SectionReveal>
 
         <SectionReveal delay={100}>
@@ -31,8 +27,8 @@ export function VideoSection() {
         </SectionReveal>
 
         <SectionReveal delay={200}>
-          <WhatsAppButton message="Olá, quero acompanhar a obra e garantir minha unidade no Residencial Balok One">
-            Quero acompanhar e garantir minha unidade
+          <WhatsAppButton message="Venho do site do Balok One e quero acompanhar a obra">
+            Quero acompanhar
           </WhatsAppButton>
         </SectionReveal>
       </div>
