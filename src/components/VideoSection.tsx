@@ -1,6 +1,7 @@
 import { Play } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
+import acessoImg from "@/assets/acesso-video-obra.jpg";
 
 export function VideoSection() {
   return (
@@ -18,13 +19,13 @@ export function VideoSection() {
         </SectionReveal>
 
         <SectionReveal delay={100}>
-          {/* Video placeholder - replace src with actual video embed */}
-          <div className="relative aspect-video rounded-2xl bg-primary/5 overflow-hidden mb-8 flex items-center justify-center border border-border">
-            <div className="flex flex-col items-center gap-3 text-muted-foreground">
-              <div className="w-16 h-16 rounded-full bg-whatsapp/10 flex items-center justify-center">
-                <Play className="w-8 h-8 text-whatsapp ml-1" />
+          <div className="relative aspect-video rounded-2xl overflow-hidden mb-8">
+            <img src={acessoImg} alt="Acesso ao Residencial Balok One" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center gap-3">
+              <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                <Play className="w-8 h-8 text-white ml-1" />
               </div>
-              <span className="text-sm font-medium">Vídeo da obra em breve</span>
+              <span className="text-sm font-medium text-white">Vídeo da obra em breve</span>
             </div>
           </div>
         </SectionReveal>
