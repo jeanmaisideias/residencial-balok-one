@@ -1,16 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/Header";
+import { HeroSection } from "@/components/HeroSection";
+import { EmotionalBlock } from "@/components/EmotionalBlock";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { AboutSection } from "@/components/AboutSection";
+import { DifferentialsSection } from "@/components/DifferentialsSection";
+import { LocationSection } from "@/components/LocationSection";
+import { VideoSection } from "@/components/VideoSection";
+import { PlantsSection } from "@/components/PlantsSection";
+import { ConditionsSection } from "@/components/ConditionsSection";
+import { TimelineSection } from "@/components/TimelineSection";
+import { ScarcitySection } from "@/components/ScarcitySection";
+import { TrustSection } from "@/components/TrustSection";
+import { FinalCTA } from "@/components/FinalCTA";
+import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/WhatsAppButton";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      <Header />
+      <main>
+        <HeroSection />
+        <EmotionalBlock />
+        <BenefitsSection />
+        <AboutSection />
+        <DifferentialsSection />
+        <LocationSection />
+        <VideoSection />
+        <PlantsSection />
+        <ConditionsSection />
+        <TimelineSection />
+        <ScarcitySection />
+        <TrustSection />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
