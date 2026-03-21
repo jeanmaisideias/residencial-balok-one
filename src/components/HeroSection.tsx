@@ -1,4 +1,6 @@
 import heroImg from "@/assets/hero-building.jpg";
+import logoCaixa from "@/assets/logo-caixa.png";
+import logoMcmv from "@/assets/logo-mcmv.png";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { Home, Car, DollarSign, Bed, Waves } from "lucide-react";
 
@@ -17,6 +19,12 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img src={heroImg} alt="Residencial Balok One" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/30" />
+      </div>
+
+      {/* Logos Caixa + MCMV top-right */}
+      <div className="absolute top-20 right-4 md:top-24 md:right-8 z-10 flex items-center gap-3">
+        <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 md:h-10 w-auto" />
+        <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-8 md:h-10 w-auto" />
       </div>
 
       <div className="relative container pb-12 pt-32 md:pb-20 md:pt-40">

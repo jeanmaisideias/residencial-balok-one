@@ -1,4 +1,6 @@
 import logoEvolutta from "@/assets/logo-evolutta.png";
+import logoCaixa from "@/assets/logo-caixa.png";
+import logoMcmv from "@/assets/logo-mcmv.png";
 
 export function Footer() {
   return (
@@ -7,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <img src={logoEvolutta} alt="Evolutta" className="h-8 w-auto brightness-0 invert mb-4" />
+            <img src={logoEvolutta} alt="Evolutta" className="h-10 w-auto mb-4" />
             <p className="text-sm">
               Realizando o sonho da casa própria com qualidade, transparência e compromisso.
             </p>
@@ -25,8 +27,8 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-bold text-primary-foreground mb-3 uppercase tracking-wider">Institucional</h4>
             <div className="flex flex-wrap items-center gap-4 mb-4">
-              <span className="text-xs bg-primary-foreground/10 rounded px-3 py-1.5 font-medium">Caixa Econômica Federal</span>
-              <span className="text-xs bg-primary-foreground/10 rounded px-3 py-1.5 font-medium">Minha Casa Minha Vida</span>
+              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 w-auto" />
+              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-8 w-auto" />
             </div>
             <div className="flex gap-4 text-xs">
               <a href="#" className="hover:text-primary-foreground transition-colors underline underline-offset-2">
