@@ -2,7 +2,6 @@ import { Play } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 import acessoImg from "@/assets/acesso-video-obra.jpg";
-import { SectionReveal } from "./SectionReveal";
 
 export function VideoSection() {
   return (
