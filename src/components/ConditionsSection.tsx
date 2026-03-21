@@ -11,16 +11,16 @@ export function ConditionsSection() {
           <div className="bg-primary rounded-2xl p-8 md:p-12 mb-8 text-primary-foreground">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
               <div>
+                <p className="text-sm text-primary-foreground/70 mb-1">a partir de</p>
                 <p className="text-3xl md:text-4xl font-extrabold">R$ 239 mil</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">a partir de</p>
               </div>
               <div>
+                <p className="text-sm text-primary-foreground/70 mb-1">entrada a partir de</p>
                 <p className="text-3xl md:text-4xl font-extrabold">R$ 1.000</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">entrada a partir de</p>
               </div>
               <div>
+                <p className="text-sm text-primary-foreground/70 mb-1">parcelamento</p>
                 <p className="text-3xl md:text-4xl font-extrabold">Facilitado</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">parcelamento</p>
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm mb-6">
