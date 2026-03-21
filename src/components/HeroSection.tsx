@@ -1,4 +1,5 @@
 import heroImg from "@/assets/hero-building.jpg";
+import logoEvolutta from "@/assets/logo-evolutta.png";
 import logoCaixa from "@/assets/logo-caixa.png";
 import logoMcmv from "@/assets/logo-mcmv.png";
 import { WhatsAppButton } from "./WhatsAppButton";
@@ -19,6 +20,11 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img src={heroImg} alt="Residencial Balok One" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/30" />
+      </div>
+
+      {/* Logo Evolutta top-left */}
+      <div className="absolute top-20 left-4 md:top-24 md:left-8 z-10">
+        <img src={logoEvolutta} alt="Evolutta" className="h-20 md:h-28 w-auto" />
       </div>
 
       {/* Logos Caixa + MCMV top-right */}

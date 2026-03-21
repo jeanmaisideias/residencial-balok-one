@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <img src={logoEvolutta} alt="Evolutta" className="h-10 w-auto mb-4" />
+            <img src={logoEvolutta} alt="Evolutta" className="h-24 w-auto mb-4" />
             <p className="text-sm">
               Realizando o sonho da casa própria com qualidade, transparência e compromisso.
             </p>
