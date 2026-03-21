@@ -1,4 +1,4 @@
-import familyImg from "@/assets/family-happy.jpg";
+import familyImg from "@/assets/familia-feliz.jpg";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 
