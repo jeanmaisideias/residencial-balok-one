@@ -46,7 +46,7 @@ export function HeroSection() {
         >
           Pare de pagar aluguel.
           <br />
-          Comece a construir o que é seu.
+          Comece a viver no que é seu!
         </h1>
 
         <p
