@@ -4,10 +4,12 @@ import { EmotionalBlock } from "@/components/EmotionalBlock";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { AboutSection } from "@/components/AboutSection";
 import { DifferentialsSection } from "@/components/DifferentialsSection";
+import { LeisureSection } from "@/components/LeisureSection";
 import { LocationSection } from "@/components/LocationSection";
 import { VideoSection } from "@/components/VideoSection";
 import { PlantsSection } from "@/components/PlantsSection";
 import { ConditionsSection } from "@/components/ConditionsSection";
+import { ImplantationSection } from "@/components/ImplantationSection";
 import { TimelineSection } from "@/components/TimelineSection";
 import { ScarcitySection } from "@/components/ScarcitySection";
 import { TrustSection } from "@/components/TrustSection";
@@ -25,10 +27,12 @@ const Index = () => {
         <BenefitsSection />
         <AboutSection />
         <DifferentialsSection />
+        <LeisureSection />
         <LocationSection />
         <VideoSection />
         <PlantsSection />
         <ConditionsSection />
+        <ImplantationSection />
         <TimelineSection />
         <ScarcitySection />
         <TrustSection />
