@@ -1,10 +1,11 @@
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
+import equipeImg from "@/assets/equipe-construtora.jpg";
 
 export function TrustSection() {
   return (
     <section className="section-padding bg-card">
-      <div className="container max-w-4xl">
+      <div className="container max-w-5xl">
         <SectionReveal>
           <div className="text-center mb-10">
             <p className="text-xs font-semibold tracking-wider uppercase text-whatsapp mb-3">Quem Somos</p>
@@ -14,7 +15,7 @@ export function TrustSection() {
           </div>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-10">
           <SectionReveal>
             <div className="text-sm text-muted-foreground space-y-4 text-pretty">
               <p>
@@ -29,16 +30,27 @@ export function TrustSection() {
             </div>
           </SectionReveal>
 
-          <SectionReveal delay={150}>
-            <div className="space-y-6">
+          <SectionReveal delay={100}>
+            <div className="rounded-2xl overflow-hidden h-full">
+              <img
+                src={equipeImg}
+                alt="Equipe de engenheiros e arquitetos trabalhando juntos"
+                className="w-full h-full object-cover min-h-[280px]"
+                loading="lazy"
+              />
+            </div>
+          </SectionReveal>
+
+          <SectionReveal delay={200}>
+            <div className="space-y-6 h-full flex flex-col justify-center">
               <div className="text-center p-6 bg-secondary rounded-2xl">
-                <p className="text-4xl md:text-5xl font-extrabold text-primary">13</p>
-                <p className="text-sm font-bold text-primary mt-1">Anos de Mercado</p>
+                <p className="text-4xl md:text-5xl font-extrabold text-whatsapp">13</p>
+                <p className="text-sm font-bold text-whatsapp mt-1">Anos de Mercado</p>
                 <p className="text-xs text-muted-foreground mt-1">Solidez e experiência comprovadas</p>
               </div>
               <div className="text-center p-6 bg-secondary rounded-2xl">
-                <p className="text-4xl md:text-5xl font-extrabold text-primary">100%</p>
-                <p className="text-sm font-bold text-primary mt-1">Pontualidade</p>
+                <p className="text-4xl md:text-5xl font-extrabold text-whatsapp">100%</p>
+                <p className="text-sm font-bold text-whatsapp mt-1">Pontualidade</p>
                 <p className="text-xs text-muted-foreground mt-1">Obras entregues no prazo</p>
               </div>
             </div>
