@@ -12,6 +12,7 @@ import lazerFireplace from "@/assets/lazer-fireplace.jpg";
 import lazerPlayground from "@/assets/lazer-playground.jpg";
 import lazerPet from "@/assets/lazer-pet.jpg";
 import lazerBike from "@/assets/lazer-bike.jpg";
+import amenitiesImg from "@/assets/amenities.jpg";
 
 const amenities = [
   { icon: Waves, title: "Piscina", desc: "Área de lazer aquático para relaxar e se divertir com a família nos finais de semana.", img: lazerPiscina },
@@ -26,7 +27,6 @@ const amenities = [
 
 export function LeisureSection() {
   const [active, setActive] = useState(0);
-
   const next = useCallback(() => setActive((p) => (p + 1) % amenities.length), []);
   const prev = useCallback(() => setActive((p) => (p - 1 + amenities.length) % amenities.length), []);
 
@@ -38,15 +38,18 @@ export function LeisureSection() {
   return (
     <section className="section-padding bg-card">
       <div className="container max-w-5xl">
+        {/* Lifestyle hero */}
         <SectionReveal>
-          <div className="text-center mb-10">
-            <p className="text-xs font-semibold tracking-wider uppercase text-whatsapp mb-3">Infraestrutura de Lazer</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 text-balance">
-              Viva com mais qualidade todos os dias
-            </h2>
-            <p className="text-muted-foreground text-pretty max-w-2xl mx-auto">
-              O Residencial Balok One foi projetado com uma infraestrutura de lazer completa, pensada para todas as idades e estilos de vida. Seu condomínio vai muito além de um simples endereço — é um verdadeiro estilo de vida.
-            </p>
+          <div className="relative rounded-2xl overflow-hidden mb-10">
+            <img src={amenitiesImg} alt="Pessoas aproveitando o lazer" className="w-full aspect-[16/9] object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 md:p-10">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-primary-foreground mb-2 text-balance">
+                Mais momentos com quem você gosta
+              </h2>
+              <p className="text-primary-foreground/80 text-sm md:text-base">
+                Dentro do seu próprio condomínio.
+              </p>
+            </div>
           </div>
         </SectionReveal>
 
@@ -54,43 +57,21 @@ export function LeisureSection() {
         <SectionReveal delay={100}>
           <div className="relative rounded-2xl overflow-hidden mb-10">
             <div className="aspect-[16/9] overflow-hidden">
-              <img
-                src={amenities[active].img}
-                alt={amenities[active].title}
-                className="w-full h-full object-cover transition-opacity duration-500"
-              />
+              <img src={amenities[active].img} alt={amenities[active].title} className="w-full h-full object-cover transition-opacity duration-500" />
             </div>
-
-            <button
-              onClick={prev}
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95"
-              aria-label="Anterior"
-            >
+            <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95" aria-label="Anterior">
               <ChevronLeft className="w-5 h-5" />
             </button>
-            <button
-              onClick={next}
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95"
-              aria-label="Próximo"
-            >
+            <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95" aria-label="Próximo">
               <ChevronRight className="w-5 h-5" />
             </button>
-
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-              {amenities.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActive(i)}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    active === i ? "bg-whatsapp" : "bg-primary-foreground/40"
-                  }`}
-                  aria-label={`Slide ${i + 1}`}
-                />
-              ))}
-            </div>
-
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-primary/70 backdrop-blur-sm text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">
               {amenities[active].title}
+            </div>
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+              {amenities.map((_, i) => (
+                <button key={i} onClick={() => setActive(i)} className={`w-2.5 h-2.5 rounded-full transition-colors ${active === i ? "bg-whatsapp" : "bg-primary-foreground/40"}`} aria-label={`Slide ${i + 1}`} />
+              ))}
             </div>
           </div>
         </SectionReveal>
@@ -100,9 +81,7 @@ export function LeisureSection() {
           {amenities.map((a, i) => (
             <SectionReveal key={a.title} delay={i * 60}>
               <div
-                className={`flex gap-4 p-5 rounded-2xl h-full cursor-pointer transition-all duration-200 ${
-                  active === i ? "bg-accent/10 ring-2 ring-accent" : "bg-secondary hover:bg-secondary/80"
-                }`}
+                className={`flex gap-4 p-5 rounded-2xl h-full cursor-pointer transition-all duration-200 ${active === i ? "bg-accent/10 ring-2 ring-accent" : "bg-secondary hover:bg-secondary/80"}`}
                 onClick={() => setActive(i)}
               >
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -118,15 +97,9 @@ export function LeisureSection() {
         </div>
 
         <SectionReveal delay={500}>
-          <p className="text-xs text-muted-foreground text-center mb-8">
-            Além disso: áreas verdes, estacionamento de visitantes e acessibilidade total para pessoas com mobilidade reduzida.
-          </p>
-        </SectionReveal>
-
-        <SectionReveal delay={550}>
           <div className="text-center">
-            <WhatsAppButton message="Olá, quero ver todos os diferenciais de lazer do Residencial Balok One">
-              Quero conhecer toda a estrutura
+            <WhatsAppButton message="Venho do site do Balok One e quero conhecer o lazer">
+              Quero conhecer o lazer
             </WhatsAppButton>
           </div>
         </SectionReveal>

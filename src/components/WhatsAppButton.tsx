@@ -34,7 +34,7 @@ export function WhatsAppButton({ message, children, variant = "solid", className
 export function FloatingWhatsApp() {
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá, quero saber mais sobre o Residencial Balok One")}`}
+      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Balok One e quero saber mais")}`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-whatsapp shadow-lg animate-pulse-green transition-transform duration-200 hover:scale-105 active:scale-95"

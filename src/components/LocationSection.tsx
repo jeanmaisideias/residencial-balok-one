@@ -3,26 +3,11 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 
 const proximities = [
-  {
-    icon: Clock,
-    title: "7–9 min do Centro",
-    desc: "Acesso rápido ao centro de Indaial com toda a infraestrutura urbana disponível para sua família.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Escolas por Perto",
-    desc: "Instituições de ensino de qualidade a poucos minutos de casa, para tranquilidade dos pais.",
-  },
-  {
-    icon: HeartPulse,
-    title: "Posto de Saúde",
-    desc: "Atendimento de saúde acessível e próximo, garantindo segurança para toda a família.",
-  },
-  {
-    icon: ShoppingCart,
-    title: "Mercados e Comércio",
-    desc: "Supermercados e comércio local a caminhada, com fácil ligação também a Timbó.",
-  },
+  { icon: Clock, title: "Centro", desc: "7–9 min do centro de Indaial" },
+  { icon: GraduationCap, title: "Escolas", desc: "Instituições de ensino a poucos minutos" },
+  { icon: ShoppingCart, title: "Mercados", desc: "Supermercados e comércio local" },
+  { icon: HeartPulse, title: "Posto de saúde", desc: "Atendimento de saúde acessível" },
+  { icon: ShoppingCart, title: "Comércio", desc: "Fácil ligação a Timbó e região" },
 ];
 
 export function LocationSection() {
@@ -31,27 +16,26 @@ export function LocationSection() {
       <div className="container max-w-4xl">
         <SectionReveal>
           <div className="text-center mb-8">
-            <p className="text-xs font-semibold tracking-wider uppercase text-whatsapp mb-3">Localização Estratégica</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 text-balance">
-              No coração de Indaial — SC
+            <p className="text-xs font-semibold tracking-wider uppercase text-whatsapp mb-3">Localização</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-3 text-balance">
+              Viva perto de tudo
             </h2>
             <p className="text-muted-foreground text-pretty max-w-xl mx-auto">
-              Situado na <strong className="text-primary">Rua Três Corações, Jardim Benedito, Indaial – SC</strong>, o Residencial Balok One oferece praticidade e conectividade para o seu cotidiano. Tudo o que você precisa está a poucos minutos de distância.
+              Menos tempo no trânsito. Mais tempo para você.
             </p>
           </div>
         </SectionReveal>
 
-        {/* Proximity details */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
           {proximities.map((p, i) => (
-            <SectionReveal key={p.title} delay={i * 80}>
-              <div className="flex gap-4 p-5 bg-card rounded-2xl shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-whatsapp/10 flex items-center justify-center shrink-0">
-                  <p.icon className="w-5 h-5 text-whatsapp" />
+            <SectionReveal key={p.title + i} delay={i * 80}>
+              <div className="flex gap-3 p-4 bg-card rounded-2xl shadow-sm">
+                <div className="w-9 h-9 rounded-lg bg-whatsapp/10 flex items-center justify-center shrink-0">
+                  <p.icon className="w-4 h-4 text-whatsapp" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-primary mb-1">{p.title}</h3>
-                  <p className="text-xs text-muted-foreground text-pretty">{p.desc}</p>
+                  <h3 className="text-sm font-bold text-primary">{p.title}</h3>
+                  <p className="text-xs text-muted-foreground">{p.desc}</p>
                 </div>
               </div>
             </SectionReveal>
@@ -74,20 +58,9 @@ export function LocationSection() {
         </SectionReveal>
 
         <SectionReveal delay={400}>
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-6">
-            <MapPin className="w-4 h-4 text-whatsapp" />
-            <a
-              href="https://maps.app.goo.gl/k6QpcRUYWtFgMW1N7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors underline underline-offset-2"
-            >
-              Rua Três Corações, Jardim Benedito, Indaial – SC
-            </a>
-          </div>
           <div className="text-center">
-            <WhatsAppButton message="Olá, quero ver a localização exata do Residencial Balok One">
-              Ver localização exata no WhatsApp
+            <WhatsAppButton message="Venho do site do Balok One e quero ver a localização">
+              Ver localização
             </WhatsAppButton>
           </div>
         </SectionReveal>

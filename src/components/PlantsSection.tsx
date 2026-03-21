@@ -33,7 +33,6 @@ const plants = [
 
 export function PlantsSection() {
   const [active, setActive] = useState(0);
-
   const next = useCallback(() => setActive((p) => (p + 1) % plants.length), []);
   const prev = useCallback(() => setActive((p) => (p - 1 + plants.length) % plants.length), []);
 
@@ -52,55 +51,27 @@ export function PlantsSection() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-4 text-balance">
             Apartamentos inteligentes para viver melhor
           </h2>
-          <p className="text-muted-foreground text-pretty mb-8">
-            Pensados para aproveitar cada espaço com conforto e funcionalidade.
-          </p>
         </SectionReveal>
 
         <SectionReveal delay={100}>
           <div className="rounded-2xl overflow-hidden bg-card border border-border mb-6">
-            {/* Image */}
             <div className="relative">
-              <img
-                src={current.src}
-                alt={current.label}
-                className="w-full h-auto transition-opacity duration-500"
-              />
-
-              <button
-                onClick={prev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95"
-                aria-label="Anterior"
-              >
+              <img src={current.src} alt={current.label} className="w-full h-auto transition-opacity duration-500" />
+              <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95" aria-label="Anterior">
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <button
-                onClick={next}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95"
-                aria-label="Próximo"
-              >
+              <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95" aria-label="Próximo">
                 <ChevronRight className="w-5 h-5" />
               </button>
-
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
                 {plants.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActive(i)}
-                    className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                      active === i ? "bg-whatsapp" : "bg-primary-foreground/40"
-                    }`}
-                    aria-label={`Slide ${i + 1}`}
-                  />
+                  <button key={i} onClick={() => setActive(i)} className={`w-2.5 h-2.5 rounded-full transition-colors ${active === i ? "bg-whatsapp" : "bg-primary-foreground/40"}`} aria-label={`Slide ${i + 1}`} />
                 ))}
               </div>
             </div>
-
-            {/* Details inside card */}
             <div className="px-6 py-5 text-center">
               <p className="text-base font-bold text-primary">{current.label}</p>
-              <p className="text-sm text-muted-foreground mb-3">{current.rooms} • {current.area}</p>
-
+              <p className="text-sm text-muted-foreground mb-3">{current.rooms} · {current.area}</p>
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
                 {current.features.map((f) => (
                   <span key={f} className="text-xs text-muted-foreground flex items-center gap-1.5">
@@ -109,11 +80,10 @@ export function PlantsSection() {
                   </span>
                 ))}
               </div>
-
               {current.isGarden && (
                 <div className="flex items-center justify-center gap-2 bg-primary/5 rounded-xl px-5 py-3 text-sm text-primary font-medium mt-4">
                   <Flame className="w-4 h-4 text-orange-500" />
-                  <span>Unidades Garden são limitadas — as mais disputadas do empreendimento. Reserve a sua com prioridade!</span>
+                  <span>Unidades Garden são limitadas — reserve a sua com prioridade!</span>
                 </div>
               )}
             </div>
@@ -121,7 +91,7 @@ export function PlantsSection() {
         </SectionReveal>
 
         <SectionReveal delay={200}>
-          <WhatsAppButton message="Olá, quero receber as plantas do Residencial Balok One no WhatsApp">
+          <WhatsAppButton message="Venho do site do Balok One e quero ver as plantas">
             Receber plantas no WhatsApp
           </WhatsAppButton>
         </SectionReveal>
