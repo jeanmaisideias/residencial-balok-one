@@ -4,14 +4,14 @@ import { Waves, Dumbbell, Trophy, PartyPopper, Flame, BookOpen, Dog, Bike } from
 import amenitiesImg from "@/assets/amenities.jpg";
 
 const amenities = [
-  { icon: Waves, emoji: "🏊", title: "Piscina", desc: "Área de lazer aquático para relaxar e se divertir com a família nos finais de semana." },
-  { icon: Dumbbell, emoji: "🏋️", title: "Academia", desc: "Espaço equipado para sua rotina de exercícios sem precisar sair do condomínio." },
-  { icon: Trophy, emoji: "🏖️", title: "Beach Tênis", desc: "Quadra de beach tênis para momentos de lazer ativo e socialização entre moradores." },
-  { icon: PartyPopper, emoji: "🎉", title: "Salão de Festas", desc: "Salão espaçoso e moderno para celebrar os momentos mais especiais com quem você ama." },
-  { icon: Flame, emoji: "🔥", title: "Fire Place", desc: "Área de convivência com lareira ao ar livre, perfeita para o frio característico de Santa Catarina." },
-  { icon: BookOpen, emoji: "📖", title: "Praça de Leitura", desc: "Espaço tranquilo e arborizado para leitura, reflexão e momentos de paz ao ar livre." },
-  { icon: Dog, emoji: "🐾", title: "Pet Place", desc: "Área especialmente projetada para que seus animais de estimação também se sintam em casa." },
-  { icon: Bike, emoji: "🚲", title: "Bicicletário", desc: "Espaço seguro para guardar bicicletas, incentivando mobilidade sustentável e saudável." },
+  { icon: Waves, title: "Piscina", desc: "Área de lazer aquático para relaxar e se divertir com a família nos finais de semana." },
+  { icon: Dumbbell, title: "Academia", desc: "Espaço equipado para sua rotina de exercícios sem precisar sair do condomínio." },
+  { icon: Trophy, title: "Beach Tênis", desc: "Quadra de beach tênis para momentos de lazer ativo e socialização entre moradores." },
+  { icon: PartyPopper, title: "Salão de Festas", desc: "Salão espaçoso e moderno para celebrar os momentos mais especiais com quem você ama." },
+  { icon: Flame, title: "Fire Place", desc: "Área de convivência com lareira ao ar livre, perfeita para o frio característico de Santa Catarina." },
+  { icon: BookOpen, title: "Praça de Leitura", desc: "Espaço tranquilo e arborizado para leitura, reflexão e momentos de paz ao ar livre." },
+  { icon: Dog, title: "Pet Place", desc: "Área especialmente projetada para que seus animais de estimação também se sintam em casa." },
+  { icon: Bike, title: "Bicicletário", desc: "Espaço seguro para guardar bicicletas, incentivando mobilidade sustentável e saudável." },
 ];
 
 export function LeisureSection() {
