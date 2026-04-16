@@ -177,3 +177,23 @@
 .animate-pulse-green {
   animation: pulse-green 2s ease-in-out infinite;
 }
+
+h1, h2, h3 { letter-spacing: -0.01em; }
+h1 { font-weight: 300; }
+h2 { font-weight: 300; }
+
+.btn-whatsapp,
+.btn-whatsapp-outline {
+  border-radius: 4px !important;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .animate-pulse-green {
+    animation: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  }
+}

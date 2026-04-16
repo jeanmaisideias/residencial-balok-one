@@ -6,7 +6,7 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { Home, Car, DollarSign, Bed, Waves, CalendarDays } from "lucide-react";
 
 const highlights = [
-  { icon: DollarSign, text: "A partir de R$ 239.000" },
+  { icon: DollarSign, text: "A partir de R$ 229.000" },
   { icon: Home, text: "Entrada a partir de R$ 1.000" },
   { icon: CalendarDays, text: "Entrada parcelada em até 60x" },
   { icon: Bed, text: "2 dormitórios" },

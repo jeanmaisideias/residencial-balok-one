@@ -17,9 +17,9 @@ export function Footer() {
 
           <div>
             <h4 className="text-sm font-bold text-primary-foreground mb-3 uppercase tracking-wider">Contato</h4>
-            <p className="text-sm mb-1">WhatsApp: (47) 9 9999-9999</p>
-            <p className="text-sm mb-1">CNPJ: XX.XXX.XXX/0001-XX</p>
-            <p className="text-sm">Indaial, SC – Brasil</p>
+            <p className="text-sm mb-1">WhatsApp: (11) 9 9907-7149</p>
+            <p className="text-sm mb-1">residencialballock1.com.br</p>
+            <p className="text-sm">Rua Três Corações, Jardim Benedito — Indaial, SC</p>
           </div>
 
           <div>
