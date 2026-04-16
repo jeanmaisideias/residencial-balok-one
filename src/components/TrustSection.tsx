@@ -1,44 +1,41 @@
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
-import equipeImg from "@/assets/equipe-construtora.jpg";
 
 const stats = [
-  { value: "13", label: "Anos de mercado" },
-  { value: "100%", label: "Obras no prazo" },
-  { value: "+500", label: "Unidades entregues" },
+  { value: "13+", label: "anos de mercado" },
+  { value: "100%", label: "obras no prazo" },
+  { value: "+500", label: "unidades entregues" },
 ];
 
 export function TrustSection() {
   return (
-    <section className="section-padding bg-card">
-      <div className="container max-w-5xl">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <SectionReveal>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img src={equipeImg} alt="Equipe Evolutta" className="w-full aspect-[4/3] object-cover" />
-            </div>
-          </SectionReveal>
+    <section className="section-padding bg-secondary">
+      <div className="container max-w-5xl text-center">
+        <SectionReveal>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-whatsapp mb-4">Construtora Evolutta</p>
+          <h2 className="font-display text-4xl md:text-6xl text-primary mb-16 text-balance leading-[1.05]">
+            Confiança que entrega
+          </h2>
+        </SectionReveal>
 
-          <SectionReveal delay={100}>
-            <div className="space-y-6">
-              <p className="text-xs font-semibold tracking-wider uppercase text-whatsapp">Construtora</p>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-primary text-balance">
-                Quem entrega seu apartamento
-              </h2>
-              <div className="grid grid-cols-3 gap-4 py-2">
-                {stats.map((s) => (
-                  <div key={s.label}>
-                    <p className="text-2xl md:text-3xl font-extrabold text-whatsapp">{s.value}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{s.label}</p>
-                  </div>
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 mb-14">
+          {stats.map((s, i) => (
+            <SectionReveal key={s.label} delay={i * 100}>
+              <div>
+                <p className="font-display text-5xl md:text-7xl text-primary tracking-tight leading-none mb-3">
+                  {s.value}
+                </p>
+                <p className="text-sm uppercase tracking-wider text-muted-foreground">{s.label}</p>
               </div>
-              <WhatsAppButton message="Venho do site do Balok One e quero falar com um especialista">
-                Falar com especialista
-              </WhatsAppButton>
-            </div>
-          </SectionReveal>
+            </SectionReveal>
+          ))}
         </div>
+
+        <SectionReveal delay={350}>
+          <WhatsAppButton message="Venho do site do Balok One e quero falar com um especialista">
+            Falar com especialista
+          </WhatsAppButton>
+        </SectionReveal>
       </div>
     </section>
   );

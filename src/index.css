@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -178,9 +178,18 @@
   animation: pulse-green 2s ease-in-out infinite;
 }
 
-h1, h2, h3 { letter-spacing: -0.01em; }
-h1 { font-weight: 300; }
-h2 { font-weight: 300; }
+h1, h2, h3 { letter-spacing: -0.02em; }
+h1 { font-weight: 400; }
+h2 { font-weight: 400; }
+
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144;
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
 
 .btn-whatsapp,
 .btn-whatsapp-outline {
