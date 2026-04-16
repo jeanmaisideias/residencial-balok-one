@@ -1,41 +1,30 @@
-import familyImg from "@/assets/family-happy.jpg";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 
 export function FinalCTA() {
   return (
     <section className="section-padding bg-primary text-primary-foreground">
-      <div className="container max-w-4xl">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <SectionReveal>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img src={familyImg} alt="Família feliz" className="w-full aspect-[4/3] object-cover" />
-            </div>
-          </SectionReveal>
-
-          <SectionReveal delay={100}>
-            <div className="space-y-6">
-              <p className="text-xs font-semibold tracking-wider uppercase text-accent">Últimas oportunidades</p>
-              <h2 className="text-2xl md:text-4xl font-extrabold text-balance leading-tight">
-                Unidades limitadas com condições de lançamento
-              </h2>
-              <p className="text-primary-foreground/80 text-pretty">
-                Comece com apenas R$ 1.000 e garanta seu apartamento.
-              </p>
-              <div className="flex flex-col gap-3">
-                <WhatsAppButton message="Venho do site do Balok One e quero falar no WhatsApp">
-                  Falar no WhatsApp
-                </WhatsAppButton>
-                <WhatsAppButton
-                  message="Quero simular financiamento do Balok One"
-                  variant="outline"
-                >
-                  Simular financiamento
-                </WhatsAppButton>
-              </div>
-            </div>
-          </SectionReveal>
-        </div>
+      <div className="container max-w-3xl text-center">
+        <SectionReveal>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-whatsapp mb-5">Últimas unidades</p>
+          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.05] mb-6">
+            Garanta o seu agora
+          </h2>
+          <p className="text-lg text-primary-foreground/70 mb-10 max-w-xl mx-auto">
+            Comece com R$ 1.000. Condições de lançamento por tempo limitado.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <WhatsAppButton message="Quero simular financiamento do Balok One">
+              Simular financiamento
+            </WhatsAppButton>
+            <WhatsAppButton
+              message="Quero saber valores e entrada"
+              variant="hero-outline"
+            >
+              Falar com consultor
+            </WhatsAppButton>
+          </div>
+        </SectionReveal>
       </div>
     </section>
   );
