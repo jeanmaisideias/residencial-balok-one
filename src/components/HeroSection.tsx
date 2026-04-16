@@ -43,7 +43,7 @@ export function HeroSection() {
         >
           Saia do aluguel com apenas
           <br />
-          <span className="text-accent">R$ 1.000</span> de entrada
+          <span className="text-whatsapp">R$ 1.000</span> de entrada
         </h1>
 
         <p
