@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,52 +6,41 @@
 
 @layer base {
   :root {
-    --background: 210 10% 96%;
-    --foreground: 210 10% 10%;
+    --background: 36 20% 96%;
+    --foreground: 0 0% 10%;
 
-    --card: 210 10% 99%;
-    --card-foreground: 210 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 210 10% 99%;
-    --popover-foreground: 210 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 210 8% 20%;
-    --primary-foreground: 210 10% 96%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 36 20% 96%;
 
-    --secondary: 210 8% 90%;
-    --secondary-foreground: 210 10% 10%;
+    --secondary: 36 15% 93%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 210 6% 85%;
-    --muted-foreground: 210 5% 45%;
+    --muted: 36 10% 88%;
+    --muted-foreground: 0 0% 42%;
 
-    --accent: 152 56% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 38 45% 60%;
+    --accent-foreground: 0 0% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 10% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 210 8% 82%;
-    --input: 210 8% 82%;
-    --ring: 152 56% 42%;
+    --border: 36 10% 85%;
+    --input: 36 10% 85%;
+    --ring: 38 45% 60%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 210 10% 99%;
-    --sidebar-foreground: 210 10% 10%;
-    --sidebar-primary: 210 8% 20%;
-    --sidebar-primary-foreground: 210 10% 96%;
-    --sidebar-accent: 210 8% 90%;
-    --sidebar-accent-foreground: 210 10% 10%;
-    --sidebar-border: 210 8% 82%;
-    --sidebar-ring: 152 56% 42%;
-
-    /* Custom tokens */
-    --navy: 210 8% 20%;
-    --navy-light: 210 5% 45%;
-    --green-whatsapp: 152 56% 42%;
-    --green-whatsapp-hover: 152 56% 36%;
-    --slate: 210 5% 45%;
-    --warm-white: 210 10% 96%;
+    --navy: 0 0% 8%;
+    --navy-light: 0 0% 42%;
+    --green-whatsapp: 142 70% 45%;
+    --green-whatsapp-hover: 142 70% 38%;
+    --warm-white: 36 20% 96%;
   }
 }
 
@@ -66,7 +55,7 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
