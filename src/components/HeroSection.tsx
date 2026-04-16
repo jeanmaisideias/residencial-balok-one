@@ -42,16 +42,16 @@ export function HeroSection() {
           className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-[1.08] tracking-tight text-balance mb-5 animate-reveal-up"
           style={{ animationDelay: "100ms" }}
         >
-          Pare de pagar aluguel.
+          Seu apartamento
           <br />
-          Comece a viver no que é seu.
+          <span className="text-accent">próprio</span> em Indaial – SC
         </h1>
 
         <p
           className="text-lg md:text-xl text-primary-foreground/80 max-w-xl text-pretty mb-8 animate-reveal-up"
           style={{ animationDelay: "200ms" }}
         >
-          Entrada facilitada e parcelas que cabem no seu bolso.
+          A partir de R$ 229.000 · Entrada parcelada em 60x · Programa Minha Casa Minha Vida
         </p>
 
         <div
