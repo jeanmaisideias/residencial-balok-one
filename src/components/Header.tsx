@@ -1,4 +1,3 @@
-import logoEvolutta from "@/assets/logo-evolutta.png";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -29,18 +28,7 @@ export function Header() {
           : "bg-transparent"
       )}
     >
-      <div className="container flex items-center justify-between h-16">
-        <a href="#top" className="flex items-center">
-          <img
-            src={logoEvolutta}
-            alt="Evolutta"
-            className={cn(
-              "w-auto transition-all duration-300",
-              scrolled ? "h-8" : "h-10 brightness-0 invert"
-            )}
-          />
-        </a>
-
+      <div className="container flex items-center justify-center h-16">
         <nav className="hidden md:flex items-center gap-7">
           {navItems.map((item) => (
             <a
@@ -57,15 +45,6 @@ export function Header() {
             </a>
           ))}
         </nav>
-
-        <a
-          href="https://wa.me/5511999077149?text=Venho%20do%20site%20do%20Balok%20One%20e%20quero%20saber%20mais"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[hsl(var(--green-whatsapp))] hover:bg-[hsl(var(--green-whatsapp-hover))] text-white text-sm font-semibold transition-colors"
-        >
-          WhatsApp
-        </a>
       </div>
     </header>
   );
