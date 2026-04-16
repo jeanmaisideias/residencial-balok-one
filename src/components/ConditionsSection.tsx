@@ -15,7 +15,7 @@ export function ConditionsSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
               <div>
                 <p className="text-sm text-primary-foreground/70 mb-1">a partir de</p>
-                <p className="text-3xl md:text-4xl font-extrabold">R$ 239 mil</p>
+                <p className="text-3xl md:text-4xl font-extrabold">R$ 229.000</p>
               </div>
               <div>
                 <p className="text-sm text-primary-foreground/70 mb-1">entrada a partir de</p>
