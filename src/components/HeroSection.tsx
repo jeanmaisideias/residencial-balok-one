@@ -7,8 +7,7 @@ import { Home, Car, DollarSign, Bed, Waves, CalendarDays } from "lucide-react";
 
 const highlights = [
   { icon: DollarSign, text: "A partir de R$ 229.000" },
-  { icon: Home, text: "Entrada a partir de R$ 1.000" },
-  { icon: CalendarDays, text: "Entrada parcelada em até 60x" },
+  { icon: CalendarDays, text: "Entrada em até 60x" },
   { icon: Bed, text: "2 dormitórios" },
   { icon: Car, text: "1 vaga" },
   { icon: Waves, text: "Lazer completo" },
@@ -42,16 +41,16 @@ export function HeroSection() {
           className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-[1.08] tracking-tight text-balance mb-5 animate-reveal-up"
           style={{ animationDelay: "100ms" }}
         >
-          Seu apartamento
+          Saia do aluguel com apenas
           <br />
-          <span className="text-accent">próprio</span> em Indaial – SC
+          <span className="text-accent">R$ 1.000</span> de entrada
         </h1>
 
         <p
           className="text-lg md:text-xl text-primary-foreground/80 max-w-xl text-pretty mb-8 animate-reveal-up"
           style={{ animationDelay: "200ms" }}
         >
-          A partir de R$ 229.000 · Entrada parcelada em 60x · Programa Minha Casa Minha Vida
+          Apartamentos em Indaial a partir de R$ 229 mil com condições do Minha Casa Minha Vida.
         </p>
 
         <div
@@ -73,15 +72,21 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-3 animate-reveal-up"
           style={{ animationDelay: "400ms" }}
         >
-          <WhatsAppButton message="Venho do site do Balok One e quero saber se posso financiar">
-            Quero saber se posso financiar
-          </WhatsAppButton>
-          <WhatsAppButton
-            message="Venho do site do Balok One e quero falar com um consultor"
-            variant="hero-outline"
-          >
-            Falar com um consultor agora
-          </WhatsAppButton>
+          <div className="flex flex-col gap-1">
+            <WhatsAppButton message="Quero simular financiamento do Balok One">
+              Simular financiamento
+            </WhatsAppButton>
+            <span className="text-xs text-primary-foreground/60 pl-1">Leva 1 minuto</span>
+          </div>
+          <div className="flex flex-col gap-1">
+            <WhatsAppButton
+              message="Venho do site do Balok One e quero falar com um consultor"
+              variant="hero-outline"
+            >
+              Falar com consultor
+            </WhatsAppButton>
+            <span className="text-xs text-primary-foreground/60 pl-1">Resposta rápida</span>
+          </div>
         </div>
       </div>
     </section>

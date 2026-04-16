@@ -91,8 +91,8 @@ export function PlantsSection() {
         </SectionReveal>
 
         <SectionReveal delay={200}>
-          <WhatsAppButton message="Venho do site do Balok One e quero ver as plantas">
-            Receber plantas no WhatsApp
+          <WhatsAppButton message="Quero ver plantas e detalhes do Balok One">
+            Quero receber as plantas no WhatsApp
           </WhatsAppButton>
         </SectionReveal>
       </div>

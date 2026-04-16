@@ -15,15 +15,22 @@ export function FinalCTA() {
 
           <SectionReveal delay={100}>
             <div className="space-y-6">
+              <p className="text-xs font-semibold tracking-wider uppercase text-accent">Últimas oportunidades</p>
               <h2 className="text-2xl md:text-4xl font-extrabold text-balance leading-tight">
-                Seu apartamento próprio começa com uma decisão
+                Unidades limitadas com condições de lançamento
               </h2>
+              <p className="text-primary-foreground/80 text-pretty">
+                Comece com apenas R$ 1.000 e garanta seu apartamento.
+              </p>
               <div className="flex flex-col gap-3">
-                <WhatsAppButton message="Venho do site do Balok One e quero falar com um consultor">
-                  Quero falar com um consultor
+                <WhatsAppButton message="Venho do site do Balok One e quero falar no WhatsApp">
+                  Falar no WhatsApp
                 </WhatsAppButton>
-                <WhatsAppButton message="Venho do site do Balok One e quero garantir minha unidade" variant="outline">
-                  Garantir minha unidade
+                <WhatsAppButton
+                  message="Quero simular financiamento do Balok One"
+                  variant="outline"
+                >
+                  Simular financiamento
                 </WhatsAppButton>
               </div>
             </div>
