@@ -73,6 +73,11 @@
     font-family: 'Manrope', system-ui, sans-serif;
     letter-spacing: -0.025em;
     font-weight: 700;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
 

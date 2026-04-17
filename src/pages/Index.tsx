@@ -13,7 +13,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/WhatsAppButton";
 
-import familyHappy from "@/assets/family-happy.jpg";
+import fachadaPremium from "@/assets/balok/fachada-premium.jpg";
 import salaCozinha from "@/assets/balok/sala-cozinha-01.jpg";
 import quadraBeach from "@/assets/balok/quadra-beach.jpg";
 import sacada from "@/assets/balok/sacada.jpg";
@@ -27,9 +27,9 @@ const Index = () => {
         <HeroSection />
 
         <FullscreenSection
-          image={familyHappy}
-          title="Seu novo começo começa aqui"
-          subtitle="Conforto, localização e valorização em um só lugar"
+          image={fachadaPremium}
+          title="Seu novo endereço começa aqui"
+          variant="band"
         />
 
         <QuickInfoSection />
