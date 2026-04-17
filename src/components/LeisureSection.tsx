@@ -1,105 +1,65 @@
-import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
-import { Waves, Dumbbell, Trophy, PartyPopper, Flame, Baby, Dog, Bike } from "lucide-react";
-import { useState, useCallback, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { WhatsAppButton } from "./WhatsAppButton";
+import piscina from "@/assets/balok/piscina.jpg";
+import beach from "@/assets/balok/quadra-beach.jpg";
+import fitness from "@/assets/balok/fitness.jpg";
+import salao from "@/assets/balok/salao.jpg";
+import salao2 from "@/assets/balok/salao-02.jpg";
+import pet from "@/assets/balok/pet.jpg";
+import bike from "@/assets/balok/bike.jpg";
+import firepit from "@/assets/balok/firepit.jpg";
+import playground from "@/assets/balok/playground.jpg";
 
-import lazerPiscina from "@/assets/lazer-piscina.jpg";
-import lazerAcademia from "@/assets/lazer-academia.jpg";
-import lazerBeach from "@/assets/lazer-beach.jpg";
-import lazerSalao from "@/assets/lazer-salao.jpg";
-import lazerFireplace from "@/assets/lazer-fireplace.jpg";
-import lazerPlayground from "@/assets/lazer-playground.jpg";
-import lazerPet from "@/assets/lazer-pet.jpg";
-import lazerBike from "@/assets/lazer-bike.jpg";
-import amenitiesImg from "@/assets/amenities.jpg";
-
-const amenities = [
-  { icon: Waves, title: "Piscina", desc: "Área de lazer aquático para relaxar e se divertir com a família nos finais de semana.", img: lazerPiscina },
-  { icon: Dumbbell, title: "Academia", desc: "Espaço equipado para sua rotina de exercícios sem precisar sair do condomínio.", img: lazerAcademia },
-  { icon: Trophy, title: "Beach Tênis", desc: "Quadra de beach tênis para momentos de lazer ativo e socialização entre moradores.", img: lazerBeach },
-  { icon: PartyPopper, title: "Salão de Festas", desc: "Salão espaçoso e moderno para celebrar os momentos mais especiais com quem você ama.", img: lazerSalao },
-  { icon: Flame, title: "Fire Place", desc: "Área de convivência com lareira ao ar livre, perfeita para o frio característico de Santa Catarina.", img: lazerFireplace },
-  { icon: Baby, title: "Playground", desc: "Espaço seguro e divertido para as crianças brincarem e se desenvolverem ao ar livre.", img: lazerPlayground },
-  { icon: Dog, title: "Pet Place", desc: "Área especialmente projetada para que seus animais de estimação também se sintam em casa.", img: lazerPet },
-  { icon: Bike, title: "Bicicletário", desc: "Espaço seguro para guardar bicicletas, incentivando mobilidade sustentável e saudável.", img: lazerBike },
+const items = [
+  { img: piscina, label: "Piscina", className: "md:col-span-2 md:row-span-2 aspect-[4/3] md:aspect-auto" },
+  { img: beach, label: "Beach Tennis", className: "aspect-[4/3]" },
+  { img: fitness, label: "Academia", className: "aspect-[4/3]" },
+  { img: salao, label: "Salão de Festas", className: "md:col-span-2 aspect-[16/9] md:aspect-[2/1]" },
+  { img: pet, label: "Pet Place", className: "aspect-[4/3]" },
+  { img: bike, label: "Bike Space", className: "aspect-[4/3]" },
+  { img: firepit, label: "Fireplace", className: "aspect-[4/3]" },
+  { img: playground, label: "Playground", className: "aspect-[4/3]" },
+  { img: salao2, label: "Espaço Gourmet", className: "aspect-[4/3]" },
 ];
 
 export function LeisureSection() {
-  const [active, setActive] = useState(0);
-  const next = useCallback(() => setActive((p) => (p + 1) % amenities.length), []);
-  const prev = useCallback(() => setActive((p) => (p - 1 + amenities.length) % amenities.length), []);
-
-  useEffect(() => {
-    const timer = setInterval(next, 4000);
-    return () => clearInterval(timer);
-  }, [next]);
-
   return (
-    <section className="section-padding bg-card">
-      <div className="container max-w-5xl">
-        {/* Lifestyle hero */}
+    <section id="lazer" className="section-padding bg-background">
+      <div className="container max-w-7xl">
         <SectionReveal>
-          <div className="relative rounded-2xl overflow-hidden mb-10">
-            <img src={amenitiesImg} alt="Pessoas aproveitando o lazer" className="w-full aspect-[16/9] object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 md:p-10">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-primary-foreground mb-2 text-balance">
-                Mais momentos com quem você gosta
-              </h2>
-              <p className="text-primary-foreground/80 text-sm md:text-base">
-                Dentro do seu próprio condomínio.
-              </p>
-            </div>
+          <div className="mb-12 md:mb-16 max-w-2xl">
+            <p className="eyebrow mb-4">Lazer Completo</p>
+            <h2 className="font-display text-4xl md:text-6xl text-primary text-balance leading-[1.02]">
+              Tudo que valoriza sua rotina
+            </h2>
+            <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-lg">
+              Áreas pensadas para conviver, relaxar e treinar sem sair de casa.
+            </p>
           </div>
         </SectionReveal>
 
-        {/* Gallery carousel */}
-        <SectionReveal delay={100}>
-          <div className="relative rounded-2xl overflow-hidden mb-10">
-            <div className="aspect-[16/9] overflow-hidden">
-              <img src={amenities[active].img} alt={amenities[active].title} className="w-full h-full object-cover transition-opacity duration-500" />
-            </div>
-            <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95" aria-label="Anterior">
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/70 text-primary-foreground flex items-center justify-center hover:bg-primary transition-colors active:scale-95" aria-label="Próximo">
-              <ChevronRight className="w-5 h-5" />
-            </button>
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-primary/70 backdrop-blur-sm text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">
-              {amenities[active].title}
-            </div>
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-              {amenities.map((_, i) => (
-                <button key={i} onClick={() => setActive(i)} className={`w-2.5 h-2.5 rounded-full transition-colors ${active === i ? "bg-whatsapp" : "bg-primary-foreground/40"}`} aria-label={`Slide ${i + 1}`} />
-              ))}
-            </div>
-          </div>
-        </SectionReveal>
-
-        {/* Amenities grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          {amenities.map((a, i) => (
-            <SectionReveal key={a.title} delay={i * 60}>
-              <div
-                className={`flex gap-4 p-5 rounded-2xl h-full cursor-pointer transition-all duration-200 ${active === i ? "bg-accent/10 ring-2 ring-accent" : "bg-secondary hover:bg-secondary/80"}`}
-                onClick={() => setActive(i)}
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <a.icon className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-primary mb-1">{a.title}</h3>
-                  <p className="text-xs text-muted-foreground text-pretty">{a.desc}</p>
-                </div>
-              </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {items.map((it, i) => (
+            <SectionReveal key={it.label} delay={i * 50} className={it.className}>
+              <figure className="relative h-full w-full rounded-2xl overflow-hidden group shadow-soft">
+                <img
+                  src={it.img}
+                  alt={it.label}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+                <figcaption className="absolute bottom-4 left-4 right-4 text-primary-foreground font-display text-base md:text-lg">
+                  {it.label}
+                </figcaption>
+              </figure>
             </SectionReveal>
           ))}
         </div>
 
-        <SectionReveal delay={500}>
-          <div className="text-center">
-            <WhatsAppButton message="Venho do site do Balok One e quero conhecer o lazer">
-              Quero conhecer o lazer
+        <SectionReveal delay={300}>
+          <div className="mt-14 flex justify-center">
+            <WhatsAppButton message="Quero ver todas as áreas de lazer do Balok One">
+              Quero conhecer o lazer completo
             </WhatsAppButton>
           </div>
         </SectionReveal>
