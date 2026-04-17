@@ -1,48 +1,62 @@
 
-O usuário quer saber como fornecer várias imagens para eu usar no layout do Balok One.
+## Polimento Final — Residencial Balok One
 
-Vou explicar as opções diretamente — isso é uma pergunta de orientação, não requer mudança de código.
+Mantém toda a direção premium atual. Foco em funcionalidade, mobile e conversão.
 
-## Como enviar imagens para o layout
+### 1. Header inteligente com troca de logo
+- Estado topo (sobre hero): logos brancos
+- Estado scrolled: logos pretos
+- Transição cruzada 300ms
 
-### Opção 1 — Upload direto no chat (recomendado)
-- **Desktop:** clique no botão **+** no canto inferior esquerdo do chat → **Attach** (ou arraste e solte os arquivos direto na área do chat).
-- **Mobile:** toque no **+** no canto inferior esquerdo → **Camera** ou **Attach**.
-- Pode enviar **até 10 arquivos por mensagem**, cada um com **até 20MB**.
-- Formatos aceitos: JPG, PNG, WEBP.
+### 2. Polimento global de texto
+- `text-wrap: balance` nos headlines
+- Remover pontos finais de subtítulos
+- Ajustar `max-width` para evitar órfãos
 
-Junto do upload, escreva onde cada imagem deve entrar. Exemplo:
-> "Imagem 1 = nova fachada (HeroSection). Imagens 2, 3, 4 = galeria. Imagem 5 = piscina (FullscreenSection antes dos Diferenciais)."
+### 3. Hero — nova copy em 3 linhas
+- "Apartamento em condomínio fechado"
+- "com entrada de R$ 1.000?" (destaque máximo)
+- "Sim, a gente fez"
+- Sub: "Em Indaial, com parcelas acessíveis, lazer completo e condições especiais de lançamento"
 
-### Opção 2 — Em lote via ZIP
-- Compacte todas as imagens em um `.zip` com nomes descritivos (`fachada.jpg`, `piscina.jpg`, `planta-garden.png`...).
-- Envie pelo mesmo botão **+ → Attach**.
-- Eu descompacto, salvo em `src/assets/` e substituo onde indicar.
+### 4. Banda pós-hero
+- Substituir imagem da família por render da fachada (gerar via IA)
+- 70vh desktop / 42vh mobile
+- "Seu novo endereço começa aqui"
 
-### Opção 3 — Links externos (URLs)
-- Cole as URLs públicas no chat (Google Drive público, Dropbox, Imgur, site da construtora etc.).
-- Eu baixo, otimizo e adiciono ao projeto.
+### 5. Ícones premium
+- Tamanhos maiores, stroke 1.5, containers maiores
 
-### Opção 4 — Geração por IA
-- Se faltar alguma imagem, posso gerar via Lovable AI (Nano Banana). Basta descrever:
-> "Gere uma foto aérea noturna do prédio com piscina iluminada, estilo cinematográfico."
+### 6. Gallery — carrossel embla
+- Auto-play 3s, pausa em hover/touch
+- Loop, setas dentro do container, dots
+- Swipe nativo mobile
 
-## Onde as imagens entrariam no layout atual
+### 7. Plantas — slider responsivo
+- Tabs sempre visíveis, scroll horizontal mobile
+- Auto-transition 4s, controles dentro do container
 
-Lugares com maior impacto visual onde novas imagens fazem diferença:
+### 8. Construtora Evolutta
+- Logo preto + texto institucional novo (13 anos, MCMV, acompanhamento)
+- Layout texto/stats responsivo
 
-1. **HeroSection** — foto principal de fundo
-2. **FullscreenSection (3 banners cinematográficos)** — fachada noturna, lazer, pôr do sol
-3. **GallerySection** — 4 a 6 imagens lifestyle (scroll horizontal)
-4. **PlantsSection** — plantas Padrão 40m², 43m² e Garden
-5. **LocationSection** — vista aérea / mapa estilizado
-6. **TrustSection / Footer** — logo Evolutta em alta resolução
+### 9. Localização
+- "No coração de Indaial — SC" + parágrafo sobre Rua Três Corações
+- Cards de proximidade abaixo
 
-## Dica para melhor resultado
+### 10. Plantão de Vendas
+- Card destacado com pin, aparece em Localização e perto do CTA final
 
-Quando enviar, me diga:
-- **Qual seção** cada imagem deve substituir (ou "use onde achar melhor")
-- **Orientação** preferida (paisagem para fullscreen, retrato para destaques)
-- Se quer que eu **mantenha** as atuais como fallback ou **substitua** definitivamente
+### 11. Mobile polish
+- Paddings reduzidos, controles dentro da viewport, stacks limpos
 
-Pronto para receber — pode mandar quando quiser.
+### 12. Micro detalhes
+- Sombras mais fortes, lift sutil hover, radius consistente
+
+### Arquivos
+- Header.tsx, HeroSection.tsx, Index.tsx
+- GallerySection.tsx (rebuild com embla)
+- PlantsSection.tsx (rebuild com auto-slide)
+- TrustSection.tsx, LocationSection.tsx, FinalCTA.tsx
+- index.css
+- Gerar: logo Evolutta branco, logo Evolutta preto, fachada premium
