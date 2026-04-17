@@ -6,8 +6,8 @@ export function FinalCTA() {
     <section className="section-padding bg-primary text-primary-foreground">
       <div className="container max-w-3xl text-center">
         <SectionReveal>
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-whatsapp mb-5">Últimas unidades</p>
-          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.05] mb-6">
+          <p className="eyebrow mb-5">Últimas unidades</p>
+          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.02] mb-6">
             Garanta o seu agora
           </h2>
           <p className="text-lg text-primary-foreground/70 mb-10 max-w-xl mx-auto">
@@ -24,6 +24,9 @@ export function FinalCTA() {
               Falar com consultor
             </WhatsAppButton>
           </div>
+          <p className="mt-8 text-xs text-primary-foreground/50">
+            Unidades mais vantajosas vendem rápido — condição promocional sujeita à disponibilidade.
+          </p>
         </SectionReveal>
       </div>
     </section>
