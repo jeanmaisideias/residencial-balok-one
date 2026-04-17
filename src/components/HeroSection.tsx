@@ -18,7 +18,7 @@ export function HeroSection() {
           alt="Família feliz no novo apartamento Balok One"
           className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/65 via-primary/55 to-primary/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/55 to-primary/95" />
       </div>
 
       <div className="relative container pb-20 pt-40 md:pb-28 md:pt-48">
@@ -29,19 +29,25 @@ export function HeroSection() {
         </p>
 
         <h1
-          className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.02] text-balance mb-6 max-w-4xl animate-reveal-up"
+          className="font-display text-primary-foreground leading-[1.05] text-balance mb-6 max-w-4xl animate-reveal-up"
           style={{ animationDelay: "100ms" }}
         >
-          Pare de pagar aluguel.
-          <br />
-          <span className="text-white/90">Comece a viver o que é seu.</span>
+          <span className="block text-3xl md:text-5xl lg:text-6xl font-medium text-white/85">
+            Apartamento em condomínio fechado
+          </span>
+          <span className="block text-4xl md:text-6xl lg:text-7xl font-extrabold mt-1">
+            com entrada de <span className="text-accent">R$ 1.000</span>?
+          </span>
+          <span className="block text-2xl md:text-4xl lg:text-5xl font-light text-white/80 mt-2 italic">
+            Sim, a gente fez
+          </span>
         </h1>
 
         <p
-          className="text-lg md:text-xl text-primary-foreground/80 max-w-xl text-pretty mb-10 animate-reveal-up"
+          className="text-base md:text-xl text-primary-foreground/85 max-w-xl text-pretty mb-10 animate-reveal-up"
           style={{ animationDelay: "200ms" }}
         >
-          Apartamentos em Indaial com entrada facilitada, condições especiais e parcelas acessíveis.
+          Em Indaial, com parcelas acessíveis, lazer completo e condições especiais de lançamento
         </p>
 
         <div

@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
 import sala1 from "@/assets/balok/sala-cozinha-01.jpg";
@@ -18,67 +21,83 @@ const images = [
 ];
 
 export function GallerySection() {
-  const [active, setActive] = useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "center", containScroll: false },
+    [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi]);
+
+  const scrollTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
 
   return (
     <section id="galeria" className="section-padding bg-background">
-      <div className="container max-w-7xl">
+      <div className="container max-w-6xl">
         <SectionReveal>
-          <div className="mb-12 md:mb-16 max-w-2xl">
+          <div className="mb-10 md:mb-14 max-w-2xl">
             <p className="eyebrow mb-4">Galeria</p>
             <h2 className="font-display text-4xl md:text-6xl text-primary text-balance leading-[1.02]">
               Seu novo lar
             </h2>
             <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-lg">
-              Ambientes pensados para o conforto e a beleza do dia a dia.
+              Ambientes pensados para o conforto e a beleza do dia a dia
             </p>
           </div>
         </SectionReveal>
 
-        {/* Desktop: main + thumbs */}
         <SectionReveal delay={120}>
-          <div className="hidden md:grid grid-cols-[1fr_140px] gap-6 lg:gap-8">
-            <figure className="rounded-2xl overflow-hidden shadow-premium bg-secondary group">
-              <img
-                src={images[active].src}
-                alt={images[active].caption}
-                className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                key={active}
-              />
-              <figcaption className="px-6 py-4 bg-card flex items-center justify-between">
-                <span className="font-display text-lg text-primary">{images[active].caption}</span>
-                <span className="text-xs text-muted-foreground">{active + 1} / {images.length}</span>
-              </figcaption>
-            </figure>
+          <div className="relative">
+            <div ref={emblaRef} className="overflow-hidden rounded-2xl shadow-premium">
+              <div className="flex">
+                {images.map((img) => (
+                  <div key={img.caption} className="relative shrink-0 grow-0 basis-full">
+                    <img
+                      src={img.src}
+                      alt={img.caption}
+                      className="w-full aspect-[4/3] md:aspect-[16/9] object-cover"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent p-5 md:p-8">
+                      <p className="font-display text-xl md:text-2xl text-primary-foreground">{img.caption}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            <div className="flex flex-col gap-3 max-h-[560px] overflow-y-auto pr-1 scrollbar-hide">
-              {images.map((img, i) => (
+            <button
+              onClick={() => emblaApi?.scrollPrev()}
+              aria-label="Anterior"
+              className="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full bg-card/90 backdrop-blur-sm shadow-elevated border border-border/50 flex items-center justify-center text-primary hover:bg-card hover:scale-105 transition"
+            >
+              <ChevronLeft className="w-5 h-5" strokeWidth={1.75} />
+            </button>
+            <button
+              onClick={() => emblaApi?.scrollNext()}
+              aria-label="Próximo"
+              className="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full bg-card/90 backdrop-blur-sm shadow-elevated border border-border/50 flex items-center justify-center text-primary hover:bg-card hover:scale-105 transition"
+            >
+              <ChevronRight className="w-5 h-5" strokeWidth={1.75} />
+            </button>
+
+            <div className="flex justify-center gap-2 mt-6">
+              {images.map((_, i) => (
                 <button
-                  key={img.caption}
-                  onClick={() => setActive(i)}
-                  aria-label={`Ver ${img.caption}`}
-                  className={`relative rounded-xl overflow-hidden aspect-square shrink-0 transition-all ${
-                    active === i ? "ring-2 ring-accent ring-offset-2 ring-offset-background" : "opacity-70 hover:opacity-100"
-                  }`}
-                >
-                  <img src={img.src} alt={img.caption} className="w-full h-full object-cover" />
-                </button>
+                  key={i}
+                  onClick={() => scrollTo(i)}
+                  aria-label={`Ir para slide ${i + 1}`}
+                  className={`h-1.5 rounded-full transition-all ${selected === i ? "w-8 bg-primary" : "w-2 bg-border hover:bg-muted-foreground/40"}`}
+                />
               ))}
             </div>
           </div>
         </SectionReveal>
-
-        {/* Mobile: horizontal swipe */}
-        <div className="md:hidden flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory -mx-5 px-5 scrollbar-hide">
-          {images.map((img) => (
-            <figure key={img.caption} className="snap-start shrink-0 w-[82vw]">
-              <div className="rounded-2xl overflow-hidden shadow-elevated bg-secondary">
-                <img src={img.src} alt={img.caption} className="w-full aspect-[4/3] object-cover" />
-              </div>
-              <figcaption className="mt-3 text-sm text-muted-foreground tracking-wide px-1">{img.caption}</figcaption>
-            </figure>
-          ))}
-        </div>
 
         <SectionReveal delay={240}>
           <div className="mt-12 md:mt-16 flex justify-center">
