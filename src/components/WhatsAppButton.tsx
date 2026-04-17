@@ -15,7 +15,7 @@ export function WhatsAppButton({ message, children, variant = "solid", className
   const baseClass = variant === "outline"
     ? "btn-whatsapp-outline"
     : variant === "hero-outline"
-    ? "btn-whatsapp-outline border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+    ? "btn-whatsapp-outline border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:border-primary-foreground"
     : "btn-whatsapp";
 
   return (
@@ -37,10 +37,10 @@ export function FloatingWhatsApp() {
       href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Balok One e quero saber mais")}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-whatsapp shadow-lg animate-pulse-green transition-transform duration-200 hover:scale-105 active:scale-95"
-      aria-label="WhatsApp"
+      className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-whatsapp text-white shadow-premium animate-pulse-green transition-transform duration-200 hover:scale-110 active:scale-95"
+      aria-label="Falar no WhatsApp"
     >
-      <MessageCircle className="w-7 h-7 text-accent-foreground" />
+      <MessageCircle className="w-6 h-6 md:w-7 md:h-7" />
     </a>
   );
 }

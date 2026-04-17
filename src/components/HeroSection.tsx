@@ -1,69 +1,59 @@
-import heroImg from "@/assets/hero-building.jpg";
-import logoEvolutta from "@/assets/logo-evolutta.png";
-import logoCaixa from "@/assets/logo-caixa.png";
-import logoMcmv from "@/assets/logo-mcmv.png";
+import heroImg from "@/assets/familia-feliz.jpg";
 import { WhatsAppButton } from "./WhatsAppButton";
-import { Home, Car, DollarSign, Bed, Waves, CalendarDays } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
-const highlights = [
-  { icon: DollarSign, text: "A partir de R$ 229.000" },
-  { icon: CalendarDays, text: "Entrada em até 60x" },
-  { icon: Bed, text: "2 dormitórios" },
-  { icon: Car, text: "1 vaga" },
-  { icon: Waves, text: "Lazer completo" },
+const chips = [
+  "A partir de R$ 229 mil",
+  "Entrada com R$ 1.000",
+  "Parcelamento em até 60x",
+  "2 dormitórios + vaga",
 ];
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-end pt-16">
+    <section className="relative min-h-[100svh] flex items-end overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Residencial Balok One" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/30" />
+        <img
+          src={heroImg}
+          alt="Família feliz no novo apartamento Balok One"
+          className="w-full h-full object-cover scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/65 via-primary/55 to-primary/90" />
       </div>
 
-      <div className="absolute top-20 left-0 right-0 z-10">
-        <div className="container">
-          <img src={logoEvolutta} alt="Evolutta" className="h-20 md:h-28 w-auto" />
-        </div>
-      </div>
-
-      <div className="absolute top-20 right-4 md:top-24 md:right-8 z-10 flex items-center gap-3">
-        <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 md:h-10 w-auto" />
-        <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-8 md:h-10 w-auto" />
-      </div>
-
-      <div className="relative container pb-12 pt-32 md:pb-20 md:pt-40">
-        <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-whatsapp/20 text-whatsapp animate-reveal-up">
+      <div className="relative container pb-20 pt-40 md:pb-28 md:pt-48">
+        <p
+          className="inline-block px-3 py-1 mb-6 text-[11px] font-semibold tracking-[0.22em] uppercase rounded-full bg-white/10 backdrop-blur-md text-primary-foreground/90 border border-white/15 animate-reveal-up"
+        >
           Minha Casa Minha Vida · Indaial, SC
         </p>
 
         <h1
-          className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-[1.08] tracking-tight text-balance mb-5 animate-reveal-up"
+          className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.02] text-balance mb-6 max-w-4xl animate-reveal-up"
           style={{ animationDelay: "100ms" }}
         >
-          Saia do aluguel com apenas
+          Pare de pagar aluguel.
           <br />
-          <span className="text-whatsapp">R$ 1.000</span> de entrada
+          <span className="text-white/90">Comece a viver o que é seu.</span>
         </h1>
 
         <p
-          className="text-lg md:text-xl text-primary-foreground/80 max-w-xl text-pretty mb-8 animate-reveal-up"
+          className="text-lg md:text-xl text-primary-foreground/80 max-w-xl text-pretty mb-10 animate-reveal-up"
           style={{ animationDelay: "200ms" }}
         >
-          Apartamentos em Indaial a partir de R$ 229 mil com condições do Minha Casa Minha Vida.
+          Apartamentos em Indaial com entrada facilitada, condições especiais e parcelas acessíveis.
         </p>
 
         <div
-          className="flex flex-wrap gap-3 mb-8 animate-reveal-up"
+          className="flex flex-wrap gap-2.5 mb-10 animate-reveal-up"
           style={{ animationDelay: "300ms" }}
         >
-          {highlights.map((h) => (
+          {chips.map((c) => (
             <span
-              key={h.text}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-foreground/10 backdrop-blur-sm text-sm font-medium text-primary-foreground"
+              key={c}
+              className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-sm font-medium text-primary-foreground"
             >
-              <h.icon className="w-4 h-4 text-whatsapp" />
-              {h.text}
+              {c}
             </span>
           ))}
         </div>
@@ -72,22 +62,21 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-3 animate-reveal-up"
           style={{ animationDelay: "400ms" }}
         >
-          <div className="flex flex-col gap-1">
-            <WhatsAppButton message="Quero simular financiamento do Balok One">
-              Simular financiamento
-            </WhatsAppButton>
-            <span className="text-xs text-primary-foreground/60 pl-1">Leva 1 minuto</span>
-          </div>
-          <div className="flex flex-col gap-1">
-            <WhatsAppButton
-              message="Venho do site do Balok One e quero falar com um consultor"
-              variant="hero-outline"
-            >
-              Falar com consultor
-            </WhatsAppButton>
-            <span className="text-xs text-primary-foreground/60 pl-1">Resposta rápida</span>
-          </div>
+          <WhatsAppButton message="Quero falar com um especialista do Balok One">
+            Quero falar com especialista
+          </WhatsAppButton>
+          <WhatsAppButton
+            message="Quero simular o financiamento do Balok One"
+            variant="hero-outline"
+          >
+            Simular financiamento
+          </WhatsAppButton>
         </div>
+      </div>
+
+      <div className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-primary-foreground/70">
+        <span className="text-[10px] tracking-[0.3em] uppercase">Role para descobrir</span>
+        <ChevronDown className="w-4 h-4 animate-scroll-indicator" />
       </div>
     </section>
   );

@@ -1,40 +1,54 @@
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
-
-const numbers = [
-  { value: "R$ 1.000", label: "de entrada" },
-  { value: "60x", label: "para parcelar" },
-  { value: "R$ 229.000", label: "a partir de" },
-];
+import { Sparkles } from "lucide-react";
 
 export function FinancialSection() {
   return (
-    <section className="section-padding bg-secondary">
-      <div className="container max-w-5xl text-center">
+    <section className="section-padding bg-primary text-primary-foreground relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{
+        backgroundImage: "radial-gradient(circle at 20% 30%, white 0.5px, transparent 1px)",
+        backgroundSize: "32px 32px",
+      }} />
+
+      <div className="relative container max-w-6xl">
         <SectionReveal>
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-whatsapp mb-4">Condições</p>
-          <h2 className="font-display text-4xl md:text-6xl text-primary mb-14 text-balance leading-[1.05]">
-            Cabe no seu bolso
+          <div className="flex items-center gap-2 mb-6">
+            <Sparkles className="w-4 h-4 text-accent" />
+            <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-accent">
+              Condição Especial de Lançamento
+            </p>
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.02] mb-12 max-w-4xl">
+            Comece com pouco. Conquiste muito.
           </h2>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 mb-14">
-          {numbers.map((n, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mb-14">
+          {[
+            { value: "R$ 1.000", label: "de entrada" },
+            { value: "60x", label: "para pagar" },
+            { value: "Limitadas", label: "unidades disponíveis" },
+          ].map((n, i) => (
             <SectionReveal key={n.label} delay={i * 100}>
-              <div className="px-4">
-                <p className="font-display text-4xl md:text-5xl lg:text-6xl text-whatsapp tracking-tight leading-none mb-3">
+              <div className="border-l border-primary-foreground/20 pl-6">
+                <p className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground tracking-tight leading-none mb-3">
                   {n.value}
                 </p>
-                <p className="text-sm uppercase tracking-wider text-muted-foreground">{n.label}</p>
+                <p className="text-sm uppercase tracking-[0.18em] text-primary-foreground/60">{n.label}</p>
               </div>
             </SectionReveal>
           ))}
         </div>
 
-        <SectionReveal delay={350}>
-          <WhatsAppButton message="Quero simular financiamento do Balok One">
-            Simular financiamento
-          </WhatsAppButton>
+        <SectionReveal delay={400}>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+            <WhatsAppButton message="Quero saber se ainda dá tempo de garantir as condições de lançamento">
+              Quero saber se ainda dá tempo
+            </WhatsAppButton>
+            <p className="text-sm text-primary-foreground/55 max-w-xs">
+              Alta procura nas últimas semanas. Condição sujeita à disponibilidade.
+            </p>
+          </div>
         </SectionReveal>
       </div>
     </section>
