@@ -45,7 +45,7 @@ export function HeroSection() {
             <span className="text-whatsapp">com entrada de R$ 1.000?</span>
           </span>
           <span className="block text-2xl md:text-4xl lg:text-5xl font-light text-white mt-2 italic">
-            Sim, a gente fez
+            Sim, a gente fez acontecer!
           </span>
         </h1>
 
