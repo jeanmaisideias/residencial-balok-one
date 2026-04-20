@@ -74,7 +74,7 @@ export function Header() {
             <img
               src={scrolled ? logoCaixaColor : logoCaixaWhite}
               alt="Caixa"
-              className="h-7 w-auto transition"
+              className="h-[21px] w-auto transition"
             />
             <img
               src={scrolled ? logoMcmvColor : logoMcmvWhite}
