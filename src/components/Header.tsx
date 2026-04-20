@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoEvolutta from "@/assets/logo-evolutta.png";
-import logoCaixa from "@/assets/logo-caixa.png";
-import logoMcmv from "@/assets/logo-mcmv.png";
+import logoEvoluttaWhite from "@/assets/logo-evolutta.png";
+import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
+import logoCaixaWhite from "@/assets/logo-caixa.png";
+import logoCaixaColor from "@/assets/logo-caixa-color.png";
+import logoMcmvWhite from "@/assets/logo-mcmv.png";
+import logoMcmvColor from "@/assets/logo-mcmv-color.png";
 
 const WHATSAPP_NUMBER = "5511999077149";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Ballok One")}`;
@@ -47,12 +50,11 @@ export function Header() {
         {/* Logo */}
         <a href="#topo" className="flex items-center shrink-0">
           <img
-            src={logoEvolutta}
+            src={scrolled ? logoEvoluttaBlack : logoEvoluttaWhite}
             alt="Evolutta"
             className={cn(
               "w-auto transition-all duration-300",
-              scrolled ? "h-10 md:h-12" : "h-12 md:h-16",
-              scrolled ? "" : "brightness-0 invert"
+              scrolled ? "h-10 md:h-12" : "h-12 md:h-16"
             )}
           />
         </a>
@@ -68,19 +70,29 @@ export function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-2 pr-2 border-r border-border/40 mr-1">
-            <img src={logoCaixa} alt="Caixa" className={cn("h-7 w-auto transition", scrolled ? "" : "brightness-0 invert opacity-90")} />
-            <img src={logoMcmv} alt="Minha Casa Minha Vida" className={cn("h-7 w-auto transition", scrolled ? "" : "brightness-0 invert opacity-90")} />
+          <div className="hidden md:flex items-center gap-3 pr-3 border-r border-border/40 mr-1">
+            <img
+              src={scrolled ? logoCaixaColor : logoCaixaWhite}
+              alt="Caixa"
+              className="h-7 w-auto transition"
+            />
+            <img
+              src={scrolled ? logoMcmvColor : logoMcmvWhite}
+              alt="Minha Casa Minha Vida"
+              className="h-7 w-auto transition"
+            />
           </div>
 
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-whatsapp text-white px-5 py-2.5 text-sm font-semibold shadow-elevated hover:bg-whatsapp-hover hover:-translate-y-0.5 active:scale-95 transition-all"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-whatsapp text-white pl-5 pr-2 py-2 text-sm font-semibold shadow-elevated hover:bg-whatsapp-hover hover:-translate-y-0.5 active:scale-95 transition-all"
           >
-            <MessageCircle className="w-4 h-4" />
-            Falar no WhatsApp
+            Solicite informações
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
+              <ArrowRight className="w-4 h-4" />
+            </span>
           </a>
 
           <button
@@ -119,10 +131,12 @@ export function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp text-white px-5 py-3 text-sm font-semibold"
+            className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp text-white pl-5 pr-2 py-2 text-sm font-semibold"
           >
-            <MessageCircle className="w-4 h-4" />
-            Falar no WhatsApp
+            Solicite informações
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
+              <ArrowRight className="w-4 h-4" />
+            </span>
           </a>
         </nav>
       </div>
