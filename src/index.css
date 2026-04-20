@@ -92,7 +92,7 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Fraunces', 'Manrope', system-ui, serif;
+    font-family: 'Prometo', 'Manrope', system-ui, sans-serif;
     letter-spacing: -0.025em;
     font-weight: 700;
     text-wrap: balance;
@@ -154,7 +154,7 @@
   .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
 
   .font-display {
-    font-family: 'Fraunces', 'Manrope', system-ui, serif;
+    font-family: 'Prometo', 'Manrope', system-ui, sans-serif;
     font-weight: 800;
     letter-spacing: -0.03em;
   }
