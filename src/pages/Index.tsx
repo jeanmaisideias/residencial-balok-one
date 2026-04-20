@@ -13,7 +13,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
 
-import fachadaPremium from "@/assets/balok/fachada-premium.jpg";
+import fachadaPremium from "@/assets/balok/fachada-noturna.jpg";
 import salaCozinha from "@/assets/balok/sala-cozinha-01.jpg";
 import quadraBeach from "@/assets/balok/quadra-beach.jpg";
 import sacada from "@/assets/balok/sacada.jpg";
