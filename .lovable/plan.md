@@ -1,60 +1,58 @@
 
+## Reorganização da seção “Quem entrega o seu novo lar” em 3 colunas
 
-## Ajuste mínimo da seção "Plantas"
+Vou ajustar a seção para ficar exatamente com três blocos principais no desktop:
 
-Vou manter a estrutura atual da seção, sem reorganizar layout, e corrigir apenas os dados exibidos para cada unidade.
+```text
+┌──────────────────┬────────────────────────────┬──────────────────┐
+│  Coluna 1         │  Coluna 2                  │  Coluna 3         │
+│  Imagem da equipe │  Logo + título + textos    │  Cards numéricos  │
+│                  │  + botão WhatsApp          │                  │
+└──────────────────┴────────────────────────────┴──────────────────┘
+```
 
-### O que será ajustado
+### Estrutura proposta
 
-1. **Título geral da seção**
-   - Trocar o texto atual:
-     - “Plantas inteligentes para viver bem em 40 m²”
-   - Para algo mais correto:
-     - “Plantas inteligentes de 40 a 43 m² privativos”
+1. **Coluna esquerda: imagem**
+   - A imagem anexa da equipe ficará isolada na primeira coluna.
+   - Manterei o estilo atual com bordas arredondadas, sombra e proporção visual elegante.
+   - No desktop, a imagem ocupará bem a altura da seção para dar mais presença visual.
 
-2. **Dados individuais por planta**
-   Hoje todas as unidades usam a mesma lista de características. Vou separar as informações por unidade:
+2. **Coluna central: conteúdo institucional**
+   - Logo Evolutta preto no topo, mantendo o tamanho maior solicitado anteriormente.
+   - Eyebrow “Construtora Evolutta”.
+   - Título “Quem entrega o seu novo lar”.
+   - Textos explicativos da construtora.
+   - Botão WhatsApp abaixo dos textos.
+   - Essa coluna será o bloco principal de leitura.
 
-   **Planta 40 m²**
-   - Nome: Apartamento Padrão
-   - Área: 40 m²
-   - Itens:
-     - 2 dormitórios
-     - Sala e cozinha integradas
-     - Varanda com churrasqueira
-     - 1 vaga de garagem
-     - Área de serviço privativa
+3. **Coluna direita: cards de números**
+   - Manter os cards empilhados:
+     - “13+ anos de mercado”
+     - “100% obras entregues no prazo”
+     - “500+ famílias felizes”
+   - Os números permanecerão em verde, como solicitado.
+   - Os cards terão o mesmo estilo atual: fundo branco, bordas arredondadas, sombra e leve hover.
 
-   **Planta 43 m²**
-   - Nome: Apartamento Padrão
-   - Área: 43 m²
-   - Itens:
-     - 2 dormitórios
-     - Varanda ampliada
-     - Acabamentos modernos
-     - 1 vaga de garagem
-     - Área de serviço privativa
+### Responsividade
 
-   **Planta Garden**
-   - Nome: Apartamento Garden
-   - Área: 43 m²
-   - Manter o selo “Jardim privativo exclusivo”
-   - Itens:
-     - 2 dormitórios aconchegantes
-     - Ampla sala e cozinha integrada
-     - Varanda gourmet com churrasqueira
-     - 1 vaga de garagem exclusiva
-     - Área de serviço privativa
-     - Pátio e área verde particular
+- **Desktop:** 3 colunas lado a lado.
+- **Tablet/mobile:** empilhar em ordem lógica:
+  1. Logo/texto
+  2. Imagem
+  3. Cards
+- Isso mantém a leitura mais natural em telas pequenas e evita que os cards fiquem apertados.
 
-3. **Evitar emojis**
-   - Não usar o símbolo de brilho do anexo, para manter a regra visual do projeto: sem emojis em listas ou títulos.
+### Ajustes mínimos
 
-4. **Manter a estrutura**
-   - Não vou alterar o grid, carrossel, tabs, botão de WhatsApp ou espaçamentos principais.
-   - A mudança será concentrada no conteúdo/dados da seção `PlantsSection`.
+Vou mexer apenas no layout da seção `TrustSection`, mantendo:
+- O conteúdo atual dos textos.
+- A imagem já adicionada.
+- O logo preto.
+- O CTA de WhatsApp.
+- Os três cards existentes.
+- A identidade visual atual do site.
 
 ### Arquivo afetado
 
-- `src/components/PlantsSection.tsx`
-
+- `src/components/TrustSection.tsx`
