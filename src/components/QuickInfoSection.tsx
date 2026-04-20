@@ -14,6 +14,18 @@ export function QuickInfoSection() {
     <section className="section-padding-compact bg-stone border-y border-border/50">
       <div className="container max-w-6xl">
         <SectionReveal>
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <p className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase text-accent mb-4">
+              Sobre o empreendimento
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-extrabold text-primary tracking-tight text-balance mb-5">
+              Residencial Balok One
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground text-pretty leading-relaxed">
+              O Residencial Balok One foi pensado para quem quer dar um passo definitivo na vida. Um projeto moderno, acessível e com excelente localização para você viver melhor.
+            </p>
+          </div>
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {items.map((it) => (
               <div key={it.label} className="flex flex-col items-center text-center gap-3 p-4">
