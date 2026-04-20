@@ -87,12 +87,10 @@ export function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-whatsapp text-white pl-5 pr-2 py-2 text-sm font-semibold shadow-elevated hover:bg-whatsapp-hover hover:-translate-y-0.5 active:scale-95 transition-all"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-whatsapp text-white px-6 py-3 text-sm font-semibold shadow-elevated hover:bg-whatsapp-hover hover:-translate-y-0.5 active:scale-95 transition-all"
           >
             Solicite informações
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
-              <ArrowRight className="w-4 h-4" />
-            </span>
+            <ArrowRight className="w-4 h-4" />
           </a>
 
           <button
@@ -131,12 +129,10 @@ export function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp text-white pl-5 pr-2 py-2 text-sm font-semibold"
+            className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp text-white px-6 py-3 text-sm font-semibold"
           >
             Solicite informações
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
-              <ArrowRight className="w-4 h-4" />
-            </span>
+            <ArrowRight className="w-4 h-4" />
           </a>
         </nav>
       </div>
