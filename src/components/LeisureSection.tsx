@@ -32,8 +32,8 @@ export function LeisureSection() {
             <h2 className="font-display text-4xl md:text-6xl text-primary text-balance leading-[1.02]">
               Tudo que valoriza sua rotina
             </h2>
-            <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-lg">
-              Áreas pensadas para conviver, relaxar e treinar sem sair de casa.
+            <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl text-pretty">
+              Áreas pensadas para conviver, relaxar e treinar sem sair de casa
             </p>
           </div>
         </SectionReveal>
