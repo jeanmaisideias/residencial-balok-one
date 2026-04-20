@@ -31,7 +31,7 @@ const Index = () => {
 
         <FullscreenSection
           image={fachadaPremium}
-          title="Seu novo endereço começa aqui"
+          title="Venha viver no que é seu!"
           variant="band"
         />
 
