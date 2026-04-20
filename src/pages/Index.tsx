@@ -11,7 +11,7 @@ import { FinancialSection } from "@/components/FinancialSection";
 import { TrustSection } from "@/components/TrustSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
-import { FloatingWhatsApp } from "@/components/WhatsAppButton";
+
 
 import fachadaPremium from "@/assets/balok/fachada-premium.jpg";
 import salaCozinha from "@/assets/balok/sala-cozinha-01.jpg";
@@ -73,7 +73,6 @@ const Index = () => {
         <FinalCTA />
       </main>
       <Footer />
-      <FloatingWhatsApp />
     </>
   );
 };
