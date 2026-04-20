@@ -14,21 +14,18 @@ const plants = [
     src: planta40,
     area: "40 m²",
     garden: false,
-    summary: "Compacto e funcional",
   },
   {
     label: "43 m²",
     src: planta43,
     area: "43 m²",
     garden: false,
-    summary: "Ampliado, mais respiro",
   },
   {
     label: "Garden",
     src: plantaGarden,
     area: "43 m²",
     garden: true,
-    summary: "43 m² + jardim privativo",
   },
 ];
 
@@ -60,7 +57,6 @@ export function PlantsSection() {
   return (
     <section id="plantas" className="section-padding bg-secondary">
       <div className="container max-w-6xl">
-        {/* Cabeçalho centralizado */}
         <SectionReveal>
           <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <p className="eyebrow mb-4">Plantas</p>
@@ -73,7 +69,6 @@ export function PlantsSection() {
           </div>
         </SectionReveal>
 
-        {/* Tabs centralizadas */}
         <div className="-mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto scrollbar-hide mb-8 md:mb-10">
           <div className="flex gap-2 w-max md:w-auto md:justify-center mx-auto">
             {plants.map((p, i) => (
@@ -103,7 +98,6 @@ export function PlantsSection() {
           </div>
         </div>
 
-        {/* Conteúdo principal */}
         <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14 items-stretch">
           <SectionReveal>
             <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-premium h-full flex items-center">
@@ -164,49 +158,6 @@ export function PlantsSection() {
             </div>
           </SectionReveal>
         </div>
-
-        {/* Rodapé comparativo */}
-        <SectionReveal delay={200}>
-          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
-            {plants.map((p, i) => {
-              const isActive = active === i;
-              return (
-                <button
-                  key={p.label}
-                  onClick={() => goTo(i)}
-                  className={`text-left p-5 rounded-2xl border transition-all ${
-                    isActive
-                      ? "bg-primary text-primary-foreground border-primary shadow-elevated"
-                      : "bg-card border-border hover:border-primary/40"
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span
-                      className={`font-display text-2xl ${
-                        isActive ? "text-primary-foreground" : "text-primary"
-                      }`}
-                    >
-                      {p.label}
-                    </span>
-                    {p.garden && (
-                      <Sprout
-                        className={`w-4 h-4 ${isActive ? "text-primary-foreground" : "text-accent"}`}
-                        strokeWidth={2}
-                      />
-                    )}
-                  </div>
-                  <p
-                    className={`text-sm ${
-                      isActive ? "text-primary-foreground/80" : "text-muted-foreground"
-                    }`}
-                  >
-                    {p.summary}
-                  </p>
-                </button>
-              );
-            })}
-          </div>
-        </SectionReveal>
       </div>
     </section>
   );
