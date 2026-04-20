@@ -32,8 +32,8 @@ export function Header() {
   }, []);
 
   const linkClass = cn(
-    "relative text-[13px] font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all hover:after:w-full",
-    scrolled ? "text-foreground/80 hover:text-foreground" : "text-primary-foreground/85 hover:text-primary-foreground"
+    "relative text-[13px] font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:text-accent hover:after:w-full",
+    scrolled ? "text-foreground/80" : "text-primary-foreground/85"
   );
 
   return (
