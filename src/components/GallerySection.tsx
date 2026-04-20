@@ -44,10 +44,10 @@ export function GallerySection() {
           <div className="mb-10 md:mb-14 max-w-2xl">
             <p className="eyebrow mb-4">Galeria</p>
             <h2 className="font-display text-4xl md:text-6xl text-primary text-balance leading-[1.02]">
-              Seu novo lar
+              Você vai amar morar aqui
             </h2>
             <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-lg">
-              Ambientes pensados para o conforto e a beleza do dia a dia
+              Apartamentos que entregam conforto e bem-estar
             </p>
           </div>
         </SectionReveal>
