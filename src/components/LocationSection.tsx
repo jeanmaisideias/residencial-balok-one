@@ -30,8 +30,8 @@ export function LocationSection() {
           {proximities.map((p, i) => (
             <SectionReveal key={p.label} delay={i * 80}>
               <div className="flex flex-col items-start gap-3 p-4 md:p-5 rounded-2xl bg-card border border-border/50 shadow-soft hover:-translate-y-1 transition-transform h-full">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <p.icon className="w-6 h-6 md:w-7 md:h-7 text-accent" strokeWidth={1.5} />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 ring-1 ring-accent/30 flex items-center justify-center shadow-lg shadow-accent/20">
+                  <p.icon className="w-6 h-6 md:w-7 md:h-7 text-accent-foreground" strokeWidth={1.5} />
                 </div>
                 <p className="text-sm md:text-base font-semibold text-primary leading-snug">{p.label}</p>
               </div>
