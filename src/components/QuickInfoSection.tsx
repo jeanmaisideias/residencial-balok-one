@@ -22,7 +22,7 @@ export function QuickInfoSection() {
               Residencial Ballok One
             </h2>
             <p className="text-base md:text-lg text-muted-foreground text-pretty leading-relaxed">
-              O Residencial Ballok One foi pensado para quem quer dar um passo definitivo na vida. Um projeto moderno, acessível e com excelente localização para você viver melhor.
+              Um empreendimento concebido para oferecer a qualidade de vida que você e sua família merecem. Com espaços cuidadosamente planejados para proporcionar conforto no dia a dia, infraestrutura de lazer completa e uma localização privilegiada com fácil acesso a Indaial e Timbó. Um projeto verdadeiramente especial.
             </p>
           </div>
 
