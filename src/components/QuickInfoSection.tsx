@@ -1,12 +1,11 @@
-import { Building2, Bed, Ruler, Car, BadgeCheck } from "lucide-react";
+import { Building2, Bed, Ruler, Car } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 
 const items = [
   { icon: Building2, value: "120", label: "Apartamentos" },
-  { icon: Bed, value: "2", label: "Dormitórios" },
   { icon: Ruler, value: "40-43", label: "M²" },
+  { icon: Bed, value: "2", label: "Dormitórios" },
   { icon: Car, value: "1", label: "Vaga" },
-  { icon: BadgeCheck, value: "✓", label: "MCMV Caixa", special: true },
 ];
 
 export function QuickInfoSection() {
