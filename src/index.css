@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Michroma&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -70,7 +70,7 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'Michroma', 'Manrope', system-ui, sans-serif;
     letter-spacing: -0.025em;
     font-weight: 700;
     text-wrap: balance;
@@ -132,7 +132,7 @@
   .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
 
   .font-display {
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'Michroma', 'Manrope', system-ui, sans-serif;
     font-weight: 700;
     letter-spacing: -0.03em;
   }
