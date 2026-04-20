@@ -107,8 +107,8 @@ export function PlantsSection() {
             <ul className="space-y-3 mb-6">
               {baseFeatures.map((f) => (
                 <li key={f.text} className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                    <f.icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent/70 ring-1 ring-accent/30 flex items-center justify-center shadow-lg shadow-accent/20 shrink-0">
+                    <f.icon className="w-5 h-5 text-accent-foreground" strokeWidth={1.5} />
                   </div>
                   <span className="text-base text-primary font-medium">{f.text}</span>
                 </li>
