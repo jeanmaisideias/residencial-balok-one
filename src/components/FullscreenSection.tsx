@@ -2,7 +2,7 @@ import { SectionReveal } from "./SectionReveal";
 
 interface FullscreenSectionProps {
   image: string;
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   align?: "left" | "center";
   variant?: "full" | "band";
