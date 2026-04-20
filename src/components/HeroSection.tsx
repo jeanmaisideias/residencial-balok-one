@@ -1,4 +1,4 @@
-import heroImg from "@/assets/familia-feliz.jpg";
+import heroVideo from "@/assets/video-hero.mp4";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { ChevronDown } from "lucide-react";
 
@@ -13,12 +13,18 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[100svh] flex items-end overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="Família feliz no novo apartamento Balok One"
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-label="Vídeo do empreendimento Balok One"
           className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/55 to-primary/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/60 to-primary/95" />
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
       <div className="relative container pb-20 pt-40 md:pb-28 md:pt-48">
