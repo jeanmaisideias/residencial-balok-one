@@ -31,7 +31,7 @@ export function HeroSection() {
         <p
           className="inline-block px-3 py-1 mb-6 text-[11px] font-semibold tracking-[0.22em] uppercase rounded-full bg-white/10 backdrop-blur-md text-primary-foreground/90 border border-white/15 animate-reveal-up"
         >
-          Minha Casa Minha Vida · Indaial, SC
+          Venha ser feliz! Sua família merece!
         </p>
 
         <h1
