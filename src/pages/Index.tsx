@@ -41,7 +41,8 @@ const Index = () => {
 
         <FullscreenSection
           image={salaCozinha}
-          title={<>Um lar lindo<br />por dentro e por fora</>}
+          label="Os apartamentos"
+          title={<>Um lar lindo por<br />dentro e por fora</>}
           subtitle="Ambientes planejados para viver bem todos os dias"
           align="left"
         />
