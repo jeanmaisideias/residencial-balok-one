@@ -3,7 +3,6 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import piscina from "@/assets/balok/piscina.jpg";
 import beach from "@/assets/balok/quadra-beach.jpg";
 import fitness from "@/assets/balok/fitness.jpg";
-import salao from "@/assets/balok/salao.jpg";
 import salao2 from "@/assets/balok/salao-02.jpg";
 import pet from "@/assets/balok/pet.jpg";
 import bike from "@/assets/balok/bike.jpg";
@@ -14,12 +13,11 @@ const items = [
   { img: piscina, label: "Piscina", className: "md:col-span-2 md:row-span-2 aspect-[4/3] md:aspect-auto" },
   { img: beach, label: "Beach Tennis", className: "aspect-[4/3]" },
   { img: fitness, label: "Academia", className: "aspect-[4/3]" },
-  { img: salao, label: "Salão de Festas", className: "md:col-span-2 aspect-[16/9] md:aspect-[2/1]" },
+  { img: salao2, label: "Espaço Gourmet", className: "md:col-span-2 aspect-[16/9] md:aspect-[2/1]" },
   { img: pet, label: "Pet Place", className: "aspect-[4/3]" },
   { img: bike, label: "Bike Space", className: "aspect-[4/3]" },
   { img: firepit, label: "Fireplace", className: "aspect-[4/3]" },
   { img: playground, label: "Playground", className: "aspect-[4/3]" },
-  { img: salao2, label: "Espaço Gourmet", className: "aspect-[4/3]" },
 ];
 
 export function LeisureSection() {
