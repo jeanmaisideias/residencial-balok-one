@@ -41,8 +41,8 @@ export function BenefitsSection() {
           {diferenciais.map((b, i) => (
             <SectionReveal key={b.title} delay={i * 80}>
               <div className="group p-6 md:p-8 rounded-2xl bg-card border border-border/60 hover:border-accent/30 hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 h-full text-center flex flex-col items-center">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <b.icon className="w-6 h-6 text-accent" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 ring-1 ring-accent/30 flex items-center justify-center shadow-lg shadow-accent/20 mb-5 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-accent/30">
+                  <b.icon className="w-7 h-7 text-accent-foreground" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-base md:text-lg text-primary mb-2 leading-snug">
                   {b.title}
