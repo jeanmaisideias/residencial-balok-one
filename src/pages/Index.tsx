@@ -51,7 +51,7 @@ const Index = () => {
 
         <FullscreenSection
           image={quadraBeach}
-          title="Mais vida. Mais lazer. Mais orgulho."
+          title="Você merece mais vida, mais lazer e mais orgulho"
         />
 
         <LeisureSection />
