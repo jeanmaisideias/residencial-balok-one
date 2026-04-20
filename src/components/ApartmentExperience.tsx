@@ -51,7 +51,7 @@ export function ApartmentExperience() {
 
         <SectionReveal delay={100}>
           <div className="text-center mb-6">
-            <WhatsAppButton message="Venho do site do Balok One e quero ver mais detalhes do apartamento">
+            <WhatsAppButton message="Venho do site do Ballok One e quero ver mais detalhes do apartamento">
               Quero ver mais detalhes do apartamento
             </WhatsAppButton>
           </div>
@@ -100,7 +100,7 @@ export function ApartmentExperience() {
             Veja agora como pode ser o seu futuro apartamento
           </p>
           <div className="text-center">
-            <WhatsAppButton message="Venho do site do Balok One e quero receber fotos e plantas no WhatsApp">
+            <WhatsAppButton message="Venho do site do Ballok One e quero receber fotos e plantas no WhatsApp">
               Quero receber fotos e plantas no WhatsApp
             </WhatsAppButton>
           </div>

@@ -1,5 +1,5 @@
 
-## Polimento Final — Residencial Balok One
+## Polimento Final — Residencial Ballok One
 
 Mantém toda a direção premium atual. Foco em funcionalidade, mobile e conversão.
 

@@ -20,7 +20,7 @@ export function HeroSection() {
           muted
           playsInline
           preload="auto"
-          aria-label="Vídeo do empreendimento Balok One"
+          aria-label="Vídeo do empreendimento Ballok One"
           className="w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/60 to-primary/95" />
@@ -74,11 +74,11 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-3 animate-reveal-up"
           style={{ animationDelay: "400ms" }}
         >
-          <WhatsAppButton message="Quero falar com um especialista do Balok One">
+          <WhatsAppButton message="Quero falar com um especialista do Ballok One">
             Quero falar com especialista
           </WhatsAppButton>
           <WhatsAppButton
-            message="Quero simular o financiamento do Balok One"
+            message="Quero simular o financiamento do Ballok One"
             variant="hero-outline"
           >
             Simular financiamento

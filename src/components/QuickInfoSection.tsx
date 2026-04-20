@@ -19,10 +19,10 @@ export function QuickInfoSection() {
               Sobre o empreendimento
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-extrabold text-primary tracking-tight text-balance mb-5">
-              Residencial Balok One
+              Residencial Ballok One
             </h2>
             <p className="text-base md:text-lg text-muted-foreground text-pretty leading-relaxed">
-              O Residencial Balok One foi pensado para quem quer dar um passo definitivo na vida. Um projeto moderno, acessível e com excelente localização para você viver melhor.
+              O Residencial Ballok One foi pensado para quem quer dar um passo definitivo na vida. Um projeto moderno, acessível e com excelente localização para você viver melhor.
             </p>
           </div>
 
