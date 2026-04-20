@@ -13,7 +13,7 @@ export function EmotionalBlock() {
               <br />
               <span className="text-whatsapp">É o fim do aluguel.</span>
               <br />
-              É o começo da sua liberdade.
+              É o começo da sua independência.
             </h2>
             <WhatsAppButton message="Venho do site do Balok One e quero entender como comprar">
               Quero entender como comprar
