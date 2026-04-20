@@ -42,7 +42,7 @@ export function HeroSection() {
             Apartamento em condomínio fechado
           </span>
           <span className="block text-4xl md:text-6xl lg:text-7xl font-extrabold mt-1">
-            com entrada de <span className="text-accent">R$ 1.000</span>?
+            <span className="text-whatsapp">com entrada de R$ 1.000?</span>
           </span>
           <span className="block text-2xl md:text-4xl lg:text-5xl font-light text-white/80 mt-2 italic">
             Sim, a gente fez
