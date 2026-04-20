@@ -57,7 +57,7 @@ export function Header() {
             alt="Evolutta"
             className={cn(
               "w-auto transition-all duration-300",
-              scrolled ? "h-7 md:h-9" : "h-28 md:h-40"
+              scrolled ? "h-7 md:h-9" : "mt-4 h-28 md:mt-0 md:h-40"
             )}
           />
         </a>
