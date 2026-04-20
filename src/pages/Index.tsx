@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
+import { EmotionalBlock } from "@/components/EmotionalBlock";
 import { FullscreenSection } from "@/components/FullscreenSection";
 import { QuickInfoSection } from "@/components/QuickInfoSection";
 import { GallerySection } from "@/components/GallerySection";
@@ -25,6 +26,8 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+
+        <EmotionalBlock />
 
         <FullscreenSection
           image={fachadaPremium}
