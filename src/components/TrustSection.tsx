@@ -1,10 +1,12 @@
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
-import logoEvolutta from "@/assets/logo-evolutta.png";
+import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
+import evoluttaTeamProject from "@/assets/evolutta-team-project.jpg";
 
 const stats = [
   { value: "13+", label: "anos de mercado" },
   { value: "100%", label: "obras entregues no prazo" },
+  { value: "500+", label: "famílias felizes" },
 ];
 
 export function TrustSection() {
@@ -14,14 +16,22 @@ export function TrustSection() {
         <div className="grid lg:grid-cols-[1.5fr_1fr] gap-12 lg:gap-20 items-start">
           <SectionReveal>
             <img
-              src={logoEvolutta}
+              src={logoEvoluttaBlack}
               alt="Construtora Evolutta"
-              className="h-12 md:h-14 w-auto mb-8 mx-auto lg:mx-0"
+              className="h-24 md:h-32 w-auto mb-8 mx-auto lg:mx-0"
             />
             <p className="eyebrow mb-4 text-center lg:text-left">Construtora Evolutta</p>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-primary leading-[1.05] text-balance mb-8 text-center lg:text-left">
               Quem entrega o seu novo lar
             </h2>
+            <div className="mb-8 overflow-hidden rounded-2xl shadow-elevated border border-border/50">
+              <img
+                src={evoluttaTeamProject}
+                alt="Equipe da Evolutta analisando projeto residencial"
+                className="w-full aspect-[16/10] object-cover"
+                loading="lazy"
+              />
+            </div>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl">
               Somos uma construtora com <strong className="text-primary font-semibold">13 anos de atuação</strong> no
               mercado imobiliário, especializados em empreendimentos residenciais dentro do programa Minha Casa Minha Vida.
@@ -43,7 +53,7 @@ export function TrustSection() {
             <div className="grid grid-cols-1 gap-5 lg:sticky lg:top-28">
               {stats.map((s) => (
                 <div key={s.label} className="bg-card rounded-2xl p-8 md:p-10 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform">
-                  <p className="font-display text-6xl md:text-7xl text-primary tracking-tight leading-none mb-3">
+                  <p className="font-display text-6xl md:text-7xl text-accent tracking-tight leading-none mb-3">
                     {s.value}
                   </p>
                   <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">{s.label}</p>
