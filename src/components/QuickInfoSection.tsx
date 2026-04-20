@@ -1,12 +1,11 @@
-import { Building2, Bed, Ruler, Car, BadgeCheck } from "lucide-react";
+import { Building2, Bed, Ruler, Car } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 
 const items = [
   { icon: Building2, value: "120", label: "Apartamentos" },
-  { icon: Bed, value: "2", label: "Dormitórios" },
   { icon: Ruler, value: "40-43", label: "M²" },
+  { icon: Bed, value: "2", label: "Dormitórios" },
   { icon: Car, value: "1", label: "Vaga" },
-  { icon: BadgeCheck, value: "✓", label: "MCMV Caixa", special: true },
 ];
 
 export function QuickInfoSection() {
@@ -30,7 +29,7 @@ export function QuickInfoSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-10 md:gap-y-0 relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0 relative max-w-4xl mx-auto">
             {items.map((it, idx) => (
               <div
                 key={it.label}
@@ -38,15 +37,9 @@ export function QuickInfoSection() {
                   idx > 0 ? "md:before:content-[''] md:before:absolute md:before:left-0 md:before:top-1/2 md:before:-translate-y-1/2 md:before:h-16 md:before:w-px md:before:bg-border/60" : ""
                 }`}
               >
-                {it.special ? (
-                  <div className="w-16 h-16 rounded-full bg-background ring-2 ring-accent ring-offset-2 ring-offset-background flex items-center justify-center shadow-md transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg">
-                    <it.icon className="w-7 h-7 text-accent" strokeWidth={2.25} fill="hsl(var(--accent) / 0.1)" />
-                  </div>
-                ) : (
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 ring-1 ring-accent/30 flex items-center justify-center shadow-lg shadow-accent/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-accent/30">
-                    <it.icon className="w-7 h-7 text-accent-foreground" strokeWidth={1.5} />
-                  </div>
-                )}
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 ring-1 ring-accent/30 flex items-center justify-center shadow-lg shadow-accent/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-accent/30">
+                  <it.icon className="w-7 h-7 text-accent-foreground" strokeWidth={1.5} />
+                </div>
 
                 <div className="flex flex-col items-center gap-1.5">
                   <span className="font-display text-4xl md:text-5xl font-extrabold text-primary tracking-tight leading-none">
