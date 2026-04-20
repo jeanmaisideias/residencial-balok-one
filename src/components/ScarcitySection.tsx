@@ -11,7 +11,7 @@ export function ScarcitySection() {
           <h2 className="text-xl md:text-2xl font-extrabold mb-3 text-balance">
             Poucas unidades disponíveis nesta condição
           </h2>
-          <WhatsAppButton message="Venho do site do Balok One e quero ver disponibilidade">
+          <WhatsAppButton message="Venho do site do Ballok One e quero ver disponibilidade">
             Ver disponibilidade
           </WhatsAppButton>
         </SectionReveal>

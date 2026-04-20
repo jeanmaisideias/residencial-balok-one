@@ -6,7 +6,7 @@ import logoCaixa from "@/assets/logo-caixa.png";
 import logoMcmv from "@/assets/logo-mcmv.png";
 
 const WHATSAPP_NUMBER = "5511999077149";
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Balok One")}`;
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Ballok One")}`;
 
 const navItems = [
   { label: "Início", href: "#topo" },

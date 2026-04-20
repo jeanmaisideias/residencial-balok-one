@@ -121,7 +121,7 @@ export function PlantsSection() {
               )}
             </ul>
 
-            <WhatsAppButton message={`Quero receber as plantas do Balok One (Planta ${current.label})`}>
+            <WhatsAppButton message={`Quero receber as plantas do Ballok One (Planta ${current.label})`}>
               Receber plantas no WhatsApp
             </WhatsAppButton>
           </SectionReveal>

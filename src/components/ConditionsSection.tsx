@@ -26,7 +26,7 @@ export function ConditionsSection() {
                 <p className="text-3xl md:text-4xl font-extrabold">60x</p>
               </div>
             </div>
-            <WhatsAppButton message="Venho do site do Balok One e quero simular minha parcela">
+            <WhatsAppButton message="Venho do site do Ballok One e quero simular minha parcela">
               Simular minha parcela
             </WhatsAppButton>
           </div>

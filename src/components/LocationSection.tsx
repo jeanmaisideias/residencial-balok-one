@@ -49,7 +49,7 @@ export function LocationSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Residencial Balok One"
+              title="Localização Residencial Ballok One"
             />
             <div className="pointer-events-none absolute inset-0 bg-primary/5" />
           </div>
@@ -70,7 +70,7 @@ export function LocationSection() {
                 Visite nosso stand e conheça pessoalmente o empreendimento
               </p>
             </div>
-            <WhatsAppButton message="Quero agendar uma visita ao plantão do Balok One">
+            <WhatsAppButton message="Quero agendar uma visita ao plantão do Ballok One">
               Agendar visita
             </WhatsAppButton>
           </div>
