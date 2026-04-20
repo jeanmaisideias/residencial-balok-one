@@ -90,10 +90,10 @@ export function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-whatsapp text-white px-6 py-3 text-sm font-semibold shadow-elevated hover:bg-whatsapp-hover hover:-translate-y-0.5 active:scale-95 transition-all"
+            className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-whatsapp text-white px-4 py-2 text-xs font-semibold shadow-elevated hover:bg-whatsapp-hover hover:-translate-y-0.5 active:scale-95 transition-all"
           >
             Solicite informações
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
 
           <button
