@@ -48,7 +48,7 @@ export function Header() {
     >
       <div className={cn(
         "container flex items-center justify-between transition-all duration-300",
-        scrolled ? "h-20 lg:h-24" : "h-28 md:h-36"
+        scrolled ? "h-14 lg:h-16" : "h-20 md:h-24"
       )}>
         {/* Logo */}
         <a href="#topo" className="flex items-center shrink-0">
@@ -57,7 +57,7 @@ export function Header() {
             alt="Evolutta"
             className={cn(
               "w-auto transition-all duration-300",
-              scrolled ? "h-10 md:h-12" : "h-20 md:h-28"
+              scrolled ? "h-7 md:h-9" : "h-14 md:h-20"
             )}
           />
         </a>
