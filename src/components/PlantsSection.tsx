@@ -11,29 +11,47 @@ import plantaGarden from "@/assets/balok/planta-garden.png";
 const plants = [
   {
     label: "40 m²",
+    name: "Apartamento Padrão",
     src: planta40,
     area: "40 m²",
     garden: false,
+    features: [
+      "2 dormitórios",
+      "Sala e cozinha integradas",
+      "Varanda com churrasqueira",
+      "1 vaga de garagem",
+      "Área de serviço privativa",
+    ],
   },
   {
     label: "43 m²",
+    name: "Apartamento Padrão",
     src: planta43,
     area: "43 m²",
     garden: false,
+    features: [
+      "2 dormitórios",
+      "Varanda ampliada",
+      "Acabamentos modernos",
+      "1 vaga de garagem",
+      "Área de serviço privativa",
+    ],
   },
   {
     label: "Garden",
+    name: "Apartamento Garden",
     src: plantaGarden,
     area: "43 m²",
     garden: true,
+    features: [
+      "2 dormitórios aconchegantes",
+      "Ampla sala e cozinha integrada",
+      "Varanda gourmet com churrasqueira",
+      "1 vaga de garagem exclusiva",
+      "Área de serviço privativa",
+      "Pátio e área verde particular",
+    ],
   },
-];
-
-const features = [
-  "2 dormitórios",
-  "Sala e cozinha integradas",
-  "Varanda com churrasqueira",
-  "1 vaga de garagem",
 ];
 
 export function PlantsSection() {
@@ -61,10 +79,10 @@ export function PlantsSection() {
           <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <p className="eyebrow mb-4">Plantas</p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary text-balance leading-[1.05]">
-              Plantas inteligentes para viver bem em 40 m²
+              Plantas inteligentes de 40 a 43 m² privativos
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mt-4">
-              Dois dormitórios, sala integrada e varanda gourmet em todas as opções.
+              Opções padrão e Garden com dois dormitórios e ambientes bem aproveitados.
             </p>
           </div>
         </SectionReveal>
@@ -129,7 +147,7 @@ export function PlantsSection() {
               )}
 
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground mb-3">
-                Planta {current.label}
+                {current.name}
               </p>
               <p className="font-display text-5xl md:text-6xl text-primary leading-none">
                 {current.area}
@@ -137,7 +155,7 @@ export function PlantsSection() {
               <p className="text-base text-muted-foreground mt-2 mb-8">de área privativa</p>
 
               <ul className="space-y-3 mb-8">
-                {features.map((f) => (
+                {current.features.map((f) => (
                   <li key={f} className="flex items-center gap-3">
                     <span className="w-6 h-6 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
                       <Check className="w-3.5 h-3.5 text-accent" strokeWidth={3} />
