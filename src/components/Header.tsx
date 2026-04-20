@@ -48,7 +48,7 @@ export function Header() {
     >
       <div className={cn(
         "container flex items-center justify-between transition-all duration-300",
-        scrolled ? "h-14 lg:h-16" : "h-20 md:h-24"
+        scrolled ? "h-14 lg:h-16" : "h-32 md:h-40 lg:h-32"
       )}>
         {/* Logo */}
         <a href="#topo" className="flex items-center shrink-0">
