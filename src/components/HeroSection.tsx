@@ -44,13 +44,13 @@ export function HeroSection() {
           <span className="block text-4xl md:text-6xl lg:text-7xl font-extrabold mt-1">
             <span className="text-whatsapp">com entrada de R$ 1.000?</span>
           </span>
-          <span className="block text-2xl md:text-4xl lg:text-5xl font-light text-white/80 mt-2 italic">
+          <span className="block text-2xl md:text-4xl lg:text-5xl font-light text-white mt-2 italic">
             Sim, a gente fez
           </span>
         </h1>
 
         <p
-          className="text-base md:text-xl text-primary-foreground/85 max-w-xl text-pretty mb-10 animate-reveal-up"
+          className="text-base md:text-xl text-white max-w-xl text-pretty mb-10 animate-reveal-up"
           style={{ animationDelay: "200ms" }}
         >
           Em Indaial, com parcelas acessíveis, lazer completo e condições especiais de lançamento
