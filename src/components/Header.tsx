@@ -24,8 +24,9 @@ const navItems = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const compact = scrolled || open;
-  const showHorizontalLogo = open;
+  const isCompact = scrolled || open;
+  const showVerticalWhite = !isCompact;
+  const showHorizontalBlack = isCompact;
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
@@ -36,7 +37,7 @@ export function Header() {
 
   const linkClass = cn(
     "relative text-[13px] font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:text-accent hover:after:w-full",
-    compact ? "text-foreground/80" : "text-primary-foreground/85"
+    isCompact ? "text-foreground/80" : "text-primary-foreground/85"
   );
 
   return (
@@ -44,32 +45,31 @@ export function Header() {
       id="topo"
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        compact
+        isCompact
           ? "bg-background/85 backdrop-blur-xl border-b border-border/60 shadow-soft"
           : "bg-transparent"
       )}
     >
       <div className={cn(
         "container flex items-center justify-between transition-all duration-300",
-         compact ? "h-16 lg:h-16" : "h-28 md:h-32 lg:h-36"
+         isCompact ? "h-16 lg:h-16" : "h-28 md:h-32 lg:h-36"
       )}>
         {/* Logo */}
-        <a href="#topo" className="relative flex items-center shrink-0 w-[190px] md:w-[230px] lg:w-[250px] h-12 md:h-14">
+        <a href="#topo" className="relative flex items-center shrink-0 w-[190px] md:w-[230px] lg:w-[250px] h-28 md:h-32 lg:h-36 overflow-visible">
           <img
             src={logoEvoluttaHorizontalBlack}
             alt="Evolutta"
             className={cn(
-              "absolute left-0 w-[180px] md:w-[220px] lg:w-[240px] h-auto object-contain transition-opacity duration-500 ease-out",
-              showHorizontalLogo ? "opacity-100" : "opacity-0"
+              "absolute left-0 top-1/2 w-[180px] md:w-[220px] lg:w-[240px] h-auto -translate-y-1/2 object-contain transition-[opacity,transform] duration-700 ease-out",
+              showHorizontalBlack ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             )}
           />
           <img
-            src={scrolled ? logoEvoluttaBlack : logoEvoluttaWhite}
+            src={logoEvoluttaWhite}
             alt="Evolutta"
             className={cn(
-              "absolute left-0 w-auto object-contain transition-[height,opacity] duration-500 ease-out",
-              compact ? "h-9 md:h-10" : "h-24 md:h-28 lg:h-28",
-              showHorizontalLogo ? "opacity-0" : "opacity-100"
+              "absolute left-0 top-1/2 h-24 md:h-28 lg:h-28 w-auto -translate-y-1/2 object-contain transition-[opacity,transform] duration-700 ease-out",
+              showVerticalWhite ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             )}
           />
         </a>
@@ -87,12 +87,12 @@ export function Header() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-3 pr-3 border-r border-border/40 mr-1">
             <span className="relative block h-[21px] w-[74px]">
-              <img src={logoCaixaWhite} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", compact ? "opacity-0" : "opacity-100")} />
-              <img src={logoCaixaColor} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", compact ? "opacity-100" : "opacity-0")} />
+              <img src={logoCaixaWhite} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", isCompact ? "opacity-0" : "opacity-100")} />
+              <img src={logoCaixaColor} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", isCompact ? "opacity-100" : "opacity-0")} />
             </span>
             <span className="relative block h-7 w-[92px]">
-              <img src={logoMcmvWhite} alt="Minha Casa Minha Vida" className={cn("absolute inset-0 h-7 w-auto transition-opacity duration-700 ease-out", compact ? "opacity-0" : "opacity-100")} />
-              <img src={logoMcmvColor} alt="Minha Casa Minha Vida" className={cn("absolute inset-0 h-7 w-auto transition-opacity duration-700 ease-out", compact ? "opacity-100" : "opacity-0")} />
+              <img src={logoMcmvWhite} alt="Minha Casa Minha Vida" className={cn("absolute inset-0 h-7 w-auto transition-opacity duration-700 ease-out", isCompact ? "opacity-0" : "opacity-100")} />
+              <img src={logoMcmvColor} alt="Minha Casa Minha Vida" className={cn("absolute inset-0 h-7 w-auto transition-opacity duration-700 ease-out", isCompact ? "opacity-100" : "opacity-0")} />
             </span>
           </div>
 
@@ -112,7 +112,7 @@ export function Header() {
             onClick={() => setOpen((v) => !v)}
             className={cn(
               "lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full transition-colors",
-              compact ? "text-foreground hover:bg-secondary" : "text-primary-foreground hover:bg-primary-foreground/10"
+              isCompact ? "text-foreground hover:bg-secondary" : "text-primary-foreground hover:bg-primary-foreground/10"
             )}
           >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
