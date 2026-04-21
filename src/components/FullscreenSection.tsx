@@ -18,7 +18,7 @@ export function FullscreenSection({ image, title, subtitle, label, align = "cent
   return (
     <section className={`relative ${heightClass} w-full overflow-hidden`}>
       <div
-        className={`absolute inset-0 bg-cover bg-center scale-105 ${parallax ? "md:bg-fixed" : ""}`}
+        className={`absolute inset-0 bg-cover bg-center ${parallax ? "md:bg-fixed" : "scale-105"}`}
         style={{ backgroundImage: `url(${image})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary/75" />
