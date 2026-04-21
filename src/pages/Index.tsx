@@ -19,6 +19,7 @@ import salaCozinha from "@/assets/balok/sala-cozinha-01.jpg";
 import quadraBeach from "@/assets/balok/quadra-beach.jpg";
 import sacada from "@/assets/balok/sacada.jpg";
 import indaialCity from "@/assets/acesso-video-obra.jpg";
+import homeownersKeys from "@/assets/close-up-homeowners-with-new-house-keys-2.jpg";
 
 const Index = () => {
   return (
@@ -57,6 +58,13 @@ const Index = () => {
         <LeisureSection />
 
         <PlantsSection />
+
+        <FullscreenSection
+          image={homeownersKeys}
+          title="O melhor apartamento MCMV de Santa Catarina!"
+          variant="band"
+          parallax
+        />
 
         <FinancialSection />
 
