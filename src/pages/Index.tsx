@@ -18,7 +18,7 @@ import fachadaPremium from "@/assets/balok/fachada-noturna.jpg";
 import salaCozinha from "@/assets/balok/sala-cozinha-01.jpg";
 import quadraBeach from "@/assets/balok/quadra-beach.jpg";
 import sacada from "@/assets/balok/sacada.jpg";
-import indaialCity from "@/assets/acesso-video-obra.jpg";
+import predioBallockOne from "@/assets/predio_ballok_one_2.png";
 import homeownersKeys from "@/assets/close-up-homeowners-with-new-house-keys-2.jpg";
 
 const Index = () => {
@@ -72,8 +72,8 @@ const Index = () => {
         <LocationSection />
 
         <FullscreenSection
-          image={indaialCity}
-          title="No coração de uma cidade que cresce."
+          image={predioBallockOne}
+          title="Um lugar perfeito para criar memórias especiais"
         />
 
         <TrustSection />
