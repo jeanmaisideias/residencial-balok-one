@@ -136,7 +136,7 @@ export function PlantsSection() {
           </SectionReveal>
 
           <SectionReveal delay={120}>
-            <div className="h-full flex flex-col min-h-[460px] lg:min-h-[560px]">
+            <div className="h-full flex flex-col lg:min-h-[560px]">
               <div className="min-h-[44px] mb-5">
                 {current.garden && (
                   <div className="inline-flex items-center gap-2 self-start px-4 py-2 rounded-full bg-accent/10 border border-accent/30">
