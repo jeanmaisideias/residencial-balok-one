@@ -69,13 +69,13 @@ export function TrustSection() {
 
           <SectionReveal delay={100} className="lg:col-span-7">
             <div className="flex flex-col h-full">
-              <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mb-8">
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 mb-8">
                 <img
                   src={logoEvoluttaBlack}
                   alt="Construtora Evolutta"
-                  className="h-[90px] md:h-[120px] w-auto shrink-0"
+                  className="h-16 md:h-[120px] w-auto shrink-0 self-start"
                 />
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-primary leading-[1.05] text-balance">
+                <h2 className="font-display text-2xl md:text-4xl lg:text-5xl text-primary leading-[1.05] text-balance">
                   Tradição em entregar lares
                 </h2>
               </div>
@@ -95,16 +95,16 @@ export function TrustSection() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 md:gap-5 mt-auto">
+              <div className="grid grid-cols-3 gap-2 md:gap-5 mt-auto">
                 {stats.map((s) => (
                   <div
                     key={s.label}
-                    className="bg-card rounded-xl p-5 md:p-6 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform text-center"
+                    className="bg-card rounded-xl p-3 md:p-6 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform text-center"
                   >
-                    <p className="font-display text-4xl md:text-5xl text-accent tracking-tight leading-none mb-2">
+                    <p className="font-display text-2xl md:text-5xl text-accent tracking-tight leading-none mb-2 break-words">
                       <CountUp target={s.target} suffix={s.suffix} />
                     </p>
-                    <p className="text-[10px] md:text-xs uppercase tracking-[0.14em] text-muted-foreground leading-tight">
+                    <p className="text-[9px] md:text-xs uppercase tracking-[0.12em] text-muted-foreground leading-tight">
                       {s.label}
                     </p>
                   </div>
