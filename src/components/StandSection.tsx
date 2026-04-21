@@ -17,7 +17,7 @@ export function StandSection() {
             Rua Três Corações – Jardim Benedito
           </p>
           <p className="text-sm text-muted-foreground mb-6">
-            Indaial – SC
+            Indaial/SC
           </p>
           <p className="text-base text-primary font-medium mb-6">
             Visite e conheça o empreendimento pessoalmente
