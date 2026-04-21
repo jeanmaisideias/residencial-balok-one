@@ -25,11 +25,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const compact = scrolled || open;
-  const evoluttaLogo = open
-    ? logoEvoluttaHorizontalBlack
-    : scrolled
-      ? logoEvoluttaBlack
-      : logoEvoluttaWhite;
+  const showHorizontalLogo = !scrolled || open;
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
@@ -58,13 +54,21 @@ export function Header() {
          compact ? "h-16 lg:h-16" : "h-28 md:h-32 lg:h-36"
       )}>
         {/* Logo */}
-        <a href="#topo" className="flex items-center shrink-0 w-[174px] md:w-[210px] lg:w-[230px]">
+        <a href="#topo" className="relative flex items-center shrink-0 w-[190px] md:w-[230px] lg:w-[250px] h-12 md:h-14">
           <img
-            src={evoluttaLogo}
+            src={logoEvoluttaHorizontalBlack}
             alt="Evolutta"
             className={cn(
-              "w-auto max-w-full object-contain transition-[height,margin,opacity] duration-500 ease-out",
-              compact ? "h-9 md:h-10" : "mt-3 h-24 md:mt-2 md:h-28 lg:h-28"
+              "absolute left-0 w-[180px] md:w-[220px] lg:w-[240px] h-auto object-contain transition-opacity duration-700 ease-out",
+              showHorizontalLogo ? "opacity-100" : "opacity-0"
+            )}
+          />
+          <img
+            src={scrolled ? logoEvoluttaBlack : logoEvoluttaWhite}
+            alt="Evolutta"
+            className={cn(
+              "absolute left-0 h-9 md:h-10 w-auto object-contain transition-opacity duration-700 ease-out",
+              showHorizontalLogo ? "opacity-0" : "opacity-100"
             )}
           />
         </a>
@@ -81,16 +85,14 @@ export function Header() {
         {/* Right side */}
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-3 pr-3 border-r border-border/40 mr-1">
-            <img
-              src={compact ? logoCaixaColor : logoCaixaWhite}
-              alt="Caixa"
-              className="h-[21px] w-auto transition-opacity duration-500 ease-out"
-            />
-            <img
-              src={compact ? logoMcmvColor : logoMcmvWhite}
-              alt="Minha Casa Minha Vida"
-              className="h-7 w-auto transition-opacity duration-500 ease-out"
-            />
+            <span className="relative block h-[21px] w-[74px]">
+              <img src={logoCaixaWhite} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", compact ? "opacity-0" : "opacity-100")} />
+              <img src={logoCaixaColor} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", compact ? "opacity-100" : "opacity-0")} />
+            </span>
+            <span className="relative block h-7 w-[92px]">
+              <img src={logoMcmvWhite} alt="Minha Casa Minha Vida" className={cn("absolute inset-0 h-7 w-auto transition-opacity duration-700 ease-out", compact ? "opacity-0" : "opacity-100")} />
+              <img src={logoMcmvColor} alt="Minha Casa Minha Vida" className={cn("absolute inset-0 h-7 w-auto transition-opacity duration-700 ease-out", compact ? "opacity-100" : "opacity-0")} />
+            </span>
           </div>
 
           <a
