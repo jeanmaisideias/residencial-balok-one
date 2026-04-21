@@ -85,19 +85,19 @@ export function LocationSection() {
 
         {/* Plantão de Vendas */}
         <SectionReveal delay={300}>
-          <div className="relative rounded-2xl bg-primary text-primary-foreground p-7 md:p-10 md:pr-64 shadow-premium flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mt-24 md:mt-32 overflow-visible">
+          <div className="relative rounded-2xl bg-primary text-primary-foreground p-7 md:p-8 md:pr-72 shadow-premium flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mt-24 md:mt-32 overflow-visible">
             <img
               src={corretoraImg}
               alt="Corretora do plantão de vendas"
-              className="hidden md:block absolute right-6 lg:right-10 bottom-0 h-[120%] max-h-[360px] w-auto object-contain object-bottom pointer-events-none select-none"
+              className="hidden md:block absolute right-4 lg:right-8 bottom-0 h-[150%] max-h-[300px] w-auto object-contain object-bottom pointer-events-none select-none"
             />
             <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-accent/20 flex items-center justify-center shrink-0">
               <MapPin className="w-7 h-7 md:w-8 md:h-8 text-accent" strokeWidth={1.5} />
             </div>
             <div className="flex-1">
-              <p className="eyebrow text-accent mb-2">Plantão de Vendas no Local</p>
+              <p className="eyebrow text-accent mb-2">Venha visitar e encante-se</p>
               <p className="font-display text-2xl md:text-3xl mb-2 leading-tight">
-                Rua Três Corações — Jardim Benedito · Indaial – SC
+                Plantão de Vendas no Local
               </p>
               <p className="text-primary-foreground/75 text-sm md:text-base">
                 Visite nosso stand e conheça pessoalmente o empreendimento
