@@ -1,5 +1,4 @@
 import { SectionReveal } from "./SectionReveal";
-import { WhatsAppButton } from "./WhatsAppButton";
 import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
 import evoluttaTeamProject from "@/assets/evolutta-team-project.jpg";
 
@@ -43,13 +42,10 @@ export function TrustSection() {
               Ao longo desta trajetória, entregamos centenas de unidades com pontualidade e padrão de acabamento
               reconhecido pelos nossos clientes.
             </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
               Nosso compromisso vai além da entrega das chaves: acompanhamos cada família desde a assinatura do contrato
               até a mudança, garantindo total transparência, suporte técnico e atendimento personalizado em todas as etapas.
             </p>
-            <WhatsAppButton message="Venho do site do Ballock One e quero falar com um especialista">
-              Falar com especialista
-            </WhatsAppButton>
           </SectionReveal>
 
           <SectionReveal delay={150} className="order-3">
