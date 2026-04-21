@@ -12,14 +12,26 @@ export function FinancialSection() {
 
       <div className="relative container max-w-6xl">
         <SectionReveal>
-          <div className="flex items-center gap-2 mb-6">
-            <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-accent">
-              Condição Especial de Lançamento
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 items-center mb-12">
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-accent">
+                  Condição Especial de Lançamento
+                </p>
+              </div>
+              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.02] max-w-4xl">
+                Comece com pouco. Conquiste muito!
+              </h2>
+            </div>
+            <div className="hidden md:block rounded-2xl overflow-hidden shadow-elevated w-[260px] lg:w-[320px] h-[180px] lg:h-[220px]">
+              <img
+                src={salaCozinhaImg}
+                alt="Sala e cozinha integradas do apartamento"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
-          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.02] mb-12 max-w-4xl">
-            Comece com pouco. Conquiste muito!
-          </h2>
         </SectionReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mb-14">
@@ -30,16 +42,6 @@ export function FinancialSection() {
           ].map((n, i) => (
             <SectionReveal key={n.label} delay={i * 100}>
               <div className="border-l border-primary-foreground/20 pl-6 h-full flex flex-col">
-                {i === 2 && (
-                  <div className="mb-5 rounded-2xl overflow-hidden shadow-elevated">
-                    <img
-                      src={salaCozinhaImg}
-                      alt="Sala e cozinha integradas do apartamento"
-                      className="w-full h-40 md:h-44 object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                )}
                 <p className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground tracking-tight leading-none mb-3">
                   {n.value}
                 </p>
