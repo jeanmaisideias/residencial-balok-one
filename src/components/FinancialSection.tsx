@@ -1,6 +1,5 @@
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
-import { Sparkles } from "lucide-react";
 
 export function FinancialSection() {
   return (
@@ -13,7 +12,6 @@ export function FinancialSection() {
       <div className="relative container max-w-6xl">
         <SectionReveal>
           <div className="flex items-center gap-2 mb-6">
-            <Sparkles className="w-4 h-4 text-accent" />
             <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-accent">
               Condição Especial de Lançamento
             </p>
