@@ -8,9 +8,10 @@ interface FullscreenSectionProps {
   align?: "left" | "center";
   variant?: "full" | "band";
   parallax?: boolean;
+  imagePosition?: string;
 }
 
-export function FullscreenSection({ image, title, subtitle, label, align = "center", variant = "full", parallax = false }: FullscreenSectionProps) {
+export function FullscreenSection({ image, title, subtitle, label, align = "center", variant = "full", parallax = false, imagePosition = "center" }: FullscreenSectionProps) {
   const heightClass = variant === "band"
     ? "h-[42vh] min-h-[320px] md:h-[70vh] md:min-h-[520px]"
     : "h-[80vh] min-h-[520px]";
@@ -19,7 +20,7 @@ export function FullscreenSection({ image, title, subtitle, label, align = "cent
     <section className={`relative ${heightClass} w-full overflow-hidden`}>
       <div
         className={`absolute inset-0 bg-cover bg-center ${parallax ? "md:bg-fixed" : "scale-105"}`}
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${image})`, backgroundPosition: imagePosition }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary/75" />
       <div className={`relative h-full container flex flex-col justify-end pb-12 md:pb-24 ${align === "center" ? "items-center text-center" : "items-start"}`}>
