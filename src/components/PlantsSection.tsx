@@ -116,17 +116,17 @@ export function PlantsSection() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14 items-stretch">
+        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14 items-stretch min-h-[560px]">
           <SectionReveal>
-            <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-premium h-full flex items-center">
+            <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-premium h-full flex items-center min-h-[460px] lg:min-h-[560px]">
               <div ref={emblaRef} className="overflow-hidden w-full">
                 <div className="flex">
                   {plants.map((p) => (
-                    <div key={p.label} className="shrink-0 grow-0 basis-full p-3 md:p-6">
+                    <div key={p.label} className="shrink-0 grow-0 basis-full p-3 md:p-6 flex items-center justify-center h-[440px] lg:h-[540px]">
                       <img
                         src={p.src}
                         alt={`Planta ${p.label}`}
-                        className="w-full h-auto object-contain max-h-[520px] mx-auto"
+                        className="w-full h-full object-contain mx-auto"
                       />
                     </div>
                   ))}
@@ -136,15 +136,17 @@ export function PlantsSection() {
           </SectionReveal>
 
           <SectionReveal delay={120}>
-            <div className="h-full flex flex-col">
-              {current.garden && (
-                <div className="inline-flex items-center gap-2 self-start mb-5 px-4 py-2 rounded-full bg-accent/10 border border-accent/30">
-                  <Sprout className="w-4 h-4 text-accent" strokeWidth={2} />
-                  <span className="text-xs font-bold uppercase tracking-wider text-accent">
-                    Jardim privativo exclusivo
-                  </span>
-                </div>
-              )}
+            <div className="h-full flex flex-col min-h-[460px] lg:min-h-[560px]">
+              <div className="min-h-[44px] mb-5">
+                {current.garden && (
+                  <div className="inline-flex items-center gap-2 self-start px-4 py-2 rounded-full bg-accent/10 border border-accent/30">
+                    <Sprout className="w-4 h-4 text-accent" strokeWidth={2} />
+                    <span className="text-xs font-bold uppercase tracking-wider text-accent">
+                      Jardim privativo exclusivo
+                    </span>
+                  </div>
+                )}
+              </div>
 
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground mb-3">
                 {current.name}
