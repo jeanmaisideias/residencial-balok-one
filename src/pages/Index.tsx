@@ -84,6 +84,7 @@ const Index = () => {
         <FullscreenSection
           image={familyNewHome}
           title="Toda família merece viver a emoção de abrir a porta do próprio lar"
+          parallax
         />
 
         <FinalCTA />
