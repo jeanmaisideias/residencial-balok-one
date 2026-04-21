@@ -1,48 +1,34 @@
 
+## Atualizar card do Plantão de Vendas com imagem da corretora
 
-## Ajustes na seção "Quem Somos" — confirmação do layout
+Vamos redesenhar o card do plantão de vendas na seção **Localização** para incluir a imagem da corretora à direita, conforme o print 2.
 
-Confirmando o layout proposto conforme o mockup enviado:
+### Mudanças
 
-### Estrutura final (desktop)
+**1. Adicionar asset da corretora**
+- Copiar `user-uploads://retrato-de-agente-imobiliario-feminino-olhando-para-a-camera-enquanto-casal-feliz-em-pe-no-fundo.png` para `src/assets/corretora-plantao.png`.
+
+**2. Atualizar `src/components/LocationSection.tsx`**
+- Importar a nova imagem da corretora.
+- Reestruturar o card "Plantão de Vendas no Local":
+  - Manter o fundo escuro (primary), bordas arredondadas e o ícone do MapPin verde à esquerda.
+  - Manter os textos: eyebrow "Plantão de Vendas no Local", título "Rua Três Corações — Jardim Benedito · Indaial – SC", subtítulo "Visite nosso stand e conheça pessoalmente o empreendimento" e o botão "Agendar visita".
+  - Adicionar a imagem da corretora posicionada absolutamente na lateral direita do card, alinhada à base, transbordando ligeiramente para cima do card (efeito do print 2).
+  - Container do card com `relative` + `overflow-visible` para permitir o transbordo.
+  - No mobile (abaixo de `md`): ocultar a imagem da corretora (`hidden md:block`) para preservar legibilidade.
+  - Adicionar `padding-right` extra no desktop (`md:pr-56`) para garantir que o texto/botão não sobreponham a imagem.
+
+### Layout final (desktop)
 
 ```text
-┌────────────────────────────────────────────────┐
-│ QUEM SOMOS                                     │
-│                                                │
-│ ┌────────────┐  ┌────────┬───────────────────┐ │
-│ │            │  │ LOGO   │  Tradição em      │ │
-│ │   Foto     │  │        │  entregar lares   │ │
-│ │   equipe   │  └────────┴───────────────────┘ │
-│ │            │  ┌──────────────────────────┐   │
-│ │            │  │  Texto (3 parágrafos     │   │
-│ │            │  │  em largura total)       │   │
-│ └────────────┘  └──────────────────────────┘   │
-│                                                │
-│ ┌──────────┐  ┌──────────┐  ┌──────────┐       │
-│ │  13+     │  │  100%    │  │  500+    │       │
-│ └──────────┘  └──────────┘  └──────────┘       │
-└────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────┐ ─┐
+│ [icon] PLANTÃO DE VENDAS NO LOCAL              ┌──────│  │
+│        Rua Três Corações — Jardim Benedito ·   │ corre│  │ corretora
+│        Indaial – SC                            │ tora │  │ transborda
+│        Visite nosso stand...   [Agendar visita]│ img  │  │ no topo
+└────────────────────────────────────────────────┴──────┘ ─┘
 ```
 
-### Mudanças em `src/components/TrustSection.tsx`
-
-1. **Eyebrow "QUEM SOMOS" no topo**, alinhado à esquerda do container, antes da grid principal.
-
-2. **Grid principal de 2 colunas** (≈ 5/12 + 7/12 no desktop):
-   - **Esquerda**: foto da equipe vertical, ocupando toda a altura da coluna.
-   - **Direita** (em duas linhas):
-     - **Linha 1 — header**: logo Evolutta à esquerda + título "Tradição em entregar lares" à direita, alinhados verticalmente ao centro.
-     - **Linha 2 — texto**: 3 parágrafos em largura total da coluna (sem `max-w-2xl`), reduzindo altura vertical.
-
-3. **Cards de estatísticas na base**: grid horizontal de 3 colunas (13+, 100%, 500+) ocupando toda a largura do container, abaixo do bloco principal.
-
-### Mobile
-Empilhamento vertical: eyebrow → foto → logo → título → texto → 3 cards (1 coluna).
-
-### Memória a atualizar
-- `mem://features/trust-section` — refletir nova estrutura (eyebrow no topo, grid foto+conteúdo, cards na base).
-
-### Arquivo afetado
-- `src/components/TrustSection.tsx`
-
+### Arquivos
+- `src/assets/corretora-plantao.png` (novo)
+- `src/components/LocationSection.tsx` (editado)
