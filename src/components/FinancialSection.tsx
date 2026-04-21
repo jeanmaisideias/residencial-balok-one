@@ -53,11 +53,11 @@ export function FinancialSection() {
 
         <SectionReveal delay={400}>
           <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-            <WhatsAppButton message="Quero saber se ainda dá tempo de garantir as condições de lançamento">
-              Quero saber se ainda dá tempo
+            <WhatsAppButton message="Quero saber se ainda dá tempo de comprar">
+              Quero saber se ainda dá tempo de comprar
             </WhatsAppButton>
             <p className="text-sm text-primary-foreground/55 max-w-xs">
-              Devido a alta procura consulte disponibilidade.
+              Devido a alta procura consulte disponibilidade das unidades e condições de pagamento.
             </p>
           </div>
         </SectionReveal>
