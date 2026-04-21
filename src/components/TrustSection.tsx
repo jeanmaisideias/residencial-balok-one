@@ -74,7 +74,7 @@ export function TrustSection() {
                 <img
                   src={logoEvoluttaHorizontal}
                   alt="Construtora Evolutta"
-                  className="block md:hidden h-10 w-auto self-start"
+                  className="block md:hidden h-20 w-auto self-start"
                 />
                 <img
                   src={logoEvoluttaBlack}
