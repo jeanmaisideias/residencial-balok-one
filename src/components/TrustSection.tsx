@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { SectionReveal } from "./SectionReveal";
 import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
+import logoEvoluttaHorizontal from "@/assets/logo-evolutta-horizontal.png";
 import evoluttaTeamProject from "@/assets/evolutta-team-project.jpg";
 
 const stats = [
@@ -71,9 +72,14 @@ export function TrustSection() {
             <div className="flex flex-col h-full">
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 mb-8">
                 <img
+                  src={logoEvoluttaHorizontal}
+                  alt="Construtora Evolutta"
+                  className="block md:hidden h-10 w-auto self-start"
+                />
+                <img
                   src={logoEvoluttaBlack}
                   alt="Construtora Evolutta"
-                  className="h-16 md:h-[120px] w-auto shrink-0 self-start"
+                  className="hidden md:block h-[120px] w-auto shrink-0 self-start"
                 />
                 <h2 className="font-display text-2xl md:text-4xl lg:text-5xl text-primary leading-[1.05] text-balance">
                   Tradição em entregar lares
