@@ -59,7 +59,7 @@ export function Footer() {
           </div>
 
           {/* Column 3 — Conecte-se */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 flex flex-col">
             <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-6">
               Conecte-se
             </h4>
@@ -82,6 +82,12 @@ export function Footer() {
                   <s.icon className="w-6 h-6" />
                 </a>
               ))}
+            </div>
+
+            {/* Parceiros institucionais — alinhados à base com Política de Privacidade */}
+            <div className="mt-auto pt-10 flex items-center gap-6 md:gap-8 flex-wrap">
+              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 md:h-9 w-auto opacity-90" />
+              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-10 md:h-11 w-auto opacity-90" />
             </div>
           </div>
 
