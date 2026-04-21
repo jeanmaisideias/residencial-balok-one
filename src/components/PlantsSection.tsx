@@ -61,6 +61,7 @@ export function PlantsSection() {
     [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]
   );
   const [active, setActive] = useState(0);
+  const [openMobile, setOpenMobile] = useState(false);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -71,6 +72,11 @@ export function PlantsSection() {
   }, [emblaApi]);
 
   const goTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
+  const openPlant = useCallback((i: number) => {
+    setActive(i);
+    emblaApi?.scrollTo(i);
+    setOpenMobile(true);
+  }, [emblaApi]);
   const current = plants[active];
 
   return (
