@@ -1,27 +1,25 @@
 
 
-## Converter todas as imagens para WebP
+## Corrigir deformação do logo Evolutta no rodapé
 
-Vou converter todas as imagens do projeto (JPG, JPEG, PNG) para o formato WebP, que oferece compressão muito superior mantendo a mesma qualidade visual. Isso vai deixar o site mais leve e rápido para carregar — especialmente importante no mobile.
+O logotipo da Evolutta está aparecendo esticado horizontalmente no rodapé. A imagem original está correta (proporção 1920×625), mas o container flex da coluna da marca (`flex flex-col`, que por padrão usa `align-items: stretch`) está esticando a `<img>` para ocupar toda a largura da coluna, ignorando a proporção natural mesmo com `h-[58px] w-auto`.
 
 ### O que será feito
 
-1. **Mapear todas as imagens** nas pastas `src/assets/` e `public/`, identificando os formatos atuais (JPG, PNG).
-2. **Converter para WebP** com qualidade 85 (excelente equilíbrio entre tamanho e qualidade visual). Logos e imagens com transparência serão convertidos preservando o canal alpha.
-3. **Atualizar todas as referências** nos componentes `.tsx` para apontar para os novos arquivos `.webp`.
-4. **Remover os arquivos originais** (JPG/PNG) após confirmar que tudo funciona, para manter o projeto limpo.
-5. **Verificar visualmente** o site após a conversão para garantir que nenhuma imagem ficou quebrada e que a qualidade está preservada.
+- Adicionar `self-start` (ou equivalente) ao elemento `<img>` do logo Evolutta no `Footer.tsx` para que ele respeite sua proporção intrínseca em vez de esticar horizontalmente junto com a coluna flex.
 
 ### Detalhes técnicos
 
-- Ferramenta: `cwebp` (libwebp) executada via `nix run nixpkgs#libwebp`.
-- Qualidade: `-q 85` para fotos, `-q 90 -alpha_q 100` para PNGs com transparência (logos).
-- Substituição em massa nos imports usando `sed` nos arquivos `.tsx`.
-- Pastas afetadas: `src/assets/` (incluindo `src/assets/balok/`) e `public/`.
-- Os imports nos componentes (Hero, Gallery, Leisure, Footer, Index, etc.) serão atualizados de `.jpg`/`.png` para `.webp`.
-- O arquivo `public/placeholder.svg` e `public/robots.txt` não serão tocados (SVG já é otimizado).
+- Arquivo: `src/components/Footer.tsx`
+- Mudança na linha do logo:
 
-### Ganho esperado
+```tsx
+<img 
+  src={logoEvolutta} 
+  alt="Evolutta Construtora e Incorporadora" 
+  className="h-12 md:h-[58px] w-auto self-start" 
+/>
+```
 
-WebP normalmente reduz o tamanho dos arquivos entre 25% e 50% comparado a JPG e até 80% comparado a PNG, sem perda visual perceptível. Isso melhora o LCP (Largest Contentful Paint) e a experiência geral, principalmente em conexões móveis.
+Isso impede o `align-items: stretch` padrão do flex container de deformar a imagem, mantendo o tamanho controlado apenas pela altura definida (`h-12` no mobile / `h-[58px]` no desktop) com largura proporcional automática.
 
