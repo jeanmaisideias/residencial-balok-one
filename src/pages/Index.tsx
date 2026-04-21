@@ -85,6 +85,7 @@ const Index = () => {
           image={familyNewHome}
           title="Toda família merece viver a emoção de abrir a porta do próprio lar"
           parallax
+          imagePosition="center 20%"
         />
 
         <FinalCTA />
