@@ -17,14 +17,14 @@ export function FinancialSection() {
             </p>
           </div>
           <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.02] mb-12 max-w-4xl">
-            Comece com pouco. Conquiste muito.
+            Comece com pouco. Conquiste muito!
           </h2>
         </SectionReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mb-14">
           {[
             { value: "R$ 1.000", label: "de entrada" },
-            { value: "60x", label: "para pagar" },
+            { value: "60x", label: "entrada" },
             { value: "Limitadas", label: "unidades disponíveis" },
           ].map((n, i) => (
             <SectionReveal key={n.label} delay={i * 100}>
@@ -44,7 +44,7 @@ export function FinancialSection() {
               Quero saber se ainda dá tempo
             </WhatsAppButton>
             <p className="text-sm text-primary-foreground/55 max-w-xs">
-              Alta procura nas últimas semanas. Condição sujeita à disponibilidade.
+              Devido a alta procura consulte disponibilidade.
             </p>
           </div>
         </SectionReveal>
