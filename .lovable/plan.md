@@ -1,34 +1,34 @@
 
-## Atualizar card do Plantão de Vendas com imagem da corretora
+## Reorganizar a seção "Comece com pouco" conforme print
 
-Vamos redesenhar o card do plantão de vendas na seção **Localização** para incluir a imagem da corretora à direita, conforme o print 2.
+A imagem foi inserida no lugar errado (em cima da palavra "Limitadas"). No print, a imagem aparece como um **card vertical à direita**, ao lado do título principal — e os 3 stats (R$ 1.000 | 60x | Limitadas) ficam alinhados em uma única linha embaixo, ocupando toda a largura.
 
-### Mudanças
-
-**1. Adicionar asset da corretora**
-- Copiar `user-uploads://retrato-de-agente-imobiliario-feminino-olhando-para-a-camera-enquanto-casal-feliz-em-pe-no-fundo.png` para `src/assets/corretora-plantao.png`.
-
-**2. Atualizar `src/components/LocationSection.tsx`**
-- Importar a nova imagem da corretora.
-- Reestruturar o card "Plantão de Vendas no Local":
-  - Manter o fundo escuro (primary), bordas arredondadas e o ícone do MapPin verde à esquerda.
-  - Manter os textos: eyebrow "Plantão de Vendas no Local", título "Rua Três Corações — Jardim Benedito · Indaial – SC", subtítulo "Visite nosso stand e conheça pessoalmente o empreendimento" e o botão "Agendar visita".
-  - Adicionar a imagem da corretora posicionada absolutamente na lateral direita do card, alinhada à base, transbordando ligeiramente para cima do card (efeito do print 2).
-  - Container do card com `relative` + `overflow-visible` para permitir o transbordo.
-  - No mobile (abaixo de `md`): ocultar a imagem da corretora (`hidden md:block`) para preservar legibilidade.
-  - Adicionar `padding-right` extra no desktop (`md:pr-56`) para garantir que o texto/botão não sobreponham a imagem.
-
-### Layout final (desktop)
+### Layout alvo (desktop)
 
 ```text
-┌────────────────────────────────────────────────────────┐ ─┐
-│ [icon] PLANTÃO DE VENDAS NO LOCAL              ┌──────│  │
-│        Rua Três Corações — Jardim Benedito ·   │ corre│  │ corretora
-│        Indaial – SC                            │ tora │  │ transborda
-│        Visite nosso stand...   [Agendar visita]│ img  │  │ no topo
-└────────────────────────────────────────────────┴──────┘ ─┘
+┌─────────────────────────────────┬──────────────────┐
+│ CONDIÇÃO ESPECIAL DE LANÇAMENTO │   ╭──────────╮   │
+│                                 │   │          │   │
+│ Comece com pouco.               │   │  imagem  │   │
+│ Conquiste muito!                │   │  sala    │   │
+│                                 │   │  cozinha │   │
+│                                 │   ╰──────────╯   │
+└─────────────────────────────────┴──────────────────┘
+┌──────────────┬──────────────┬──────────────────────┐
+│ R$ 1.000     │ 60x          │ Limitadas            │
+│ DE SINAL     │ ENTRADA PARC.│ UNIDADES DISPONÍVEIS │
+└──────────────┴──────────────┴──────────────────────┘
+[ Botão CTA ]   Devido a alta procura consulte...
 ```
 
+### Mudanças em `src/components/FinancialSection.tsx`
+
+1. **Remover** o bloco `{i === 2 && (...)}` que renderiza a imagem dentro do stat "Limitadas".
+2. **Envolver** o eyebrow + heading num grid de 2 colunas (`md:grid-cols-[1fr_auto]`):
+   - Coluna esquerda: eyebrow + `<h2>` (como já está).
+   - Coluna direita: novo card com a imagem `salaCozinhaImg`, com `rounded-2xl`, `overflow-hidden`, `shadow-elevated`, dimensões fixas `w-[260px] lg:w-[320px] h-[180px] lg:h-[220px]`, `object-cover`. Ocultar no mobile (`hidden md:block`) para não competir com o título.
+3. **Manter** o grid dos 3 stats abaixo (R$ 1.000 / 60x / Limitadas) intacto em uma linha (`grid-cols-1 md:grid-cols-3`).
+4. **Manter** o CTA e copy inalterados.
+
 ### Arquivos
-- `src/assets/corretora-plantao.png` (novo)
-- `src/components/LocationSection.tsx` (editado)
+- `src/components/FinancialSection.tsx` (editado)
