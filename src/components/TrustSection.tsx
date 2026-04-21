@@ -88,16 +88,19 @@ export function TrustSection() {
 
               <div className="space-y-5 mb-8">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Somos uma construtora com <strong className="text-primary font-semibold">13 anos de atuação</strong> no
-                  mercado imobiliário, especializados em empreendimentos residenciais dentro do programa Minha Casa Minha Vida.
+                  Há <strong className="text-primary font-semibold">13 anos no mercado imobiliário</strong>, somos
+                  especialistas no desenvolvimento de empreendimentos residenciais dentro do programa Minha Casa Minha
+                  Vida, unindo experiência, segurança e oportunidades reais para quem deseja conquistar o imóvel próprio.
                 </p>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Ao longo desta trajetória, entregamos centenas de unidades com pontualidade e padrão de acabamento
-                  reconhecido pelos nossos clientes.
+                  Ao longo dessa trajetória, entregamos centenas de unidades com pontualidade, qualidade construtiva e
+                  padrão de acabamento reconhecido por nossos clientes. Cada projeto reflete nosso compromisso com
+                  seriedade e excelência em cada detalhe.
                 </p>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Nosso compromisso vai além da entrega das chaves: acompanhamos cada família desde a assinatura do contrato
-                  até a mudança, garantindo total transparência, suporte técnico e atendimento personalizado em todas as etapas.
+                  Para nós, entregar as chaves é apenas parte da jornada. Acompanhamos cada família desde a assinatura
+                  do contrato até a mudança, oferecendo transparência, suporte técnico e atendimento próximo em todas as
+                  etapas da conquista do novo lar.
                 </p>
               </div>
 
