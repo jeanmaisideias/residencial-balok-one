@@ -92,7 +92,7 @@ export function Footer() {
               href={YOUTUBE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-start gap-3"
+              className="group flex flex-col items-start gap-6"
             >
               <span className="text-sm font-medium text-primary-foreground/85 group-hover:text-accent transition-colors leading-tight whitespace-nowrap">
                 Evoluindo dia a dia
