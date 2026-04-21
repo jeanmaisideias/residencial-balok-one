@@ -14,13 +14,13 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
 
-import fachadaPremium from "@/assets/balok/fachada-noturna.jpg";
-import salaCozinha from "@/assets/balok/sala-cozinha-01.jpg";
-import quadraBeach from "@/assets/balok/quadra-beach.jpg";
-import sacada from "@/assets/balok/sacada.jpg";
-import predioBallockOne from "@/assets/predio_ballok_one_2.png";
-import homeownersKeys from "@/assets/close-up-homeowners-with-new-house-keys-2.jpg";
-import familyNewHome from "@/assets/family-new-home.jpg";
+import fachadaPremium from "@/assets/balok/fachada-noturna.webp";
+import salaCozinha from "@/assets/balok/sala-cozinha-01.webp";
+import quadraBeach from "@/assets/balok/quadra-beach.webp";
+import sacada from "@/assets/balok/sacada.webp";
+import predioBallockOne from "@/assets/predio_ballok_one_2.webp";
+import homeownersKeys from "@/assets/close-up-homeowners-with-new-house-keys-2.webp";
+import familyNewHome from "@/assets/family-new-home.webp";
 
 const Index = () => {
   return (

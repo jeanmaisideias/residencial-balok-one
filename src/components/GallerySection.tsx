@@ -4,12 +4,12 @@ import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
-import sala1 from "@/assets/balok/sala-cozinha-01.jpg";
-import sala2 from "@/assets/balok/sala-cozinha-02.jpg";
-import dorm1 from "@/assets/balok/dormitorio-01.jpg";
-import dorm2 from "@/assets/balok/dormitorio-02.jpg";
-import banho from "@/assets/balok/banho.jpg";
-import sacada from "@/assets/balok/sacada.jpg";
+import sala1 from "@/assets/balok/sala-cozinha-01.webp";
+import sala2 from "@/assets/balok/sala-cozinha-02.webp";
+import dorm1 from "@/assets/balok/dormitorio-01.webp";
+import dorm2 from "@/assets/balok/dormitorio-02.webp";
+import banho from "@/assets/balok/banho.webp";
+import sacada from "@/assets/balok/sacada.webp";
 
 const images = [
   { src: sala1, caption: "Sala integrada" },

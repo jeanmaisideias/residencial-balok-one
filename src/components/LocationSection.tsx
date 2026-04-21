@@ -1,7 +1,7 @@
 import { Clock, GraduationCap, HeartPulse, ShoppingCart, MapPin } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
-import corretoraImg from "@/assets/corretora-plantao.png";
+import corretoraImg from "@/assets/corretora-plantao.webp";
 
 const proximities = [
   {

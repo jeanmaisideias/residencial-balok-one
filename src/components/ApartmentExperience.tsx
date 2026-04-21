@@ -1,11 +1,11 @@
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 
-import lazerSalao from "@/assets/lazer-salao.jpg";
-import lazerPiscina from "@/assets/lazer-piscina.jpg";
-import lazerAcademia from "@/assets/lazer-academia.jpg";
-import lazerBeach from "@/assets/lazer-beach.jpg";
-import lazerFireplace from "@/assets/lazer-fireplace.jpg";
+import lazerSalao from "@/assets/lazer-salao.webp";
+import lazerPiscina from "@/assets/lazer-piscina.webp";
+import lazerAcademia from "@/assets/lazer-academia.webp";
+import lazerBeach from "@/assets/lazer-beach.webp";
+import lazerFireplace from "@/assets/lazer-fireplace.webp";
 import { useState, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 

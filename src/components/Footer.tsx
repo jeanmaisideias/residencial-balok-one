@@ -1,9 +1,9 @@
 import { Instagram, Facebook, Youtube, Play } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoEvolutta from "@/assets/logo-evolutta-white-h.png";
-import logoMaisIdeias from "@/assets/mais-ideias-white.png";
-import logoCaixa from "@/assets/logo-caixa.png";
-import logoMcmv from "@/assets/logo-mcmv.png";
+import logoEvolutta from "@/assets/logo-evolutta-white-h.webp";
+import logoMaisIdeias from "@/assets/mais-ideias-white.webp";
+import logoCaixa from "@/assets/logo-caixa.webp";
+import logoMcmv from "@/assets/logo-mcmv.webp";
 
 const links = [
   { label: "Início", href: "#topo" },

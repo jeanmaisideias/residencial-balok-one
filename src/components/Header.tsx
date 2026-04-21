@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoEvoluttaWhite from "@/assets/logo-evolutta.png";
-import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
-import logoEvoluttaHorizontalBlack from "@/assets/logo-evolutta-horizontal-black.png";
-import logoCaixaWhite from "@/assets/logo-caixa.png";
-import logoCaixaColor from "@/assets/logo-caixa-color.png";
-import logoMcmvWhite from "@/assets/logo-mcmv.png";
-import logoMcmvColor from "@/assets/logo-mcmv-color.png";
+import logoEvoluttaWhite from "@/assets/logo-evolutta.webp";
+import logoEvoluttaBlack from "@/assets/logo-evolutta-black.webp";
+import logoEvoluttaHorizontalBlack from "@/assets/logo-evolutta-horizontal-black.webp";
+import logoCaixaWhite from "@/assets/logo-caixa.webp";
+import logoCaixaColor from "@/assets/logo-caixa-color.webp";
+import logoMcmvWhite from "@/assets/logo-mcmv.webp";
+import logoMcmvColor from "@/assets/logo-mcmv-color.webp";
 
 const WHATSAPP_NUMBER = "5511999077149";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Ballock One")}`;
