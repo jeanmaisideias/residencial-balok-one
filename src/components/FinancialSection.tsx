@@ -23,8 +23,8 @@ export function FinancialSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mb-14">
           {[
-            { value: "R$ 1.000", label: "de entrada" },
-            { value: "60x", label: "entrada" },
+            { value: "R$ 1.000", label: "de sinal" },
+            { value: "60x", label: "entrada parcelada" },
             { value: "Limitadas", label: "unidades disponíveis" },
           ].map((n, i) => (
             <SectionReveal key={n.label} delay={i * 100}>
