@@ -94,8 +94,8 @@ export function Footer() {
               rel="noopener noreferrer"
               className="group flex flex-col items-start gap-3"
             >
-              <span className="text-sm font-medium text-primary-foreground/85 group-hover:text-accent transition-colors leading-tight">
-                Evoluindo<br />dia a dia
+              <span className="text-sm font-medium text-primary-foreground/85 group-hover:text-accent transition-colors leading-tight whitespace-nowrap">
+                Evoluindo dia a dia
               </span>
               <span className="relative">
                 <span className="absolute inset-0 rounded-full bg-accent/40 animate-ping" />
