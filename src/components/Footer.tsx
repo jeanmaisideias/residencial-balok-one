@@ -30,9 +30,9 @@ export function Footer() {
       <div className="container py-20 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 mb-14">
           {/* Column 1 — Brand */}
-          <div className="md:col-span-5 space-y-5">
+          <div className="md:col-span-5 flex flex-col space-y-5">
             <img src={logoEvolutta} alt="Evolutta Construtora e Incorporadora" className="h-20 md:h-24 w-auto" />
-            <p className="text-sm text-primary-foreground/70 max-w-md leading-relaxed">
+            <p className="text-sm text-primary-foreground/70 max-w-md leading-relaxed mt-auto">
               Há 13 anos no mercado imobiliário, somos especialistas em empreendimentos Minha Casa Minha Vida. Já entregamos centenas de unidades com qualidade, pontualidade e acabamento reconhecido. Mais do que construir imóveis, acompanhamos cada família com transparência, suporte e confiança até a conquista do novo lar.
             </p>
           </div>
@@ -42,7 +42,7 @@ export function Footer() {
             <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-6">
               Navegação
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-[18px]">
               {links.map((l) => (
                 <li key={l.label}>
                   <a href={l.href} className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
