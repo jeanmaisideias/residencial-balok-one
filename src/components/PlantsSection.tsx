@@ -94,8 +94,35 @@ export function PlantsSection() {
           </div>
         </SectionReveal>
 
-        <div className="-mx-5 md:mx-0 overflow-x-auto scrollbar-hide mb-8 md:mb-10 py-2">
-          <div className="flex gap-2 w-max md:w-auto md:justify-center mx-auto px-5 md:px-0">
+        {/* Mobile: stacked buttons */}
+        <div className="md:hidden flex flex-col gap-3">
+          {plants.map((p, i) => (
+            <button
+              key={p.label}
+              onClick={() => openPlant(i)}
+              className="w-full flex items-center justify-between gap-3 px-5 py-4 rounded-2xl border border-border bg-card text-left shadow-sm hover:border-primary/40 transition-all"
+            >
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2">
+                  <span className="text-base font-bold text-primary">Planta {p.label}</span>
+                  {p.garden && (
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-accent/15 text-accent">
+                      Exclusiva
+                    </span>
+                  )}
+                </div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-accent mt-1">
+                  Clique para ver
+                </span>
+              </div>
+              <ChevronRight className="w-5 h-5 text-primary shrink-0" />
+            </button>
+          ))}
+        </div>
+
+        {/* Desktop: tabs */}
+        <div className="hidden md:block mb-8 md:mb-10 py-2">
+          <div className="flex gap-2 justify-center">
             {plants.map((p, i) => (
               <button
                 key={p.label}
@@ -123,7 +150,7 @@ export function PlantsSection() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14 items-stretch lg:min-h-[560px]">
+        <div className="hidden md:grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14 items-stretch lg:min-h-[560px]">
           <SectionReveal>
             <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-premium h-full flex items-center lg:min-h-[560px]">
               <div ref={emblaRef} className="overflow-hidden w-full">
@@ -185,6 +212,51 @@ export function PlantsSection() {
             </div>
           </SectionReveal>
         </div>
+
+        {/* Mobile modal */}
+        <Dialog open={openMobile} onOpenChange={setOpenMobile}>
+          <DialogContent className="md:hidden p-0 max-w-[95vw] max-h-[90vh] overflow-y-auto rounded-2xl">
+            <div className="p-5">
+              <div className="rounded-xl overflow-hidden bg-secondary border border-border mb-5 flex items-center justify-center h-[280px]">
+                <img src={current.src} alt={`Planta ${current.label}`} className="w-full h-full object-contain" />
+              </div>
+
+              {current.garden && (
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/30 mb-4">
+                  <Sprout className="w-3.5 h-3.5 text-accent" strokeWidth={2} />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-accent">
+                    Jardim privativo exclusivo
+                  </span>
+                </div>
+              )}
+
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground mb-2">
+                {current.name}
+              </p>
+              <p className="font-display text-4xl text-primary leading-none">{current.area}</p>
+              <p className="text-sm text-muted-foreground mt-2 mb-5">de área privativa</p>
+
+              <ul className="space-y-2.5 mb-6">
+                {current.features.map((f) => (
+                  <li key={f} className="flex items-center gap-3">
+                    <span className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
+                      <Check className="w-3 h-3 text-accent" strokeWidth={3} />
+                    </span>
+                    <span className="text-sm text-primary">{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <WhatsAppButton
+                className="w-full justify-center"
+                message={`Quero receber as plantas do Ballock One (Planta ${current.label})`}
+              >
+                Receber plantas no WhatsApp
+              </WhatsAppButton>
+            </div>
+          </DialogContent>
+        </Dialog>
+
       </div>
     </section>
   );
