@@ -1,25 +1,48 @@
 
-## Adicionar marcador no endereço correto do mapa
 
-Hoje a seção de Localização usa um `iframe` do Google Maps Embed apontando para coordenadas aproximadas, sem um pino fixo no endereço do empreendimento (Rua Três Corações, Jardim Benedito — Indaial/SC).
+## Ajustes na seção "Quem Somos" — confirmação do layout
 
-### O que será feito
+Confirmando o layout proposto conforme o mockup enviado:
 
-1. **Trocar o embed para um link com marcador real**
-   - Substituir o `src` do `iframe` em `src/components/LocationSection.tsx` pelo formato `https://www.google.com/maps?q=...&output=embed`, usando o endereço completo "Rua Três Corações, Jardim Benedito, Indaial - SC".
-   - Esse formato força o Google a exibir um **pino vermelho fixo** exatamente sobre o endereço pesquisado, em vez de só centralizar o mapa.
-   - Manter `loading="lazy"`, `referrerPolicy` e o `title` atuais para acessibilidade e performance.
+### Estrutura final (desktop)
 
-2. **Adicionar um botão "Abrir no Google Maps"**
-   - Logo abaixo (ou sobreposto ao canto do mapa) incluir um link discreto que abre `https://www.google.com/maps/search/?api=1&query=...` em nova aba.
-   - Permite ao visitante traçar rota direto pelo celular, reforçando conversão.
+```text
+┌────────────────────────────────────────────────┐
+│ QUEM SOMOS                                     │
+│                                                │
+│ ┌────────────┐  ┌────────┬───────────────────┐ │
+│ │            │  │ LOGO   │  Tradição em      │ │
+│ │   Foto     │  │        │  entregar lares   │ │
+│ │   equipe   │  └────────┴───────────────────┘ │
+│ │            │  ┌──────────────────────────┐   │
+│ │            │  │  Texto (3 parágrafos     │   │
+│ │            │  │  em largura total)       │   │
+│ └────────────┘  └──────────────────────────┘   │
+│                                                │
+│ ┌──────────┐  ┌──────────┐  ┌──────────┐       │
+│ │  13+     │  │  100%    │  │  500+    │       │
+│ └──────────┘  └──────────┘  └──────────┘       │
+└────────────────────────────────────────────────┘
+```
 
-3. **Ajuste visual mínimo**
-   - Manter o container, sombra, bordas arredondadas e o leve overlay já existentes.
-   - Sem mudanças em outras seções, cores ou estrutura.
+### Mudanças em `src/components/TrustSection.tsx`
 
-### Observação técnica
-O Embed básico do Google Maps (sem API key) **não permite** marcadores customizados com ícone próprio. Para um pino totalmente personalizado (cor, logo Ballock One) seria necessário migrar para a Google Maps JavaScript API com chave + biblioteca tipo `@vis.gl/react-google-maps`, o que envolve cadastro de billing no Google Cloud. A solução proposta acima entrega o marcador correto no endereço sem custo nem chave de API.
+1. **Eyebrow "QUEM SOMOS" no topo**, alinhado à esquerda do container, antes da grid principal.
+
+2. **Grid principal de 2 colunas** (≈ 5/12 + 7/12 no desktop):
+   - **Esquerda**: foto da equipe vertical, ocupando toda a altura da coluna.
+   - **Direita** (em duas linhas):
+     - **Linha 1 — header**: logo Evolutta à esquerda + título "Tradição em entregar lares" à direita, alinhados verticalmente ao centro.
+     - **Linha 2 — texto**: 3 parágrafos em largura total da coluna (sem `max-w-2xl`), reduzindo altura vertical.
+
+3. **Cards de estatísticas na base**: grid horizontal de 3 colunas (13+, 100%, 500+) ocupando toda a largura do container, abaixo do bloco principal.
+
+### Mobile
+Empilhamento vertical: eyebrow → foto → logo → título → texto → 3 cards (1 coluna).
+
+### Memória a atualizar
+- `mem://features/trust-section` — refletir nova estrutura (eyebrow no topo, grid foto+conteúdo, cards na base).
 
 ### Arquivo afetado
-- `src/components/LocationSection.tsx`
+- `src/components/TrustSection.tsx`
+
