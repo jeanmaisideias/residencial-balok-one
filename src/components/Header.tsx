@@ -60,7 +60,7 @@ export function Header() {
             src={logoEvoluttaHorizontalBlack}
             alt="Evolutta"
             className={cn(
-              "absolute left-0 top-1/2 w-[180px] md:w-[220px] lg:w-[240px] h-auto -translate-y-1/2 object-contain transition-[opacity,transform] duration-700 ease-out",
+              "absolute left-0 top-1/2 w-[90px] md:w-[110px] lg:w-[120px] h-auto -translate-y-1/2 object-contain transition-[opacity,transform] duration-700 ease-out",
               showHorizontalBlack ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             )}
           />
@@ -75,7 +75,7 @@ export function Header() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 2xl:gap-9">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 2xl:gap-9 mr-6 xl:mr-10">
           {navItems.map((item) => (
             <a key={item.label} href={item.href} className={linkClass}>
               {item.label}
@@ -85,7 +85,7 @@ export function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-5 xl:gap-6">
-          <div className="hidden md:flex items-center gap-3 pl-5 pr-3 border-l border-r border-border/40 mr-1">
+          <div className="hidden md:flex items-center gap-3 pl-7 xl:pl-9 pr-3 border-l border-r border-border/40 mr-1">
             <span className="relative block h-[21px] w-[74px]">
               <img src={logoCaixaWhite} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", isCompact ? "opacity-0" : "opacity-100")} />
               <img src={logoCaixaColor} alt="Caixa" className={cn("absolute inset-0 h-[21px] w-auto transition-opacity duration-700 ease-out", isCompact ? "opacity-100" : "opacity-0")} />
