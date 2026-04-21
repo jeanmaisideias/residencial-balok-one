@@ -28,7 +28,7 @@ export function FullscreenSection({ image, title, subtitle, label, labelVariant 
         <SectionReveal>
           {label && (
             labelVariant === "feature" ? (
-              <p className="mb-5 md:mb-7 inline-block px-6 py-3 md:px-9 md:py-4 font-display text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight rounded-full bg-accent text-white shadow-elevated">
+              <p className="mb-5 md:mb-7 inline-block px-6 py-3 md:px-9 md:py-4 font-display text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight rounded-full bg-white/10 backdrop-blur-md border-2 border-white/70 text-white shadow-elevated">
                 {label}
               </p>
             ) : (
