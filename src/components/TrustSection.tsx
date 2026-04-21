@@ -55,7 +55,7 @@ export function TrustSection() {
           <p className="eyebrow mb-8 text-center lg:text-left">Quem Somos</p>
         </SectionReveal>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch mb-10 lg:mb-14">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           <SectionReveal className="lg:col-span-5">
             <div className="overflow-hidden rounded-2xl shadow-elevated border border-border/50 h-full">
               <img
@@ -80,7 +80,7 @@ export function TrustSection() {
                 </h2>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-5 mb-8">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   Somos uma construtora com <strong className="text-primary font-semibold">13 anos de atuação</strong> no
                   mercado imobiliário, especializados em empreendimentos residenciais dentro do programa Minha Casa Minha Vida.
@@ -94,27 +94,25 @@ export function TrustSection() {
                   até a mudança, garantindo total transparência, suporte técnico e atendimento personalizado em todas as etapas.
                 </p>
               </div>
+
+              <div className="grid grid-cols-3 gap-4 md:gap-5 mt-auto">
+                {stats.map((s) => (
+                  <div
+                    key={s.label}
+                    className="bg-card rounded-xl p-5 md:p-6 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform text-center"
+                  >
+                    <p className="font-display text-4xl md:text-5xl text-accent tracking-tight leading-none mb-2">
+                      <CountUp target={s.target} suffix={s.suffix} />
+                    </p>
+                    <p className="text-[10px] md:text-xs uppercase tracking-[0.14em] text-muted-foreground leading-tight">
+                      {s.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </SectionReveal>
         </div>
-
-        <SectionReveal delay={150}>
-          <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-2xl ml-auto">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="bg-card rounded-xl p-4 md:p-5 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform text-center"
-              >
-                <p className="font-display text-2xl md:text-3xl text-accent tracking-tight leading-none mb-2">
-                  <CountUp target={s.target} suffix={s.suffix} />
-                </p>
-                <p className="text-[10px] md:text-xs uppercase tracking-[0.14em] text-muted-foreground leading-tight">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </SectionReveal>
       </div>
     </section>
   );
