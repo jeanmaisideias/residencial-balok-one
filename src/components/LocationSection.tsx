@@ -3,10 +3,26 @@ import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 const proximities = [
-  { icon: Clock, label: "7 min do centro" },
-  { icon: GraduationCap, label: "Escolas perto" },
-  { icon: ShoppingCart, label: "Mercados ao redor" },
-  { icon: HeartPulse, label: "Saúde acessível" },
+  {
+    icon: Clock,
+    title: "7–9 min do Centro",
+    description: "Acesso rápido ao centro de Indaial com toda a infraestrutura urbana disponível para sua família.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Escolas por Perto",
+    description: "Instituições de ensino de qualidade a poucos minutos de casa, para tranquilidade dos pais.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Posto de Saúde",
+    description: "Atendimento de saúde acessível e próximo, garantindo segurança para toda a família.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "Mercados e Comércio",
+    description: "Supermercados e comércio local a caminhada, com fácil ligação também a Timbó.",
+  },
 ];
 
 export function LocationSection() {
@@ -26,14 +42,17 @@ export function LocationSection() {
           </div>
         </SectionReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 mb-10">
           {proximities.map((p, i) => (
-            <SectionReveal key={p.label} delay={i * 80}>
-              <div className="flex flex-col items-start gap-3 p-4 md:p-5 rounded-2xl bg-card border border-border/50 shadow-soft hover:-translate-y-1 transition-transform h-full">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 ring-1 ring-accent/30 flex items-center justify-center shadow-lg shadow-accent/20">
-                  <p.icon className="w-6 h-6 md:w-7 md:h-7 text-accent-foreground" strokeWidth={1.5} />
+            <SectionReveal key={p.title} delay={i * 80}>
+              <div className="flex items-start gap-4 p-5 md:p-6 rounded-2xl bg-card border border-border/50 shadow-soft hover:-translate-y-1 transition-transform h-full">
+                <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-accent/15 ring-1 ring-accent/20 flex items-center justify-center shrink-0">
+                  <p.icon className="w-5 h-5 md:w-6 md:h-6 text-accent" strokeWidth={1.75} />
                 </div>
-                <p className="text-sm md:text-base font-semibold text-primary leading-snug">{p.label}</p>
+                <div className="flex-1">
+                  <h3 className="text-base md:text-lg font-bold text-primary mb-1.5 leading-snug">{p.title}</h3>
+                  <p className="text-sm md:text-[15px] text-muted-foreground leading-relaxed">{p.description}</p>
+                </div>
               </div>
             </SectionReveal>
           ))}
