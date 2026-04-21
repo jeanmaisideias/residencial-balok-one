@@ -20,6 +20,7 @@ import quadraBeach from "@/assets/balok/quadra-beach.jpg";
 import sacada from "@/assets/balok/sacada.jpg";
 import predioBallockOne from "@/assets/predio_ballok_one_2.png";
 import homeownersKeys from "@/assets/close-up-homeowners-with-new-house-keys-2.jpg";
+import familyNewHome from "@/assets/family-new-home.jpg";
 
 const Index = () => {
   return (
@@ -81,8 +82,8 @@ const Index = () => {
         <TrustSection />
 
         <FullscreenSection
-          image={sacada}
-          title="O momento certo pode ser agora"
+          image={familyNewHome}
+          title="Toda família merece viver a emoção de abrir a porta do próprio lar"
         />
 
         <FinalCTA />
