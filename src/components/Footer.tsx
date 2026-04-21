@@ -33,9 +33,6 @@ export function Footer() {
             <p className="text-sm text-primary-foreground/70 max-w-md leading-relaxed">
               Há 13 anos no mercado imobiliário, somos especialistas em empreendimentos Minha Casa Minha Vida. Já entregamos centenas de unidades com qualidade, pontualidade e acabamento reconhecido. Mais do que construir imóveis, acompanhamos cada família com transparência, suporte e confiança até a conquista do novo lar.
             </p>
-            <p className="text-[11px] text-primary-foreground/45 max-w-md leading-relaxed pt-4 border-t border-primary-foreground/10">
-              Evolutta Construtora Empreendimentos Imobiliários e Participações SPE LTDA — CNPJ 00.000.000/0001-00
-            </p>
           </div>
 
           {/* Column 2 — Navegação */}
@@ -111,7 +108,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-xs text-primary-foreground/50">
-          <p>Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
+          <p>Evolutta Construtora Empreendimentos Imobiliários e Participações SPE LTDA — CNPJ 00.000.000/0001-00 · Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
           <a
             href="https://linktr.ee/maisideiasmkt"
             target="_blank"
