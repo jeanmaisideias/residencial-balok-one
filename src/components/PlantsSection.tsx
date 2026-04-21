@@ -87,8 +87,8 @@ export function PlantsSection() {
           </div>
         </SectionReveal>
 
-        <div className="-mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto scrollbar-hide mb-8 md:mb-10">
-          <div className="flex gap-2 w-max md:w-auto md:justify-center mx-auto">
+        <div className="-mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto scrollbar-hide mb-8 md:mb-10 py-2">
+          <div className="flex gap-2 w-max md:w-auto md:justify-center mx-auto pr-5 md:pr-0">
             {plants.map((p, i) => (
               <button
                 key={p.label}
