@@ -62,6 +62,7 @@ const Index = () => {
         <FullscreenSection
           image={homeownersKeys}
           label="A partir de R$ 229.000"
+          labelVariant="feature"
           title={<>O melhor apartamento<br />MCMV de Santa Catarina!</>}
           variant="band"
           parallax
