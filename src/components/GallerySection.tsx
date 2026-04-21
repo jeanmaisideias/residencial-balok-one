@@ -101,7 +101,7 @@ export function GallerySection() {
 
         <SectionReveal delay={240}>
           <div className="mt-12 md:mt-16 flex justify-center">
-            <WhatsAppButton message="Quero conhecer melhor o Ballok One">
+            <WhatsAppButton message="Quero conhecer melhor o Ballock One">
               Quero conhecer melhor
             </WhatsAppButton>
           </div>

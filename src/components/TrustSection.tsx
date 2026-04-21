@@ -47,7 +47,7 @@ export function TrustSection() {
               Nosso compromisso vai além da entrega das chaves: acompanhamos cada família desde a assinatura do contrato
               até a mudança, garantindo total transparência, suporte técnico e atendimento personalizado em todas as etapas.
             </p>
-            <WhatsAppButton message="Venho do site do Ballok One e quero falar com um especialista">
+            <WhatsAppButton message="Venho do site do Ballock One e quero falar com um especialista">
               Falar com especialista
             </WhatsAppButton>
           </SectionReveal>

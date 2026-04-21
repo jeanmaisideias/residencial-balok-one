@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
           <p>
             Esta Política de Privacidade descreve como a Construtora Evolutta coleta,
             utiliza, armazena e protege as informações pessoais dos visitantes do site
-            do Residencial Ballok One.
+            do Residencial Ballock One.
           </p>
 
           <h2 className="font-display text-2xl md:text-3xl text-primary pt-6">1. Informações coletadas</h2>

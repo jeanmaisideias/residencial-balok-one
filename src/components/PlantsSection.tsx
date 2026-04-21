@@ -168,7 +168,7 @@ export function PlantsSection() {
               <div className="mt-auto">
                 <WhatsAppButton
                   className="w-full justify-center"
-                  message={`Quero receber as plantas do Ballok One (Planta ${current.label})`}
+                  message={`Quero receber as plantas do Ballock One (Planta ${current.label})`}
                 >
                   Receber plantas no WhatsApp
                 </WhatsAppButton>

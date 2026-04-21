@@ -16,7 +16,7 @@ export function VideoSection() {
 
         <SectionReveal delay={100}>
           <div className="relative aspect-video rounded-2xl overflow-hidden mb-8">
-            <img src={acessoImg} alt="Acesso ao Residencial Ballok One" className="w-full h-full object-cover" />
+            <img src={acessoImg} alt="Acesso ao Residencial Ballock One" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center gap-3">
               <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                 <Play className="w-8 h-8 text-white ml-1" />
@@ -27,7 +27,7 @@ export function VideoSection() {
         </SectionReveal>
 
         <SectionReveal delay={200}>
-          <WhatsAppButton message="Venho do site do Ballok One e quero acompanhar a obra">
+          <WhatsAppButton message="Venho do site do Ballock One e quero acompanhar a obra">
             Quero acompanhar
           </WhatsAppButton>
         </SectionReveal>
