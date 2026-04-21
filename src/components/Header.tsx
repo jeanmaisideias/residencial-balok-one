@@ -3,6 +3,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logoEvoluttaWhite from "@/assets/logo-evolutta.png";
 import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
+import logoEvoluttaHorizontalBlack from "@/assets/logo-evolutta-horizontal-black.png";
 import logoCaixaWhite from "@/assets/logo-caixa.png";
 import logoCaixaColor from "@/assets/logo-caixa-color.png";
 import logoMcmvWhite from "@/assets/logo-mcmv.png";
@@ -23,6 +24,12 @@ const navItems = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const compact = scrolled || open;
+  const evoluttaLogo = open
+    ? logoEvoluttaHorizontalBlack
+    : scrolled
+      ? logoEvoluttaBlack
+      : logoEvoluttaWhite;
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
@@ -33,7 +40,7 @@ export function Header() {
 
   const linkClass = cn(
     "relative text-[13px] font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:text-accent hover:after:w-full",
-    scrolled ? "text-foreground/80" : "text-primary-foreground/85"
+    compact ? "text-foreground/80" : "text-primary-foreground/85"
   );
 
   return (
@@ -41,23 +48,23 @@ export function Header() {
       id="topo"
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
+        compact
           ? "bg-background/85 backdrop-blur-xl border-b border-border/60 shadow-soft"
           : "bg-transparent"
       )}
     >
       <div className={cn(
         "container flex items-center justify-between transition-all duration-300",
-         scrolled ? "h-14 lg:h-16" : "h-28 md:h-32 lg:h-36"
+         compact ? "h-16 lg:h-16" : "h-28 md:h-32 lg:h-36"
       )}>
         {/* Logo */}
-        <a href="#topo" className="flex items-center shrink-0">
+        <a href="#topo" className="flex items-center shrink-0 w-[174px] md:w-[210px] lg:w-[230px]">
           <img
-            src={scrolled ? logoEvoluttaBlack : logoEvoluttaWhite}
+            src={evoluttaLogo}
             alt="Evolutta"
             className={cn(
-              "w-auto transition-all duration-300",
-              scrolled ? "h-7 md:h-9" : "mt-3 h-24 md:mt-2 md:h-28 lg:h-28"
+              "w-auto max-w-full object-contain transition-[height,margin,opacity] duration-500 ease-out",
+              compact ? "h-9 md:h-10" : "mt-3 h-24 md:mt-2 md:h-28 lg:h-28"
             )}
           />
         </a>
@@ -75,14 +82,14 @@ export function Header() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-3 pr-3 border-r border-border/40 mr-1">
             <img
-              src={scrolled ? logoCaixaColor : logoCaixaWhite}
+              src={compact ? logoCaixaColor : logoCaixaWhite}
               alt="Caixa"
-              className="h-[21px] w-auto transition"
+              className="h-[21px] w-auto transition-opacity duration-500 ease-out"
             />
             <img
-              src={scrolled ? logoMcmvColor : logoMcmvWhite}
+              src={compact ? logoMcmvColor : logoMcmvWhite}
               alt="Minha Casa Minha Vida"
-              className="h-7 w-auto transition"
+              className="h-7 w-auto transition-opacity duration-500 ease-out"
             />
           </div>
 
@@ -102,7 +109,7 @@ export function Header() {
             onClick={() => setOpen((v) => !v)}
             className={cn(
               "lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full transition-colors",
-              scrolled ? "text-foreground hover:bg-secondary" : "text-primary-foreground hover:bg-white/10"
+              compact ? "text-foreground hover:bg-secondary" : "text-primary-foreground hover:bg-primary-foreground/10"
             )}
           >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
