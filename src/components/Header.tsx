@@ -25,7 +25,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const compact = scrolled || open;
-  const showHorizontalLogo = !scrolled || open;
+  const showHorizontalLogo = open;
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
@@ -59,7 +59,7 @@ export function Header() {
             src={logoEvoluttaHorizontalBlack}
             alt="Evolutta"
             className={cn(
-              "absolute left-0 w-[180px] md:w-[220px] lg:w-[240px] h-auto object-contain transition-opacity duration-700 ease-out",
+              "absolute left-0 w-[180px] md:w-[220px] lg:w-[240px] h-auto object-contain transition-opacity duration-500 ease-out",
               showHorizontalLogo ? "opacity-100" : "opacity-0"
             )}
           />
@@ -67,7 +67,8 @@ export function Header() {
             src={scrolled ? logoEvoluttaBlack : logoEvoluttaWhite}
             alt="Evolutta"
             className={cn(
-              "absolute left-0 h-9 md:h-10 w-auto object-contain transition-opacity duration-700 ease-out",
+              "absolute left-0 w-auto object-contain transition-[height,opacity] duration-500 ease-out",
+              compact ? "h-9 md:h-10" : "h-24 md:h-28 lg:h-28",
               showHorizontalLogo ? "opacity-0" : "opacity-100"
             )}
           />
