@@ -59,7 +59,7 @@ export function Footer() {
           </div>
 
           {/* Column 3 — Conecte-se */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 flex flex-col">
             <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-6">
               Conecte-se
             </h4>
@@ -82,6 +82,12 @@ export function Footer() {
                   <s.icon className="w-6 h-6" />
                 </a>
               ))}
+            </div>
+
+            {/* Parceiros institucionais — alinhados à base com Política de Privacidade */}
+            <div className="mt-auto pt-10 flex items-center gap-6 md:gap-8 flex-wrap">
+              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 md:h-9 w-auto opacity-90" />
+              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-10 md:h-11 w-auto opacity-90" />
             </div>
           </div>
 
@@ -109,19 +115,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Parceiros institucionais */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-10">
-          <div className="md:col-span-5 hidden md:block" />
-          <div className="md:col-span-7">
-            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-5">
-              Parceiros
-            </h4>
-            <div className="flex items-center gap-8 md:gap-10 flex-wrap">
-              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 md:h-10 w-auto opacity-90" />
-              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-10 md:h-12 w-auto opacity-90" />
-            </div>
-          </div>
-        </div>
+
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] text-primary-foreground/50">
           <p className="md:flex-1 leading-relaxed">Evolutta Construtora Empreendimentos Imobiliários e Participações SPE LTDA — CNPJ 00.000.000/0001-00 · Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
