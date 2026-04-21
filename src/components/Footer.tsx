@@ -28,7 +28,7 @@ export function Footer() {
       <div className="h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
 
       <div className="container py-20 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 mb-14 md:items-end">
           {/* Column 1 — Brand */}
           <div className="md:col-span-5 space-y-5">
             <img src={logoEvolutta} alt="Evolutta Construtora e Incorporadora" className="h-20 md:h-24 w-auto" />
@@ -86,8 +86,8 @@ export function Footer() {
 
             {/* Parceiros institucionais — alinhados à base com Política de Privacidade */}
             <div className="mt-auto pt-10 flex items-end gap-5 md:gap-6 flex-nowrap">
-              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-10 md:h-12 w-auto opacity-90 shrink-0" />
-              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-12 md:h-14 w-auto opacity-90 shrink-0" />
+              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-[34px] md:h-[41px] w-auto opacity-90 shrink-0" />
+              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-[41px] md:h-[48px] w-auto opacity-90 shrink-0" />
             </div>
           </div>
 
