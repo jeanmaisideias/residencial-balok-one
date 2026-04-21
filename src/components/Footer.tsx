@@ -2,6 +2,8 @@ import { Instagram, Facebook, Youtube, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoEvolutta from "@/assets/logo-evolutta-white-h.png";
 import logoMaisIdeias from "@/assets/mais-ideias-white.png";
+import logoCaixa from "@/assets/logo-caixa.png";
+import logoMcmv from "@/assets/logo-mcmv.png";
 
 const links = [
   { label: "Início", href: "#topo" },
@@ -104,6 +106,20 @@ export function Footer() {
                 </span>
               </span>
             </a>
+          </div>
+        </div>
+
+        {/* Parceiros institucionais */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-10">
+          <div className="md:col-span-5 hidden md:block" />
+          <div className="md:col-span-7">
+            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-5">
+              Parceiros
+            </h4>
+            <div className="flex items-center gap-8 md:gap-10 flex-wrap">
+              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-8 md:h-10 w-auto opacity-90" />
+              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-10 md:h-12 w-auto opacity-90" />
+            </div>
           </div>
         </div>
 
