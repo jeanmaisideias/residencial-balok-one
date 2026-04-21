@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 const chips = [
   "A partir de R$ 229 mil",
   "Sinal de R$ 1.000",
-  "Saldo em até 60x",
+  "Entrada em até 60x",
   "2 dormitórios + 1 vaga",
 ];
 
