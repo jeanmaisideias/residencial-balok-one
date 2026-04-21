@@ -116,13 +116,13 @@ export function PlantsSection() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14 items-stretch min-h-[560px]">
+        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-14 items-stretch lg:min-h-[560px]">
           <SectionReveal>
-            <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-premium h-full flex items-center min-h-[460px] lg:min-h-[560px]">
+            <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-premium h-full flex items-center lg:min-h-[560px]">
               <div ref={emblaRef} className="overflow-hidden w-full">
                 <div className="flex">
                   {plants.map((p) => (
-                    <div key={p.label} className="shrink-0 grow-0 basis-full p-3 md:p-6 flex items-center justify-center h-[440px] lg:h-[540px]">
+                    <div key={p.label} className="shrink-0 grow-0 basis-full p-4 md:p-6 flex items-center justify-center h-[280px] sm:h-[360px] lg:h-[540px]">
                       <img
                         src={p.src}
                         alt={`Planta ${p.label}`}
