@@ -1,5 +1,6 @@
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
+import salaCozinhaImg from "@/assets/sala-cozinha-financial.jpg";
 
 export function FinancialSection() {
   return (
@@ -28,7 +29,17 @@ export function FinancialSection() {
             { value: "Limitadas", label: "unidades disponíveis" },
           ].map((n, i) => (
             <SectionReveal key={n.label} delay={i * 100}>
-              <div className="border-l border-primary-foreground/20 pl-6">
+              <div className="border-l border-primary-foreground/20 pl-6 h-full flex flex-col">
+                {i === 2 && (
+                  <div className="mb-5 rounded-2xl overflow-hidden shadow-elevated">
+                    <img
+                      src={salaCozinhaImg}
+                      alt="Sala e cozinha integradas do apartamento"
+                      className="w-full h-40 md:h-44 object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <p className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground tracking-tight leading-none mb-3">
                   {n.value}
                 </p>
