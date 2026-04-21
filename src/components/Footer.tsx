@@ -94,14 +94,14 @@ export function Footer() {
               rel="noopener noreferrer"
               className="group flex flex-col items-start gap-3"
             >
+              <span className="text-sm font-medium text-primary-foreground/85 group-hover:text-accent transition-colors leading-tight">
+                Evoluindo<br />dia a dia
+              </span>
               <span className="relative">
                 <span className="absolute inset-0 rounded-full bg-accent/40 animate-ping" />
                 <span className="relative flex items-center justify-center w-14 h-14 rounded-full bg-accent text-accent-foreground shadow-premium group-hover:scale-105 transition-transform">
                   <Play className="w-6 h-6 fill-current ml-0.5" />
                 </span>
-              </span>
-              <span className="text-sm font-medium text-primary-foreground/85 group-hover:text-accent transition-colors leading-tight">
-                Acompanhe a obra<br />pelo YouTube
               </span>
             </a>
           </div>
