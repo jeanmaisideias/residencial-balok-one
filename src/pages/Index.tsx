@@ -64,7 +64,7 @@ const Index = () => {
           title="O melhor apartamento MCMV de Santa Catarina!"
           variant="band"
           parallax
-          imagePosition="center 32%"
+          imagePosition="center 8%"
         />
 
         <FinancialSection />
