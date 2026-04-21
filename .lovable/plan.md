@@ -1,25 +1,24 @@
 
 
-## Corrigir deformação do logo Evolutta no rodapé
+## Reduzir logos Caixa e MCMV em 15%
 
-O logotipo da Evolutta está aparecendo esticado horizontalmente no rodapé. A imagem original está correta (proporção 1920×625), mas o container flex da coluna da marca (`flex flex-col`, que por padrão usa `align-items: stretch`) está esticando a `<img>` para ocupar toda a largura da coluna, ignorando a proporção natural mesmo com `h-[58px] w-auto`.
+Vou reduzir o tamanho dos logos institucionais (Caixa e Minha Casa Minha Vida) no rodapé em 15%, mantendo o alinhamento pela base já existente.
 
 ### O que será feito
 
-- Adicionar `self-start` (ou equivalente) ao elemento `<img>` do logo Evolutta no `Footer.tsx` para que ele respeite sua proporção intrínseca em vez de esticar horizontalmente junto com a coluna flex.
+- **Logo Caixa**: de `h-[34px] md:h-[41px]` para `h-[29px] md:h-[35px]`
+- **Logo MCMV**: de `h-[41px] md:h-[48px]` para `h-[35px] md:h-[41px]`
 
 ### Detalhes técnicos
 
-- Arquivo: `src/components/Footer.tsx`
-- Mudança na linha do logo:
+Arquivo: `src/components/Footer.tsx` (bloco "Parceiros institucionais")
 
 ```tsx
-<img 
-  src={logoEvolutta} 
-  alt="Evolutta Construtora e Incorporadora" 
-  className="h-12 md:h-[58px] w-auto self-start" 
-/>
+<div className="mt-auto pt-10 flex items-baseline gap-5 md:gap-6 flex-nowrap">
+  <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-[29px] md:h-[35px] w-auto opacity-90 shrink-0" />
+  <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-[35px] md:h-[41px] w-auto opacity-90 shrink-0" />
+</div>
 ```
 
-Isso impede o `align-items: stretch` padrão do flex container de deformar a imagem, mantendo o tamanho controlado apenas pela altura definida (`h-12` no mobile / `h-[58px]` no desktop) com largura proporcional automática.
+O `items-baseline` e o `mt-auto` permanecem, garantindo que os logos continuem alinhados pela base com o link "Política de Privacidade".
 
