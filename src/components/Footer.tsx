@@ -39,7 +39,7 @@ export function Footer() {
 
           {/* Column 2 — Navegação */}
           <div className="md:col-span-2">
-            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-6">
+            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-accent mb-6">
               Navegação
             </h4>
             <ul className="space-y-[18px]">
@@ -60,7 +60,7 @@ export function Footer() {
 
           {/* Column 3 — Conecte-se */}
           <div className="md:col-span-3 flex flex-col">
-            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-6">
+            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-accent mb-6">
               Conecte-se
             </h4>
             <a
@@ -93,7 +93,7 @@ export function Footer() {
 
           {/* Column 4 — YouTube */}
           <div className="md:col-span-2">
-            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-6">
+            <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-accent mb-6">
               Acompanhe a obra
             </h4>
             <a
