@@ -61,16 +61,24 @@ export function LocationSection() {
         <SectionReveal delay={250}>
           <div className="relative rounded-2xl overflow-hidden bg-card shadow-elevated mb-10">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.123!2d-49.2317!3d-26.8978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94defc6b3b5e1a0d%3A0x7f5b6b0e5a0e0e0e!2sR.+Tr%C3%AAs+Cora%C3%A7%C3%B5es+-+Jardim+Benedito%2C+Indaial+-+SC!5e0!3m2!1spt-BR!2sbr!4v1"
+              src="https://www.google.com/maps?q=Rua+Tr%C3%AAs+Cora%C3%A7%C3%B5es%2C+Jardim+Benedito%2C+Indaial+-+SC&output=embed"
               width="100%"
               height="420"
-              style={{ border: 0, filter: "grayscale(0.3) contrast(0.95)" }}
+              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Localização Residencial Ballock One"
             />
-            <div className="pointer-events-none absolute inset-0 bg-primary/5" />
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Tr%C3%AAs+Cora%C3%A7%C3%B5es%2C+Jardim+Benedito%2C+Indaial+-+SC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-4 right-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/95 backdrop-blur text-primary text-sm font-medium shadow-elevated hover:bg-background transition-colors"
+            >
+              <MapPin className="w-4 h-4" strokeWidth={2} />
+              Abrir no Google Maps
+            </a>
           </div>
         </SectionReveal>
 
