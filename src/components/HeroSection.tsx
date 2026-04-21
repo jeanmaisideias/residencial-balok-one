@@ -57,13 +57,13 @@ export function HeroSection() {
         </p>
 
         <div
-          className="flex flex-wrap gap-2.5 mb-10 animate-reveal-up"
+          className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 mb-10 animate-reveal-up"
           style={{ animationDelay: "300ms" }}
         >
           {chips.map((c) => (
             <span
               key={c}
-              className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-sm font-medium text-primary-foreground"
+              className="w-full sm:w-auto text-center px-4 py-3 sm:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-sm font-medium text-primary-foreground"
             >
               {c}
             </span>
