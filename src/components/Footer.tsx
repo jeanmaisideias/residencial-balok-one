@@ -118,7 +118,7 @@ export function Footer() {
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-xs text-primary-foreground/50">
           <p>Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
           <a
-            href="https://maisideias.com.br"
+            href="https://linktr.ee/maisideiasmkt"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 hover:opacity-90 transition-opacity"
