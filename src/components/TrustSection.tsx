@@ -104,16 +104,16 @@ export function TrustSection() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 md:gap-5 mt-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 mt-auto">
                 {stats.map((s) => (
                   <div
                     key={s.label}
-                    className="bg-card rounded-xl p-3 md:p-6 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform text-center"
+                    className="bg-card rounded-xl p-5 md:p-6 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform flex md:flex-col items-center md:text-center gap-4 md:gap-0"
                   >
-                    <p className="font-display text-2xl md:text-5xl text-accent tracking-tight leading-none mb-2 break-words">
+                    <p className="font-display text-4xl md:text-5xl text-accent tracking-tight leading-none md:mb-2 break-words shrink-0">
                       <CountUp target={s.target} suffix={s.suffix} />
                     </p>
-                    <p className="text-[9px] md:text-xs uppercase tracking-[0.12em] text-muted-foreground leading-tight">
+                    <p className="text-sm md:text-xs uppercase tracking-[0.12em] text-muted-foreground leading-tight text-left md:text-center">
                       {s.label}
                     </p>
                   </div>
