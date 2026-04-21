@@ -85,9 +85,9 @@ export function Footer() {
             </div>
 
             {/* Parceiros institucionais — alinhados à base com Política de Privacidade */}
-            <div className="mt-auto pt-10 flex items-center gap-4 md:gap-5 flex-nowrap">
-              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-7 md:h-8 w-auto opacity-90 shrink-0" />
-              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-9 md:h-10 w-auto opacity-90 shrink-0" />
+            <div className="mt-auto pt-10 flex items-end gap-5 md:gap-6 flex-nowrap">
+              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-10 md:h-12 w-auto opacity-90 shrink-0" />
+              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-12 md:h-14 w-auto opacity-90 shrink-0" />
             </div>
           </div>
 
