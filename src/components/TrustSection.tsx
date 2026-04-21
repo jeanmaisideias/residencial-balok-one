@@ -1,12 +1,51 @@
+import { useEffect, useRef, useState } from "react";
 import { SectionReveal } from "./SectionReveal";
 import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
 import evoluttaTeamProject from "@/assets/evolutta-team-project.jpg";
 
 const stats = [
-  { value: "13+", label: "anos de mercado" },
-  { value: "100%", label: "obras entregues no prazo" },
-  { value: "500+", label: "famílias felizes" },
+  { target: 13, suffix: "+", label: "anos de mercado" },
+  { target: 100, suffix: "%", label: "obras entregues no prazo" },
+  { target: 500, suffix: "+", label: "famílias felizes" },
 ];
+
+function CountUp({ target, suffix, duration = 1800 }: { target: number; suffix: string; duration?: number }) {
+  const [value, setValue] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !started.current) {
+            started.current = true;
+            const start = performance.now();
+            const tick = (now: number) => {
+              const progress = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              setValue(Math.round(target * eased));
+              if (progress < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [target, duration]);
+
+  return (
+    <span ref={ref}>
+      {value}
+      {suffix}
+    </span>
+  );
+}
 
 export function TrustSection() {
   return (
@@ -60,13 +99,18 @@ export function TrustSection() {
         </div>
 
         <SectionReveal delay={150}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-2xl ml-auto">
             {stats.map((s) => (
-              <div key={s.label} className="bg-card rounded-2xl p-8 md:p-10 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform">
-                <p className="font-display text-6xl md:text-7xl text-accent tracking-tight leading-none mb-3">
-                  {s.value}
+              <div
+                key={s.label}
+                className="bg-card rounded-xl p-4 md:p-5 shadow-elevated border border-border/50 hover:-translate-y-1 transition-transform text-center"
+              >
+                <p className="font-display text-2xl md:text-3xl text-accent tracking-tight leading-none mb-2">
+                  <CountUp target={s.target} suffix={s.suffix} />
                 </p>
-                <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">{s.label}</p>
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.14em] text-muted-foreground leading-tight">
+                  {s.label}
+                </p>
               </div>
             ))}
           </div>
