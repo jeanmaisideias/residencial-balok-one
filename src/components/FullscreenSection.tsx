@@ -5,13 +5,14 @@ interface FullscreenSectionProps {
   title: React.ReactNode;
   subtitle?: string;
   label?: string;
+  labelVariant?: "chip" | "feature";
   align?: "left" | "center";
   variant?: "full" | "band";
   parallax?: boolean;
   imagePosition?: string;
 }
 
-export function FullscreenSection({ image, title, subtitle, label, align = "center", variant = "full", parallax = false, imagePosition = "center" }: FullscreenSectionProps) {
+export function FullscreenSection({ image, title, subtitle, label, labelVariant = "chip", align = "center", variant = "full", parallax = false, imagePosition = "center" }: FullscreenSectionProps) {
   const heightClass = variant === "band"
     ? "h-[42vh] min-h-[320px] md:h-[70vh] md:min-h-[520px]"
     : "h-[80vh] min-h-[520px]";
