@@ -36,7 +36,7 @@ export function Header() {
   }, []);
 
   const linkClass = cn(
-    "relative text-[13px] font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:text-accent hover:after:w-full",
+    "relative whitespace-nowrap text-[13px] font-medium tracking-wide transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:text-accent hover:after:w-full",
     isCompact ? "text-foreground/80" : "text-primary-foreground/85"
   );
 
@@ -55,7 +55,7 @@ export function Header() {
          isCompact ? "h-16 lg:h-16" : "h-32 md:h-36 lg:h-40"
       )}>
         {/* Logo */}
-        <a href="#topo" className="relative flex items-center shrink-0 w-[210px] md:w-[250px] lg:w-[270px] h-32 md:h-36 lg:h-40 overflow-visible">
+        <a href="#topo" className="relative flex items-center shrink-0 w-[160px] md:w-[180px] lg:w-[190px] h-32 md:h-36 lg:h-40 overflow-visible">
           <img
             src={logoEvoluttaHorizontalBlack}
             alt="Evolutta"
@@ -75,7 +75,7 @@ export function Header() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 2xl:gap-9 mr-6 xl:mr-10">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 mr-4 xl:mr-8">
           {navItems.map((item) => (
             <a key={item.label} href={item.href} className={linkClass}>
               {item.label}
