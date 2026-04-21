@@ -42,7 +42,7 @@ export function Footer() {
             <h4 className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary-foreground/40 mb-6">
               Navegação
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-4">
               {links.map((l) => (
                 <li key={l.label}>
                   <a href={l.href} className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
