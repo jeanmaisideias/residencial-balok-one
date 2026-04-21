@@ -22,7 +22,7 @@ export function QuickInfoSection() {
               <span className="h-px w-10 bg-accent" />
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-extrabold text-primary tracking-tight text-balance mb-5">
-              Residencial Ballok One
+              Residencial Ballock One
             </h2>
             <p className="text-base md:text-lg text-muted-foreground text-pretty leading-relaxed">
               Um empreendimento concebido para oferecer a qualidade de vida que você e sua família merecem. Com espaços cuidadosamente planejados para proporcionar conforto no dia a dia, infraestrutura de lazer completa e uma localização privilegiada com fácil acesso a Indaial e Timbó. Um projeto verdadeiramente especial.

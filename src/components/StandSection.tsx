@@ -22,7 +22,7 @@ export function StandSection() {
           <p className="text-base text-primary font-medium mb-6">
             Visite e conheça o empreendimento pessoalmente
           </p>
-          <WhatsAppButton message="Venho do site do Ballok One e quero agendar uma visita ao stand">
+          <WhatsAppButton message="Venho do site do Ballock One e quero agendar uma visita ao stand">
             Agendar visita ao stand
           </WhatsAppButton>
         </SectionReveal>

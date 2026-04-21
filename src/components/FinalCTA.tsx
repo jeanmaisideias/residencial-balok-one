@@ -15,7 +15,7 @@ export function FinalCTA() {
             Comece com R$ 1.000. Condições de lançamento por tempo limitado
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <WhatsAppButton message="Quero simular financiamento do Ballok One">
+            <WhatsAppButton message="Quero simular financiamento do Ballock One">
               Simular financiamento
             </WhatsAppButton>
             <WhatsAppButton

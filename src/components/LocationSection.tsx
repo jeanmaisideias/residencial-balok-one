@@ -20,7 +20,7 @@ export function LocationSection() {
               No coração de Indaial — SC
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-pretty">
-              Situado na Rua Três Corações, Jardim Benedito, Indaial – SC, o Residencial Ballock 1 oferece
+              Situado na Rua Três Corações, Jardim Benedito, Indaial – SC, o Residencial Ballock One oferece
               praticidade e conectividade para o seu cotidiano. Tudo que você precisa está a poucos minutos de distância
             </p>
           </div>
@@ -49,7 +49,7 @@ export function LocationSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Residencial Ballok One"
+              title="Localização Residencial Ballock One"
             />
             <div className="pointer-events-none absolute inset-0 bg-primary/5" />
           </div>
@@ -70,7 +70,7 @@ export function LocationSection() {
                 Visite nosso stand e conheça pessoalmente o empreendimento
               </p>
             </div>
-            <WhatsAppButton message="Quero agendar uma visita ao plantão do Ballok One">
+            <WhatsAppButton message="Quero agendar uma visita ao plantão do Ballock One">
               Agendar visita
             </WhatsAppButton>
           </div>

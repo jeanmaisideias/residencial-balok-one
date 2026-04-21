@@ -58,7 +58,7 @@ export function ApartmentConfig() {
 
         <SectionReveal delay={200}>
           <div className="text-center">
-            <WhatsAppButton message="Venho do site do Ballok One e quero escolher minha unidade">
+            <WhatsAppButton message="Venho do site do Ballock One e quero escolher minha unidade">
               Quero escolher minha unidade
             </WhatsAppButton>
           </div>

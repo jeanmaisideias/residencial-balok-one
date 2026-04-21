@@ -30,7 +30,7 @@ export function TimelineSection() {
             </div>
           </div>
 
-          <WhatsAppButton message="Venho do site do Ballok One e quero garantir na planta">
+          <WhatsAppButton message="Venho do site do Ballock One e quero garantir na planta">
             Garantir na planta
           </WhatsAppButton>
         </SectionReveal>
