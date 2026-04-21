@@ -29,11 +29,11 @@ export function TrustSection() {
             <img
               src={logoEvoluttaBlack}
               alt="Construtora Evolutta"
-              className="h-24 md:h-32 w-auto mb-8 mx-auto lg:mx-0"
+              className="h-[110px] md:h-[147px] w-auto mb-8 mx-auto lg:mx-0"
             />
-            <p className="eyebrow mb-4 text-center lg:text-left">Construtora Evolutta</p>
+            <p className="eyebrow mb-4 text-center lg:text-left">Quem Somos</p>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-primary leading-[1.05] text-balance mb-8 text-center lg:text-left">
-              Quem entrega o seu novo lar
+              Tradição em entregar lares
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl">
               Somos uma construtora com <strong className="text-primary font-semibold">13 anos de atuação</strong> no
