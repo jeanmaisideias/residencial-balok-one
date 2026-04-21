@@ -60,7 +60,7 @@ export function LocationSection() {
         </div>
 
         <SectionReveal delay={250}>
-          <div className="relative rounded-2xl overflow-hidden bg-card shadow-elevated mb-10">
+          <div className="rounded-2xl overflow-hidden bg-card shadow-elevated mb-6">
             <iframe
               src="https://www.google.com/maps?q=Rua+Tr%C3%AAs+Cora%C3%A7%C3%B5es%2C+Jardim+Benedito%2C+Indaial+-+SC&output=embed"
               width="100%"
@@ -71,15 +71,11 @@ export function LocationSection() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Localização Residencial Ballock One"
             />
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Rua+Tr%C3%AAs+Cora%C3%A7%C3%B5es%2C+Jardim+Benedito%2C+Indaial+-+SC"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute bottom-4 right-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/95 backdrop-blur text-primary text-sm font-medium shadow-elevated hover:bg-background transition-colors"
-            >
-              <MapPin className="w-4 h-4" strokeWidth={2} />
-              Abrir no Google Maps
-            </a>
+          </div>
+          <div className="flex justify-center mb-10">
+            <WhatsAppButton message="Quero consultar a rota para visitar o Residencial Ballock One">
+              Consultar rota para visitar
+            </WhatsAppButton>
           </div>
         </SectionReveal>
 
