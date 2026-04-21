@@ -5,9 +5,9 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 import { Check, Sprout, ChevronRight, X } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import planta40 from "@/assets/balok/planta-40.png";
-import planta43 from "@/assets/balok/planta-43.png";
-import plantaGarden from "@/assets/balok/planta-garden.png";
+import planta40 from "@/assets/balok/planta-40.webp";
+import planta43 from "@/assets/balok/planta-43.webp";
+import plantaGarden from "@/assets/balok/planta-garden.webp";
 
 const plants = [
   {

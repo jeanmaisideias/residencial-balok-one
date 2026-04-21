@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { SectionReveal } from "./SectionReveal";
-import logoEvoluttaBlack from "@/assets/logo-evolutta-black.png";
-import logoEvoluttaHorizontal from "@/assets/logo-evolutta-horizontal.png";
-import evoluttaTeamProject from "@/assets/evolutta-team-project.jpg";
+import logoEvoluttaBlack from "@/assets/logo-evolutta-black.webp";
+import logoEvoluttaHorizontal from "@/assets/logo-evolutta-horizontal.webp";
+import evoluttaTeamProject from "@/assets/evolutta-team-project.webp";
 
 const stats = [
   { target: 13, suffix: "+", label: "anos de mercado" },

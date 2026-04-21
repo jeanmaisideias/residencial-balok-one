@@ -1,6 +1,6 @@
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
-import salaCozinhaImg from "@/assets/sala-cozinha-financial.jpg";
+import salaCozinhaImg from "@/assets/sala-cozinha-financial.webp";
 
 export function FinancialSection() {
   return (

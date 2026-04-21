@@ -1,13 +1,13 @@
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
-import piscina from "@/assets/balok/piscina.jpg";
-import beach from "@/assets/balok/quadra-beach.jpg";
-import fitness from "@/assets/balok/fitness.jpg";
-import salao2 from "@/assets/balok/salao-02.jpg";
-import pet from "@/assets/balok/pet.jpg";
-import bike from "@/assets/balok/bike.jpg";
-import firepit from "@/assets/balok/firepit.jpg";
-import playground from "@/assets/balok/playground.jpg";
+import piscina from "@/assets/balok/piscina.webp";
+import beach from "@/assets/balok/quadra-beach.webp";
+import fitness from "@/assets/balok/fitness.webp";
+import salao2 from "@/assets/balok/salao-02.webp";
+import pet from "@/assets/balok/pet.webp";
+import bike from "@/assets/balok/bike.webp";
+import firepit from "@/assets/balok/firepit.webp";
+import playground from "@/assets/balok/playground.webp";
 
 const items = [
   { img: piscina, label: "Piscina", className: "md:col-span-2 md:row-span-2 aspect-[4/3] md:aspect-auto" },
