@@ -108,17 +108,19 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-xs text-primary-foreground/50">
-          <div className="hidden md:flex items-center gap-4 w-full justify-between">
           <p>Evolutta Construtora Empreendimentos Imobiliários e Participações SPE LTDA — CNPJ 00.000.000/0001-00 · Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
-          <a
-            href="https://linktr.ee/maisideiasmkt"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 hover:opacity-90 transition-opacity"
-          >
-            <span>Desenvolvido por</span>
-            <img src={logoMaisIdeias} alt="MAIS IDEIAS" className="h-5 md:h-6 w-auto" />
-          </a>
+          <div className="flex items-center gap-3">
+            <span className="hidden md:inline text-primary-foreground/30">|</span>
+            <a
+              href="https://linktr.ee/maisideiasmkt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:opacity-90 transition-opacity"
+            >
+              <span>Desenvolvido por</span>
+              <img src={logoMaisIdeias} alt="MAIS IDEIAS" className="h-5 md:h-6 w-auto" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
