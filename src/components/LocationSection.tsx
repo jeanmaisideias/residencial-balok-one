@@ -34,7 +34,7 @@ export function LocationSection() {
           <div className="mb-10 md:mb-14 max-w-3xl">
             <p className="eyebrow mb-4">Localização</p>
             <h2 className="font-display text-4xl md:text-6xl text-primary text-balance leading-[1.02] mb-6">
-              No coração de Indaial — SC
+              No coração de Indaial/SC
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-pretty">
               Situado na Rua Três Corações, Jardim Benedito, Indaial – SC, o Residencial Ballock One oferece
