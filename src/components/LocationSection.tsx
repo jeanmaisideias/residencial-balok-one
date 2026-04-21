@@ -96,7 +96,7 @@ export function LocationSection() {
             </div>
             <div className="flex-1">
               <p className="eyebrow text-accent mb-2">Venha visitar e encante-se</p>
-              <p className="font-display text-2xl md:text-3xl mb-2 leading-tight">
+              <p className="font-display text-3xl md:text-5xl lg:text-6xl mb-2 leading-[1.02]">
                 Plantão de Vendas no Local
               </p>
               <p className="text-primary-foreground/75 text-sm md:text-base">
