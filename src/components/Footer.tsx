@@ -107,8 +107,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-xs text-primary-foreground/50">
-          <p className="md:flex-1">Evolutta Construtora Empreendimentos Imobiliários e Participações SPE LTDA — CNPJ 00.000.000/0001-00 · Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
+        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] text-primary-foreground/50">
+          <p className="md:flex-1 leading-relaxed">Evolutta Construtora Empreendimentos Imobiliários e Participações SPE LTDA — CNPJ 00.000.000/0001-00 · Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
           <div className="flex items-center gap-3 shrink-0">
             <span className="hidden md:inline text-primary-foreground/30">|</span>
             <a
