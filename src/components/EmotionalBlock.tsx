@@ -16,7 +16,7 @@ export function EmotionalBlock() {
               É o começo da sua independência.
             </h2>
             <WhatsAppButton message="Venho do site do Ballock One e quero atendimento para entender como comprar">
-              Quero atendimento para entender como comprar
+              Quero saber como comprar
             </WhatsAppButton>
           </div>
         </SectionReveal>

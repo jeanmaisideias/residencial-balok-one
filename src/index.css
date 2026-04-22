@@ -105,7 +105,7 @@
 
 @layer components {
   .btn-whatsapp {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-semibold transition-all duration-200 ease-out;
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 md:px-7 md:py-4 text-[15px] md:text-base font-semibold transition-all duration-200 ease-out min-h-[52px];
     background-color: hsl(var(--green-whatsapp));
     color: white;
     box-shadow: 0 6px 18px -4px hsla(var(--green-whatsapp) / 0.45);
@@ -122,7 +122,7 @@
   }
 
   .btn-whatsapp-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-semibold transition-all duration-200 ease-out border;
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 md:px-7 md:py-4 text-[15px] md:text-base font-semibold transition-all duration-200 ease-out border min-h-[52px];
     border-color: hsl(var(--green-whatsapp));
     color: hsl(var(--green-whatsapp));
     background: transparent;
