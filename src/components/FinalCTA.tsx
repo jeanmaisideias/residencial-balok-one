@@ -15,7 +15,7 @@ export function FinalCTA() {
           </p>
           <div className="flex justify-center">
             <WhatsAppButton message="Quero simular meu financiamento e garantir o meu apartamento no Ballock One">
-              Quero simular meu financiamento e garantir o meu apartamento
+              Quero garantir meu apartamento
             </WhatsAppButton>
           </div>
           <p className="mt-8 text-xs text-primary-foreground/50">

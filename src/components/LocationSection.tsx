@@ -74,7 +74,7 @@ export function LocationSection() {
           </div>
           <div className="flex justify-center mb-10">
             <WhatsAppButton message="Quero consultar a rota para visitar o Residencial Ballock One">
-              Consultar rota para visitar
+              Consultar rota
             </WhatsAppButton>
           </div>
         </SectionReveal>

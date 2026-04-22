@@ -57,7 +57,7 @@ export function LeisureSection() {
         <SectionReveal delay={300}>
           <div className="mt-14 flex justify-center">
             <WhatsAppButton message="Quero ver todas as áreas de lazer do Ballock One">
-              Quero conhecer o lazer completo
+              Conhecer o lazer completo
             </WhatsAppButton>
           </div>
         </SectionReveal>

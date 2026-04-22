@@ -52,7 +52,7 @@ export function ApartmentExperience() {
         <SectionReveal delay={100}>
           <div className="text-center mb-6">
             <WhatsAppButton message="Venho do site do Ballock One e quero ver mais detalhes do apartamento">
-              Quero ver mais detalhes do apartamento
+              Ver mais detalhes
             </WhatsAppButton>
           </div>
         </SectionReveal>
@@ -101,7 +101,7 @@ export function ApartmentExperience() {
           </p>
           <div className="text-center">
             <WhatsAppButton message="Venho do site do Ballock One e quero receber fotos e plantas no WhatsApp">
-              Quero receber fotos e plantas no WhatsApp
+              Receber fotos e plantas
             </WhatsAppButton>
           </div>
         </SectionReveal>

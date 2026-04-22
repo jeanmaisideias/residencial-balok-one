@@ -23,10 +23,10 @@ export function WhatsAppButton({ message, children, variant = "solid", className
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${baseClass} ${className}`}
+      className={`${baseClass} leading-tight text-center ${className}`}
     >
-      <MessageCircle className="w-5 h-5" />
-      {children}
+      <MessageCircle className="w-5 h-5 shrink-0" />
+      <span>{children}</span>
     </a>
   );
 }

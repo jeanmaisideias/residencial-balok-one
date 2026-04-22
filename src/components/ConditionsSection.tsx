@@ -27,7 +27,7 @@ export function ConditionsSection() {
               </div>
             </div>
             <WhatsAppButton message="Venho do site do Ballock One e quero simular minha parcela">
-              Simular minha parcela
+              Simular parcela
             </WhatsAppButton>
           </div>
         </SectionReveal>
