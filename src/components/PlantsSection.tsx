@@ -42,7 +42,7 @@ const plants = [
     label: "Garden",
     name: "Apartamento Garden",
     src: plantaGarden,
-    area: "47 m²",
+    area: "47 m² + Garden",
     garden: true,
     features: [
       "2 dormitórios aconchegantes",
