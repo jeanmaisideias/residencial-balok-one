@@ -24,7 +24,8 @@ const socials = [
 const YOUTUBE_URL = "https://www.youtube.com/@evoluttaconstrutora";
 
 export function Footer() {
-  return (
+  const [socialOpen, setSocialOpen] = useState(false);
+
     <footer id="contato" className="bg-primary text-primary-foreground">
       {/* Top accent bar */}
       <div className="h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
