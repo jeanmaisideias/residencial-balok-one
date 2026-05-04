@@ -16,7 +16,7 @@ const links = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/evoluttaconstrutora/", label: "Instagram", external: true },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Youtube, href: "#", label: "YouTube" },
 ];
