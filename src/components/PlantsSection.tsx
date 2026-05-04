@@ -11,10 +11,10 @@ import plantaGarden from "@/assets/balok/planta-garden.webp";
 
 const plants = [
   {
-    label: "40 m²",
+    label: "43,8 m²",
     name: "Apartamento Padrão",
     src: planta40,
-    area: "40 m²",
+    area: "43,8 m²",
     garden: false,
     features: [
       "2 dormitórios",
@@ -25,10 +25,10 @@ const plants = [
     ],
   },
   {
-    label: "43 m²",
+    label: "47 m²",
     name: "Apartamento Padrão",
     src: planta43,
-    area: "43 m²",
+    area: "47 m²",
     garden: false,
     features: [
       "2 dormitórios",
@@ -42,7 +42,7 @@ const plants = [
     label: "Garden",
     name: "Apartamento Garden",
     src: plantaGarden,
-    area: "43 m²",
+    area: "47 m²",
     garden: true,
     features: [
       "2 dormitórios aconchegantes",
