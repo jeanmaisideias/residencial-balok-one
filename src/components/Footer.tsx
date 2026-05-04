@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Instagram, Facebook, Youtube, Play } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import logoEvolutta from "@/assets/logo-evolutta-white-h.webp";
 import logoMaisIdeias from "@/assets/mais-ideias-white.webp";
 import logoCaixa from "@/assets/logo-caixa.webp";
