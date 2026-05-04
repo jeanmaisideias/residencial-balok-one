@@ -25,7 +25,11 @@ const YOUTUBE_URL = "https://www.youtube.com/@evoluttaconstrutora";
 
 export function Footer() {
   const [socialOpen, setSocialOpen] = useState(false);
-
+  const handleSocialClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setSocialOpen(true);
+  };
+  return (
     <footer id="contato" className="bg-primary text-primary-foreground">
       {/* Top accent bar */}
       <div className="h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
