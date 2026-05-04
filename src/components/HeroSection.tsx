@@ -6,7 +6,7 @@ const chips = [
   "A partir de R$ 229 mil",
   "Sinal de R$ 1.000",
   "Entrada em até 60x",
-  "2 dormitórios + 1 vaga",
+  "2 dormitórios + 1 ou 2 vagas",
 ];
 
 export function HeroSection() {

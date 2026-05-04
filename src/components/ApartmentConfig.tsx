@@ -8,7 +8,7 @@ const features = [
   { icon: Sofa, text: "Sala e cozinha integradas" },
   { icon: Sun, text: "Varanda com churrasqueira" },
   { icon: WashingMachine, text: "Área de serviço" },
-  { icon: Car, text: "1 vaga de garagem" },
+  { icon: Car, text: "1 ou 2 vagas de garagem" },
 ];
 
 const gardenFeatures = [

@@ -5,7 +5,7 @@ const items = [
   { icon: Building2, value: "120", label: "Apartamentos" },
   { icon: Ruler, value: "43,8 a 47", label: "M² privativos" },
   { icon: Bed, value: "2", label: "Dormitórios" },
-  { icon: Car, value: "1", label: "Vaga" },
+  { icon: Car, value: "1 ou 2", label: "Vagas" },
 ];
 
 export function QuickInfoSection() {
