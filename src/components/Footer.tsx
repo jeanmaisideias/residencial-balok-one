@@ -16,7 +16,7 @@ const links = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/evoluttaconstrutora/", label: "Instagram", external: true },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Youtube, href: "#", label: "YouTube" },
 ];
@@ -82,7 +82,9 @@ export function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  onClick={handleSocialClick}
+                  {...(s.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : { onClick: handleSocialClick })}
                   className="w-14 h-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:bg-accent/85 transition-all hover:-translate-y-0.5 shadow-elevated cursor-pointer"
                 >
                   <s.icon className="w-6 h-6" />
