@@ -86,7 +86,7 @@ export function PlantsSection() {
           <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <p className="eyebrow mb-4">Plantas</p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary text-balance leading-[1.05]">
-              Plantas inteligentes de 40 a 43 m² privativos
+              Plantas inteligentes de 43,8 a 47 m² privativos
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mt-4">
               Opções padrão e Garden com dois dormitórios e ambientes bem aproveitados.

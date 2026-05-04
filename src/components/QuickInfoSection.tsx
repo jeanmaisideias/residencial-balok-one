@@ -3,7 +3,7 @@ import { SectionReveal } from "./SectionReveal";
 
 const items = [
   { icon: Building2, value: "120", label: "Apartamentos" },
-  { icon: Ruler, value: "40 a 43", label: "M² privativos" },
+  { icon: Ruler, value: "43,8 a 47", label: "M² privativos" },
   { icon: Bed, value: "2", label: "Dormitórios" },
   { icon: Car, value: "1", label: "Vaga" },
 ];
