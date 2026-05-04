@@ -10,7 +10,7 @@ interface WhatsAppButtonProps {
 }
 
 export function WhatsAppButton({ message, children, variant = "solid", className = "" }: WhatsAppButtonProps) {
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  const url = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
 
   const baseClass = variant === "outline"
     ? "btn-whatsapp-outline"
@@ -34,7 +34,7 @@ export function WhatsAppButton({ message, children, variant = "solid", className
 export function FloatingWhatsApp() {
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Ballock One e quero saber mais")}`}
+      href={`https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent("Venho do site do Ballock One e quero saber mais")}&type=phone_number&app_absent=0`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-whatsapp text-white shadow-premium animate-pulse-green transition-transform duration-200 hover:scale-110 active:scale-95"

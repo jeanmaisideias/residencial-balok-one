@@ -25,7 +25,7 @@ const diferenciais = [
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/5547997580405?text=Ol%C3%A1!%20Quero%20simular%20minha%20condi%C3%A7%C3%A3o%20no%20Residencial%20Ballok%20One.";
+  "https://api.whatsapp.com/send/?phone=5547997580405&text=Venho+do+site+do+Ballock+One&type=phone_number&app_absent=0";
 
 export function BenefitsSection() {
   return (
