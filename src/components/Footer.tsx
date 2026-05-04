@@ -82,9 +82,8 @@ export function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-14 h-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:bg-accent/85 transition-all hover:-translate-y-0.5 shadow-elevated"
+                  onClick={handleSocialClick}
+                  className="w-14 h-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:bg-accent/85 transition-all hover:-translate-y-0.5 shadow-elevated cursor-pointer"
                 >
                   <s.icon className="w-6 h-6" />
                 </a>
