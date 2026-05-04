@@ -4,7 +4,7 @@ import { SectionReveal } from "./SectionReveal";
 
 const features = [
   { icon: Bed, text: "2 dormitórios" },
-  { icon: Maximize, text: "40 a 43 m²" },
+  { icon: Maximize, text: "43,8 a 47 m²" },
   { icon: Sofa, text: "Sala e cozinha integradas" },
   { icon: Sun, text: "Varanda com churrasqueira" },
   { icon: WashingMachine, text: "Área de serviço" },
