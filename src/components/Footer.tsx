@@ -139,6 +139,17 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      <Dialog open={socialOpen} onOpenChange={setSocialOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Obrigado pelo seu interesse!</DialogTitle>
+            <DialogDescription className="pt-2 text-base">
+              Estamos preparando estas mídias sociais para você. Volte em breve.
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </footer>
   );
 }
