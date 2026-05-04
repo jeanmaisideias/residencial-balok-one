@@ -10,7 +10,7 @@ import logoMcmvWhite from "@/assets/logo-mcmv.webp";
 import logoMcmvColor from "@/assets/logo-mcmv-color.webp";
 
 const WHATSAPP_NUMBER = "5547997580405";
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Venho do site do Ballock One")}`;
+const WHATSAPP_URL = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent("Venho do site do Ballock One")}&type=phone_number&app_absent=0`;
 
 const navItems = [
   { label: "Início", href: "#topo" },
