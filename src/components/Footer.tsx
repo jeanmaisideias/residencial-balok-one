@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Instagram, Facebook, Youtube, Play } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import logoEvolutta from "@/assets/logo-evolutta-white-h.webp";
 import logoMaisIdeias from "@/assets/mais-ideias-white.webp";
 import logoCaixa from "@/assets/logo-caixa.webp";
@@ -22,6 +24,11 @@ const socials = [
 const YOUTUBE_URL = "https://www.youtube.com/@evoluttaconstrutora";
 
 export function Footer() {
+  const [socialOpen, setSocialOpen] = useState(false);
+  const handleSocialClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setSocialOpen(true);
+  };
   return (
     <footer id="contato" className="bg-primary text-primary-foreground">
       {/* Top accent bar */}
@@ -75,9 +82,8 @@ export function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-14 h-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:bg-accent/85 transition-all hover:-translate-y-0.5 shadow-elevated"
+                  onClick={handleSocialClick}
+                  className="w-14 h-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:bg-accent/85 transition-all hover:-translate-y-0.5 shadow-elevated cursor-pointer"
                 >
                   <s.icon className="w-6 h-6" />
                 </a>
@@ -133,6 +139,17 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      <Dialog open={socialOpen} onOpenChange={setSocialOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Obrigado pelo seu interesse!</DialogTitle>
+            <DialogDescription className="pt-2 text-base">
+              Estamos preparando estas mídias sociais para você. Volte em breve.
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </footer>
   );
 }
