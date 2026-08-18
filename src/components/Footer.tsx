@@ -125,7 +125,11 @@ export function Footer() {
 
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] text-primary-foreground/50">
-          <p className="md:flex-1 leading-relaxed">Evolutta Construtora Empreendimentos Imobiliários e Participações SPE LTDA — CNPJ 60.853.797/0001-00 · Todos os direitos reservados © Construtora Evolutta {new Date().getFullYear()}</p>
+          <p className="md:flex-1 leading-relaxed">
+            Incorporação e realização: INDAIAL 1 EMPREENDIMENTOS SPE LTDA | CNPJ 60.853.797/0001-00
+            <br />
+            Registro de Incorporação: R.4-43.537, da Matrícula nº 43.537, registrado no Registro de Imóveis da Comarca de Indaial/SC.
+          </p>
           <div className="flex items-center gap-3 shrink-0">
             <span className="hidden md:inline text-primary-foreground/30">|</span>
             <a
