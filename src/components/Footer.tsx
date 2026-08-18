@@ -42,6 +42,9 @@ export function Footer() {
             <p className="text-sm text-primary-foreground/70 max-w-md leading-relaxed mt-auto">
               Há 13 anos no mercado imobiliário, somos especialistas em empreendimentos Minha Casa Minha Vida. Já entregamos centenas de unidades com qualidade, pontualidade e acabamento reconhecido. Mais do que construir imóveis, acompanhamos cada família com transparência, suporte e confiança até a conquista do novo lar.
             </p>
+            <p className="text-[11px] text-primary-foreground/45 max-w-md leading-relaxed pt-4">
+              Imagens, perspectivas, mobiliários, acabamentos, paisagismo e elementos decorativos apresentados neste site possuem caráter meramente ilustrativo. Para informações definitivas, consulte o Memorial Descritivo e os documentos oficiais do empreendimento. Valores, condições comerciais e disponibilidade das unidades estão sujeitos a alterações e devem ser consultados no momento da negociação.
+            </p>
           </div>
 
           {/* Column 2 — Navegação */}
