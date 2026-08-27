@@ -25,7 +25,7 @@ const diferenciais = [
 ];
 
 const WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5547997580405&text=Venho+do+site+do+Ballock+One&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=5547999670570&text=Venho+do+site+do+Ballock+One&type=phone_number&app_absent=0";
 
 export function BenefitsSection() {
   return (
