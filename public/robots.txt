@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://residencialbalokone.com.br/sitemap.xml
+Sitemap: https://www.evoluttaconstrutora.com.br/ballockone/sitemap.xml

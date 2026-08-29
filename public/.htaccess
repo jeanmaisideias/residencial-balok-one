@@ -1,0 +1,18 @@
+# SPA fallback para hospedagem em subdiretório /ballockone/ (Apache)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /ballockone/
+
+  # Não reescrever arquivos ou diretórios existentes
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Qualquer outra rota é entregue ao index.html (React Router)
+  RewriteRule . /ballockone/index.html [L]
+</IfModule>
+
+# Equivalente em Nginx:
+# location /ballockone/ {
+#   try_files $uri $uri/ /ballockone/index.html;
+# }
