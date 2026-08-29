@@ -1,49 +1,33 @@
+# Publicar em https://www.evoluttaconstrutora.com.br/ballockone
 
+Objetivo: gerar um `dist` que funcione servido a partir do subdiretório `/ballockone/` em servidor externo, sem alterar layout, textos, imagens ou funcionalidades.
 
-## Padronizar botões WhatsApp na versão mobile
+## O que será ajustado
 
-Hoje, vários CTAs do site têm textos longos que quebram em 2–3 linhas no mobile, e o ícone do WhatsApp encolhe/desalinha. Vou padronizar o componente e encurtar os rótulos para ficarem em 1 linha (ou no máximo 2 equilibradas) com aparência consistente em todo o site.
+1. **Base path do Vite**
+   - `vite.config.ts`: `base: "/ballockone/"` apenas em build de produção (dev continua em `/` para o preview do Lovable não quebrar).
 
-### 1. Ajustes no componente `WhatsAppButton` (`src/components/WhatsAppButton.tsx`)
+2. **Roteamento**
+   - `src/App.tsx`: `BrowserRouter basename={import.meta.env.BASE_URL}` para que `/politica-de-privacidade` vire `/ballockone/politica-de-privacidade`.
+   - Links internos com `<Link to="/...">` (Footer, PrivacyPolicy) continuam corretos automaticamente via basename.
+   - `src/pages/NotFound.tsx`: o `<a href="/">` vira `<Link to="/">` para respeitar o basename (mesma aparência e texto).
 
-- Adicionar `shrink-0` ao ícone `MessageCircle` para que ele nunca diminua quando o texto for longo.
-- Adicionar `leading-tight text-center` ao `<a>` para alinhamento limpo quando houver quebra.
-- O texto interno será envolvido em um `<span>` para manter alinhamento ao lado do ícone.
+3. **Assets**
+   - Imagens importadas de `src/assets` já recebem o base automaticamente.
+   - Fontes em `src/index.css` (`url('/fonts/...')`) e o favicon serão referenciados de forma compatível com o base para não apontarem para a raiz do domínio.
 
-### 2. Ajustes na classe `.btn-whatsapp` e `.btn-whatsapp-outline` (`src/index.css`)
+4. **SEO**
+   - `index.html`: canonical e `og:url` para `https://www.evoluttaconstrutora.com.br/ballockone/`; mesma atualização na URL do JSON-LD.
+   - `public/sitemap.xml`: as duas URLs passam a usar o novo domínio + `/ballockone`.
+   - `public/robots.txt`: diretiva `Sitemap:` apontando para `https://www.evoluttaconstrutora.com.br/ballockone/sitemap.xml`.
 
-- Mobile: `px-6 py-3.5 text-[15px]`
-- Desktop (md): `px-7 py-4 text-base`
-- Adicionar `min-h-[52px]` para garantir altura uniforme entre botões com 1 e 2 linhas.
-- Manter `gap-2.5` entre ícone e texto.
+5. **Refresh direto de URLs (deep links)**
+   - Como o servidor é externo, será incluído um arquivo de fallback SPA (`public/.htaccess` para Apache, com comentário do equivalente Nginx) que redireciona qualquer caminho sob `/ballockone/` para `index.html`. Sem isso, atualizar a página em `/ballockone/politica-de-privacidade` retorna 404.
 
-### 3. Encurtar textos dos CTAs (mantém intenção, padroniza tamanho)
+## Resultado
 
-| Componente | Antes | Depois |
-|---|---|---|
-| `StandSection` | "Agendar visita ao stand" | "Agendar visita" |
-| `EmotionalBlock` | "Quero atendimento para entender como comprar" | "Quero saber como comprar" |
-| `ConditionsSection` | "Simular minha parcela" | "Simular parcela" |
-| `FinancialSection` | "Quero saber se ainda dá tempo de comprar" | "Ainda dá tempo? Quero saber" |
-| `FinalCTA` | "Quero simular meu financiamento e garantir o meu apartamento" | "Quero garantir meu apartamento" |
-| `LeisureSection` | "Quero conhecer o lazer completo" | "Conhecer o lazer completo" |
-| `ApartmentExperience` (1) | "Quero ver mais detalhes do apartamento" | "Ver mais detalhes" |
-| `ApartmentExperience` (2) | "Quero receber fotos e plantas no WhatsApp" | "Receber fotos e plantas" |
-| `ApartmentConfig` | "Quero escolher minha unidade" | "Escolher minha unidade" |
-| `LocationSection` (1) | "Consultar rota para visitar" | "Consultar rota" |
-| `TimelineSection` | "Garantir na planta" | (mantém) |
-| `LocationSection` (2) | "Agendar visita" | (mantém) |
-| `GallerySection` | "Quero conhecer melhor" | (mantém) |
-| `HeroSection` | "Quero falar com especialista" / "Simular financiamento" | (mantém — já curtos) |
-| `PlantsSection` | "Receber plantas no WhatsApp" | (mantém) |
-| `ScarcitySection` | (verificar — provavelmente curto) | (mantém) |
+`npm run build` gera `dist/` com todos os caminhos prefixados por `/ballockone/`; basta copiar o conteúdo de `dist` para a pasta `ballockone` do servidor.
 
-As mensagens enviadas ao WhatsApp (`message`) permanecem completas e descritivas — só o texto visível do botão fica enxuto.
+## Observação
 
-### 4. Resultado esperado
-
-- Todos os CTAs em 1 linha no mobile (390px), no máximo 2 linhas equilibradas em telas muito estreitas (320px).
-- Ícone do WhatsApp sempre no tamanho `w-5 h-5`, alinhado verticalmente com o texto.
-- Altura uniforme dos botões, padding consistente, mesma aparência premium em todo o site.
-- Headings já existentes ("Não é só um apartamento. É o fim do aluguel...") permanecem intactos — apenas os CTAs mudam.
-
+O preview do Lovable continua funcionando normalmente porque o base só é aplicado no build de produção.
