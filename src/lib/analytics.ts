@@ -7,16 +7,21 @@ declare global {
   }
 }
 
+// Semântica oficial do gtag.js: `dataLayer.push(arguments)`.
 export function gtag(...args: unknown[]) {
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(args);
+  const dataLayer = window.dataLayer || (window.dataLayer = []);
+  // eslint-disable-next-line prefer-rest-params, @typescript-eslint/prefer-rest-params
+  dataLayer.push(arguments);
 }
 
 let initialized = false;
 
 export function initAnalytics() {
   if (initialized || typeof window === "undefined") return;
-  initialized = true;
+initialized = true;
+
+  // Inicializa o dataLayer antes de carregar o gtag.js (snippet oficial do Google).
+  window.dataLayer = window.dataLayer || [];
 
   const script = document.createElement("script");
   script.async = true;
