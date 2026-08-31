@@ -99,14 +99,14 @@ export default function PrivacyPolicy() {
 
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">6. Prazo de Retenção dos Dados</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">7. Prazo de Retenção dos Dados</h2>
             <p>
               Seus dados serão mantidos pelo período necessário ao atendimento das finalidades descritas nesta política ou enquanto perdurar o seu interesse no empreendimento Ballock One. Após esse período, os dados serão eliminados ou anonimizados, salvo quando a retenção for exigida por obrigação legal ou regulatória.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">7. Direitos do Titular dos Dados</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">8. Direitos do Titular dos Dados</h2>
             <p>Em conformidade com a LGPD, você possui os seguintes direitos em relação aos seus dados pessoais:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Confirmação da existência de tratamento de dados;</li>
@@ -114,16 +114,16 @@ export default function PrivacyPolicy() {
               <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
               <li>Anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos;</li>
               <li>Portabilidade dos dados a outro fornecedor;</li>
-              <li>Revogação do consentimento a qualquer momento;</li>
+              <li>Oposição ou revogação, quando aplicável, do tratamento baseado em legítimo interesse;</li>
               <li>Oposição ao tratamento realizado em descumprimento à LGPD.</li>
             </ul>
-            <p>Para exercer qualquer um desses direitos, entre em contato conosco pelos canais indicados na seção 9 desta política.</p>
+            <p>Para exercer qualquer um desses direitos, entre em contato conosco pelos canais indicados na seção 10 desta política.</p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">8. Segurança das Informações</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">9. Segurança das Informações</h2>
             <p>
-              A Evolutta adota medidas técnicas e administrativas adequadas para proteger os seus dados pessoais contra acessos não autorizados, situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado.
+              A Evolutta busca adotar medidas técnicas e administrativas razoáveis para proteger os seus dados pessoais contra acessos não autorizados, situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado.
             </p>
             <p>
               Embora empenhados na proteção dos seus dados, nenhum sistema de segurança é absolutamente inviolável. Em caso de incidente de segurança que possa gerar risco relevante a você, adotaremos as medidas cabíveis e comunicaremos as autoridades competentes nos termos da LGPD.
@@ -131,7 +131,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">9. Contato e Canal de Atendimento</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">10. Contato e Canal de Atendimento</h2>
             <p>
               Para exercer seus direitos, solicitar esclarecimentos ou registrar reclamações relacionadas ao tratamento dos seus dados pessoais, entre em contato com a Construtora Evolutta pelo e-mail{" "}
               <a href="mailto:contato@evoluttaconstrutora.com.br" className="text-accent font-medium hover:underline">
@@ -143,12 +143,12 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">10. Atualizações desta Política</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">11. Atualizações desta Política</h2>
             <p>
               Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças nas práticas de tratamento de dados ou na legislação aplicável. Recomendamos que você a consulte regularmente. A data da última atualização está indicada abaixo.
             </p>
             <p className="text-sm text-muted-foreground italic">
-              Última atualização: 21 de abril de 2026 — Construtora Evolutta — Empreendimento Ballock One
+              Última atualização: 31 de agosto de 2026 — Construtora Evolutta — Empreendimento Ballock One
             </p>
           </section>
         </div>
