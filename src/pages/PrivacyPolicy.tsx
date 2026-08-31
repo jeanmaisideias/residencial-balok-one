@@ -21,57 +21,82 @@ export default function PrivacyPolicy() {
           <section className="space-y-4">
             <h2 className="font-display text-2xl md:text-3xl text-primary">1. Apresentação</h2>
             <p>
-              Esta Política de Privacidade descreve como a Construtora Evolutta ("Evolutta", "nós") coleta, utiliza, armazena e compartilha os dados pessoais fornecidos pelos usuários que acessam a landing page do empreendimento Ballock One, em estrita conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).
+              Esta Política de Privacidade descreve como a Construtora Evolutta ("Evolutta", "nós") trata os dados relacionados aos usuários que acessam a landing page do empreendimento Ballock One, buscando conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).
             </p>
             <p>
-              Ao preencher o formulário de interesse disponível na landing page, você declara ter lido e concordado com os termos desta política.
+              Ao navegar por esta página, você declara ter lido e compreendido os termos aqui descritos.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">2. Dados Pessoais Coletados</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">2. Dados Tratados</h2>
             <p>
-              Para fins de atendimento comercial relacionado ao empreendimento Ballock One, coletamos exclusivamente os seguintes dados pessoais:
+              Esta landing page <strong>não possui formulário de cadastro</strong>. Nós não coletamos nome, telefone, e-mail ou qualquer dado pessoal diretamente pelo site.
             </p>
+            <p>Podem ser tratadas as seguintes categorias de informação:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Nome completo</li>
-              <li>Número de telefone e/ou WhatsApp</li>
+              <li>
+                <strong>Informações técnicas e de navegação</strong>, coletadas por ferramentas de medição de audiência: páginas acessadas, eventos de interação (como cliques em botões de WhatsApp), tipo de dispositivo, navegador, sistema operacional, origem do tráfego e identificadores atribuídos pelo próprio serviço de análise.
+              </li>
+              <li>
+                <strong>Informações fornecidas voluntariamente por você no WhatsApp</strong>, caso decida iniciar uma conversa a partir dos botões do site (por exemplo, nome e número de telefone exibido pelo aplicativo).
+              </li>
             </ul>
             <p>
-              Não coletamos dados sensíveis conforme definidos pelo art. 5º, II da LGPD, tampouco dados de menores de 18 (dezoito) anos.
+              Não solicitamos dados sensíveis, conforme definidos pelo art. 5º, II da LGPD, nem direcionamos o conteúdo deste site a menores de 18 (dezoito) anos.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">3. Finalidade do Tratamento</h2>
-            <p>Os dados coletados são utilizados exclusivamente para as seguintes finalidades:</p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Contato inicial para apresentação do empreendimento Ballock One e condições de aquisição;</li>
-              <li>Encaminhamento do seu interesse a corretores de imóveis devidamente habilitados, para continuidade do atendimento;</li>
-              <li>Agendamento de visitas, envio de materiais informativos e esclarecimento de dúvidas sobre o empreendimento.</li>
-            </ul>
-            <p>Os seus dados não serão utilizados para finalidades distintas das descritas acima sem o seu consentimento prévio.</p>
-          </section>
-
-          <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">4. Compartilhamento de Dados</h2>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">3. Como Ocorre o Contato Comercial</h2>
             <p>
-              A Evolutta poderá compartilhar os seus dados pessoais (nome e telefone/WhatsApp) com corretores de imóveis e equipes de vendas parceiras, exclusivamente para fins de atendimento comercial relacionado ao Ballock One.
+              A interação comercial acontece exclusivamente quando <strong>você decide acessar o WhatsApp</strong> por meio de um dos botões disponíveis no site. Ao clicar, você é direcionado ao aplicativo ou ao WhatsApp Web, fora deste site.
             </p>
             <p>
-              Esses profissionais estão sujeitos a obrigações de confidencialidade e só poderão utilizar as informações para a finalidade específica de atendimento ao empreendimento, não sendo autorizado qualquer uso para outros fins.
+              As informações que você compartilhar dentro do WhatsApp são tratadas no contexto do atendimento comercial do empreendimento Ballock One: esclarecimento de dúvidas, apresentação de condições de aquisição, envio de materiais informativos e agendamento de visitas.
             </p>
-            <p>Não vendemos, alugamos ou cedemos seus dados a terceiros não relacionados ao processo de venda do empreendimento.</p>
+            <p>
+              O funcionamento do próprio aplicativo WhatsApp é regido pelas políticas de privacidade da respectiva plataforma, que não estão sob nosso controle.
+            </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl text-primary">5. Base Legal para o Tratamento</h2>
-            <p>O tratamento dos seus dados pessoais é realizado com fundamento nas seguintes bases legais previstas na LGPD:</p>
+            <h2 className="font-display text-2xl md:text-3xl text-primary">4. Ferramentas de Terceiros Utilizadas</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Consentimento (art. 7º, I):</strong> ao preencher o formulário, você fornece consentimento livre e expresso para o tratamento descrito nesta política;</li>
-              <li><strong>Legítimo interesse (art. 7º, IX):</strong> para o contato comercial relacionado ao empreendimento de seu interesse.</li>
+              <li>
+                <strong>Google Analytics 4:</strong> utilizado para métricas de acesso e de interação (visualizações de página e eventos, como cliques nos botões de WhatsApp). A finalidade é medir o desempenho da página e melhorar a comunicação do empreendimento. Os dados são processados pelo Google conforme suas próprias políticas.
+              </li>
+              <li>
+                <strong>Google Maps:</strong> o site exibe um mapa incorporado para indicar a localização do empreendimento. Esse conteúdo é carregado a partir de servidores do Google e pode envolver tratamento de dados pelo Google conforme suas políticas.
+              </li>
+            </ul>
+            <p>
+              Você pode limitar esse tratamento por meio das configurações do seu navegador, de bloqueadores de rastreamento ou dos recursos de controle oferecidos pelo próprio Google.
+            </p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="font-display text-2xl md:text-3xl text-primary">5. Compartilhamento de Dados</h2>
+            <p>
+              As informações compartilhadas por você no WhatsApp podem ser encaminhadas a corretores de imóveis e equipes de vendas parceiras, exclusivamente para o atendimento comercial relacionado ao Ballock One.
+            </p>
+            <p>
+              Esses profissionais devem utilizar as informações apenas para essa finalidade específica. Não vendemos, alugamos ou cedemos dados a terceiros não relacionados ao processo de venda do empreendimento.
+            </p>
+            <p>
+              Dados de navegação coletados pelas ferramentas descritas na seção 4 são processados pelos respectivos fornecedores desses serviços.
+            </p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="font-display text-2xl md:text-3xl text-primary">6. Base Legal para o Tratamento</h2>
+            <p>O tratamento de dados é realizado com fundamento nas seguintes bases legais previstas na LGPD:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Legítimo interesse (art. 7º, IX):</strong> para medição de audiência do site e para o atendimento comercial iniciado por você;</li>
+              <li><strong>Procedimentos preliminares relacionados a contrato (art. 7º, V):</strong> quando o contato pelo WhatsApp visa a eventual aquisição de uma unidade.</li>
             </ul>
           </section>
+
 
           <section className="space-y-4">
             <h2 className="font-display text-2xl md:text-3xl text-primary">6. Prazo de Retenção dos Dados</h2>
