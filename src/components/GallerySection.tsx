@@ -58,7 +58,7 @@ export function GallerySection() {
               <div className="flex">
                 {images.map((img) => (
                   <div key={img.caption} className="relative shrink-0 grow-0 basis-full">
-                    <img
+                    <img loading="lazy"
                       src={img.src}
                       alt={img.caption}
                       className="w-full aspect-[4/3] md:aspect-[16/9] object-cover"

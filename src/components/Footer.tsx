@@ -38,7 +38,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 mb-14">
           {/* Column 1 — Brand */}
           <div className="md:col-span-5 flex flex-col space-y-5">
-            <img src={logoEvolutta} alt="Evolutta Construtora e Incorporadora" className="h-12 md:h-[58px] w-auto self-start" />
+            <img loading="lazy" src={logoEvolutta} alt="Evolutta Construtora e Incorporadora" className="h-12 md:h-[58px] w-auto self-start" />
             <p className="text-sm text-primary-foreground/70 max-w-md leading-relaxed mt-auto">
               Há 13 anos no mercado imobiliário, somos especialistas em empreendimentos Minha Casa Minha Vida. Já entregamos centenas de unidades com qualidade, pontualidade e acabamento reconhecido. Mais do que construir imóveis, acompanhamos cada família com transparência, suporte e confiança até a conquista do novo lar.
             </p>
@@ -97,8 +97,8 @@ export function Footer() {
 
             {/* Parceiros institucionais — alinhados à base com Política de Privacidade */}
             <div className="mt-auto pt-10 flex items-baseline gap-5 md:gap-6 flex-nowrap">
-              <img src={logoCaixa} alt="Caixa Econômica Federal" className="h-[29px] md:h-[35px] w-auto opacity-90 shrink-0" />
-              <img src={logoMcmv} alt="Minha Casa Minha Vida" className="h-[35px] md:h-[41px] w-auto opacity-90 shrink-0" />
+              <img loading="lazy" src={logoCaixa} alt="Caixa Econômica Federal" className="h-[29px] md:h-[35px] w-auto opacity-90 shrink-0" />
+              <img loading="lazy" src={logoMcmv} alt="Minha Casa Minha Vida" className="h-[35px] md:h-[41px] w-auto opacity-90 shrink-0" />
             </div>
           </div>
 
@@ -142,7 +142,7 @@ export function Footer() {
               className="flex items-center gap-3 hover:opacity-90 transition-opacity whitespace-nowrap"
             >
               <span>Desenvolvido por</span>
-              <img src={logoMaisIdeias} alt="MAIS IDEIAS" className="h-5 md:h-6 w-auto" />
+              <img loading="lazy" src={logoMaisIdeias} alt="MAIS IDEIAS" className="h-5 md:h-6 w-auto" />
             </a>
           </div>
         </div>

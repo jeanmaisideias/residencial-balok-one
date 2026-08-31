@@ -114,7 +114,7 @@ export default function PrivacyPolicy() {
               <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
               <li>Anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos;</li>
               <li>Portabilidade dos dados a outro fornecedor;</li>
-              <li>Oposição ou revogação, quando aplicável, do tratamento baseado em legítimo interesse;</li>
+              <li>Oposição ao tratamento baseado em legítimo interesse, quando aplicável, nos termos da LGPD;</li>
               <li>Oposição ao tratamento realizado em descumprimento à LGPD.</li>
             </ul>
             <p>Para exercer qualquer um desses direitos, entre em contato conosco pelos canais indicados na seção 10 desta política.</p>

@@ -33,7 +33,7 @@ export function ApartmentExperience() {
         {/* Full image hero */}
         <SectionReveal>
           <div className="relative rounded-2xl overflow-hidden mb-10">
-            <img
+            <img loading="lazy"
               src={lazerSalao}
               alt="Interior do apartamento"
               className="w-full aspect-[16/9] object-cover"
@@ -72,7 +72,7 @@ export function ApartmentExperience() {
         <SectionReveal delay={200}>
           <div className="relative rounded-2xl overflow-hidden mb-4">
             <div className="aspect-[16/9] overflow-hidden">
-              <img
+              <img loading="lazy"
                 src={gallery[active].src}
                 alt={gallery[active].label}
                 className="w-full h-full object-cover transition-opacity duration-500"

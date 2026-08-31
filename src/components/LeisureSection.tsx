@@ -40,7 +40,7 @@ export function LeisureSection() {
           {items.map((it, i) => (
             <SectionReveal key={it.label} delay={i * 50} className={it.className}>
               <figure className="relative h-full w-full rounded-2xl overflow-hidden group shadow-soft">
-                <img
+                <img loading="lazy"
                   src={it.img}
                   alt={it.label}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
