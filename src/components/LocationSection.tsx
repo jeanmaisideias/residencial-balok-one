@@ -82,7 +82,7 @@ export function LocationSection() {
         {/* Plantão de Vendas */}
         <SectionReveal delay={300}>
           <div className="relative rounded-2xl bg-primary text-primary-foreground p-7 md:p-8 md:pr-72 shadow-premium flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mt-24 md:mt-32 overflow-visible">
-            <img
+            <img loading="lazy"
               src={corretoraImg}
               alt="Corretora do plantão de vendas"
               className="hidden md:block absolute right-4 lg:right-8 bottom-0 h-[150%] max-h-[300px] w-auto object-contain object-bottom pointer-events-none select-none"

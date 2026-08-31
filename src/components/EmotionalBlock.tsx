@@ -23,7 +23,7 @@ export function EmotionalBlock() {
 
         <SectionReveal delay={150}>
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img src={familyImg} alt="Família feliz com as chaves do novo apartamento" className="w-full h-80 md:h-96 object-cover" />
+            <img loading="lazy" src={familyImg} alt="Família feliz com as chaves do novo apartamento" className="w-full h-80 md:h-96 object-cover" />
           </div>
         </SectionReveal>
       </div>

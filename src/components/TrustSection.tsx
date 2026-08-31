@@ -71,12 +71,12 @@ export function TrustSection() {
           <SectionReveal delay={100} className="lg:col-span-7">
             <div className="flex flex-col h-full">
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 mb-8">
-                <img
+                <img loading="lazy"
                   src={logoEvoluttaHorizontal}
                   alt="Construtora Evolutta"
                   className="block md:hidden h-20 w-auto self-start"
                 />
-                <img
+                <img loading="lazy"
                   src={logoEvoluttaBlack}
                   alt="Construtora Evolutta"
                   className="hidden md:block h-[120px] w-auto shrink-0 self-start"

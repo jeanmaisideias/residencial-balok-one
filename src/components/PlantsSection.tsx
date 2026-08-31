@@ -157,7 +157,7 @@ export function PlantsSection() {
                 <div className="flex">
                   {plants.map((p) => (
                     <div key={p.label} className="shrink-0 grow-0 basis-full p-4 md:p-6 flex items-center justify-center h-[280px] sm:h-[360px] lg:h-[540px]">
-                      <img
+                      <img loading="lazy"
                         src={p.src}
                         alt={`Planta ${p.label}`}
                         className="w-full h-full object-contain mx-auto"
@@ -218,7 +218,7 @@ export function PlantsSection() {
           <DialogContent className="md:hidden p-0 max-w-[95vw] max-h-[90vh] overflow-y-auto rounded-2xl">
             <div className="p-5">
               <div className="rounded-xl overflow-hidden bg-secondary border border-border mb-5 flex items-center justify-center h-[280px]">
-                <img src={current.src} alt={`Planta ${current.label}`} className="w-full h-full object-contain" />
+                <img loading="lazy" src={current.src} alt={`Planta ${current.label}`} className="w-full h-full object-contain" />
               </div>
 
               {current.garden && (
