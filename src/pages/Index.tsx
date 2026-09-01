@@ -18,7 +18,7 @@ import fachadaPremium from "@/assets/balok/fachada-noturna.webp";
 import salaCozinha from "@/assets/balok/sala-cozinha-01.webp";
 import quadraBeach from "@/assets/balok/quadra-beach.webp";
 import sacada from "@/assets/balok/sacada.webp";
-import predioBallockOne from "@/assets/predio_ballok_one_2.webp";
+import predioBallockOne from "@/assets/predio_ballock_one.webp";
 import homeownersKeys from "@/assets/close-up-homeowners-with-new-house-keys-2.webp";
 import familyNewHome from "@/assets/family-new-home.webp";
 
