@@ -12,5 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /ballockone/adm
 
 Sitemap: https://www.evoluttaconstrutora.com.br/ballockone/sitemap.xml

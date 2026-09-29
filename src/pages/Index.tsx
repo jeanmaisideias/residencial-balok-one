@@ -12,17 +12,12 @@ import { FinancialSection } from "@/components/FinancialSection";
 import { TrustSection } from "@/components/TrustSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
+import { useContent, lines } from "@/content/store";
 
 
-import fachadaPremium from "@/assets/balok/fachada-noturna.webp";
-import salaCozinha from "@/assets/balok/sala-cozinha-01.webp";
-import quadraBeach from "@/assets/balok/quadra-beach.webp";
-import sacada from "@/assets/balok/sacada.webp";
-import predioBallockOne from "@/assets/predio_ballock_one.webp";
-import homeownersKeys from "@/assets/close-up-homeowners-with-new-house-keys-2.webp";
-import familyNewHome from "@/assets/family-new-home.webp";
 
 const Index = () => {
+  const c = useContent();
   return (
     <>
       <Header />
@@ -32,8 +27,8 @@ const Index = () => {
         <EmotionalBlock />
 
         <FullscreenSection
-          image={fachadaPremium}
-          title="Venha viver no que é seu!"
+          image={c["band1.image"]}
+          title={lines(c["band1.title"])}
           variant="band"
         />
 
@@ -42,18 +37,18 @@ const Index = () => {
         <BenefitsSection />
 
         <FullscreenSection
-          image={salaCozinha}
-          label="Os apartamentos"
-          title={<>Um lar lindo por<br />dentro e por fora</>}
-          subtitle="Ambientes planejados para viver bem todos os dias"
+          image={c["band2.image"]}
+          label={c["band2.label"]}
+          title={lines(c["band2.title"])}
+          subtitle={c["band2.subtitle"]}
           align="left"
         />
 
         <GallerySection />
 
         <FullscreenSection
-          image={quadraBeach}
-          title="Você merece mais vida, mais lazer e mais orgulho"
+          image={c["band3.image"]}
+          title={lines(c["band3.title"])}
         />
 
         <LeisureSection />
@@ -61,10 +56,10 @@ const Index = () => {
         <PlantsSection />
 
         <FullscreenSection
-          image={homeownersKeys}
-          label="A partir de R$ 229.000"
+          image={c["band4.image"]}
+          label={c["band4.label"]}
           labelVariant="feature"
-          title={<>O melhor apartamento<br />MCMV de Santa Catarina!</>}
+          title={lines(c["band4.title"])}
           variant="band"
           parallax
           imagePosition="center 8%"
@@ -75,15 +70,15 @@ const Index = () => {
         <LocationSection />
 
         <FullscreenSection
-          image={predioBallockOne}
-          title="Um lugar perfeito para criar memórias especiais"
+          image={c["band5.image"]}
+          title={lines(c["band5.title"])}
         />
 
         <TrustSection />
 
         <FullscreenSection
-          image={familyNewHome}
-          title="Toda família merece viver a emoção de abrir a porta do próprio lar"
+          image={c["band6.image"]}
+          title={lines(c["band6.title"])}
           parallax
           imagePosition="center 20%"
         />

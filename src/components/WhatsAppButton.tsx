@@ -1,6 +1,5 @@
 import { MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "5547999670570";
+import { useContent, whatsappUrl } from "@/content/store";
 
 interface WhatsAppButtonProps {
   message: string;
@@ -10,7 +9,8 @@ interface WhatsAppButtonProps {
 }
 
 export function WhatsAppButton({ message, children, variant = "solid", className = "" }: WhatsAppButtonProps) {
-  const url = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+  const c = useContent();
+  const url = whatsappUrl(message, c["contact.whatsapp"]);
 
   const baseClass = variant === "outline"
     ? "btn-whatsapp-outline"
@@ -32,9 +32,10 @@ export function WhatsAppButton({ message, children, variant = "solid", className
 }
 
 export function FloatingWhatsApp() {
+  const c = useContent();
   return (
     <a
-      href={`https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent("Venho do site do Ballock One e quero saber mais")}&type=phone_number&app_absent=0`}
+      href={whatsappUrl(c["contact.message"], c["contact.whatsapp"])}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-whatsapp text-white shadow-premium animate-pulse-green transition-transform duration-200 hover:scale-110 active:scale-95"

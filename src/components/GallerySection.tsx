@@ -1,26 +1,14 @@
+import { useContent, lines } from "@/content/store";
 import { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
-import sala1 from "@/assets/balok/sala-cozinha-01.webp";
-import sala2 from "@/assets/balok/sala-cozinha-02.webp";
-import dorm1 from "@/assets/balok/dormitorio-01.webp";
-import dorm2 from "@/assets/balok/dormitorio-02.webp";
-import banho from "@/assets/balok/banho.webp";
-import sacada from "@/assets/balok/sacada.webp";
-
-const images = [
-  { src: sala1, caption: "Sala integrada" },
-  { src: sala2, caption: "Cozinha planejada" },
-  { src: dorm1, caption: "Dormitório casal" },
-  { src: dorm2, caption: "Dormitório solteiro" },
-  { src: banho, caption: "Banheiro moderno" },
-  { src: sacada, caption: "Sacada privativa" },
-];
 
 export function GallerySection() {
+  const c = useContent();
+  const images = [1, 2, 3, 4, 5, 6].map((n, i) => ({ src: c[`gallery.img${n}`], caption: c[`gallery.cap${n}`], id: i }));
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "center", containScroll: false },
     [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]
@@ -44,10 +32,10 @@ export function GallerySection() {
           <div className="mb-10 md:mb-14 max-w-2xl">
             <p className="eyebrow mb-4">Galeria</p>
             <h2 className="font-display text-4xl md:text-6xl text-primary text-balance leading-[1.02]">
-              Você vai amar morar aqui
+              {c["gallery.title"]}
             </h2>
             <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-lg">
-              Apartamentos que entregam conforto e bem-estar
+              {c["gallery.subtitle"]}
             </p>
           </div>
         </SectionReveal>
@@ -57,7 +45,7 @@ export function GallerySection() {
             <div ref={emblaRef} className="overflow-hidden rounded-2xl shadow-premium">
               <div className="flex">
                 {images.map((img) => (
-                  <div key={img.caption} className="relative shrink-0 grow-0 basis-full">
+                  <div key={img.id} className="relative shrink-0 grow-0 basis-full">
                     <img loading="lazy"
                       src={img.src}
                       alt={img.caption}

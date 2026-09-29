@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useContent, whatsappUrl } from "@/content/store";
 import logoEvoluttaWhite from "@/assets/logo-evolutta.webp";
 import logoEvoluttaBlack from "@/assets/logo-evolutta-black.webp";
 import logoEvoluttaHorizontalBlack from "@/assets/logo-evolutta-horizontal-black.webp";
@@ -9,8 +10,6 @@ import logoCaixaColor from "@/assets/logo-caixa-color.webp";
 import logoMcmvWhite from "@/assets/logo-mcmv.webp";
 import logoMcmvColor from "@/assets/logo-mcmv-color.webp";
 
-const WHATSAPP_NUMBER = "5547999670570";
-const WHATSAPP_URL = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent("Venho do site do Ballock One")}&type=phone_number&app_absent=0`;
 
 const navItems = [
   { label: "Início", href: "#topo" },
@@ -22,6 +21,7 @@ const navItems = [
 ];
 
 export function Header() {
+  const content = useContent();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const isCompact = scrolled || open;
@@ -97,7 +97,7 @@ export function Header() {
           </div>
 
           <a
-            href={WHATSAPP_URL}
+            href={whatsappUrl(content["contact.message"], content["contact.whatsapp"])}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-whatsapp text-white px-4 py-2 text-xs font-semibold shadow-elevated hover:bg-whatsapp-hover hover:-translate-y-0.5 active:scale-95 transition-all"
@@ -139,7 +139,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href={WHATSAPP_URL}
+            href={whatsappUrl(content["contact.message"], content["contact.whatsapp"])}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp text-white px-6 py-3 text-sm font-semibold"

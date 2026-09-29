@@ -1,3 +1,4 @@
+import { useContent, whatsappUrl } from "@/content/store";
 import { LayoutGrid, MapPin, Building2, ShieldCheck, MessageCircle } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 
@@ -24,10 +25,9 @@ const diferenciais = [
   },
 ];
 
-const WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5547999670570&text=Venho+do+site+do+Ballock+One&type=phone_number&app_absent=0";
 
 export function BenefitsSection() {
+  const c = useContent();
   return (
     <section id="sobre" className="section-padding bg-stone">
       <div className="container max-w-6xl">
@@ -58,7 +58,7 @@ export function BenefitsSection() {
         <SectionReveal delay={200}>
           <div className="flex justify-center mt-12 md:mt-16">
             <a
-              href={WHATSAPP_URL}
+              href={whatsappUrl(c["contact.message"], c["contact.whatsapp"])}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp animate-pulse-green"
