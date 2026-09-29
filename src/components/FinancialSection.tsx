@@ -1,8 +1,9 @@
+import { useContent, lines } from "@/content/store";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
-import salaCozinhaImg from "@/assets/sala-cozinha-financial.webp";
 
 export function FinancialSection() {
+  const c = useContent();
   return (
     <section className="section-padding bg-primary text-primary-foreground relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{
@@ -20,12 +21,12 @@ export function FinancialSection() {
                 </p>
               </div>
               <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-balance leading-[1.02] max-w-4xl">
-                Comece com pouco. Conquiste muito!
+                {c["financial.title"]}
               </h2>
             </div>
             <div className="hidden md:block rounded-2xl overflow-hidden shadow-elevated w-[260px] lg:w-[320px] h-[180px] lg:h-[220px]">
               <img
-                src={salaCozinhaImg}
+                src={c["financial.image"]}
                 alt="Sala e cozinha integradas do apartamento"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -36,11 +37,11 @@ export function FinancialSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mb-14">
           {[
-            { value: "R$ 1.000", label: "de sinal" },
-            { value: "60x", label: "entrada parcelada" },
-            { value: "Limitadas", label: "unidades disponíveis" },
+            { value: c["financial.v1"], label: c["financial.l1"] },
+            { value: c["financial.v2"], label: c["financial.l2"] },
+            { value: c["financial.v3"], label: c["financial.l3"] },
           ].map((n, i) => (
-            <SectionReveal key={n.label} delay={i * 100}>
+            <SectionReveal key={i} delay={i * 100}>
               <div className="border-l border-primary-foreground/20 pl-6 h-full flex flex-col">
                 <p className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground tracking-tight leading-none mb-3">
                   {n.value}

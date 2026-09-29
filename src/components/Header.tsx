@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useContent, whatsappUrl } from "@/content/store";
 import logoEvoluttaWhite from "@/assets/logo-evolutta.webp";
 import logoEvoluttaBlack from "@/assets/logo-evolutta-black.webp";
 import logoEvoluttaHorizontalBlack from "@/assets/logo-evolutta-horizontal-black.webp";
@@ -20,6 +21,7 @@ const navItems = [
 ];
 
 export function Header() {
+  const content = useContent();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const isCompact = scrolled || open;

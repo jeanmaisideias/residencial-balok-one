@@ -1,19 +1,20 @@
-import familyImg from "@/assets/familia-feliz.webp";
+import { useContent, lines } from "@/content/store";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SectionReveal } from "./SectionReveal";
 
 export function EmotionalBlock() {
+  const c = useContent();
   return (
     <section className="section-padding bg-card">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <SectionReveal>
           <div className="space-y-6">
             <h2 className="text-2xl md:text-4xl font-extrabold text-primary leading-tight text-balance">
-              Não é só um apartamento.
+              {c["emotional.line1"]}
               <br />
-              <span className="text-whatsapp">É o fim do aluguel.</span>
+              <span className="text-whatsapp">{c["emotional.line2"]}</span>
               <br />
-              É o começo da sua independência.
+              {c["emotional.line3"]}
             </h2>
             <WhatsAppButton message="Venho do site do Ballock One e quero atendimento para entender como comprar">
               Quero saber como comprar
@@ -23,7 +24,7 @@ export function EmotionalBlock() {
 
         <SectionReveal delay={150}>
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img loading="lazy" src={familyImg} alt="Família feliz com as chaves do novo apartamento" className="w-full h-80 md:h-96 object-cover" />
+            <img loading="lazy" src={c["emotional.image"]} alt="Família feliz com as chaves do novo apartamento" className="w-full h-80 md:h-96 object-cover" />
           </div>
         </SectionReveal>
       </div>
