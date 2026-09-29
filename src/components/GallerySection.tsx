@@ -5,21 +5,6 @@ import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionReveal } from "./SectionReveal";
 import { WhatsAppButton } from "./WhatsAppButton";
-import sala1 from "@/assets/balok/sala-cozinha-01.webp";
-import sala2 from "@/assets/balok/sala-cozinha-02.webp";
-import dorm1 from "@/assets/balok/dormitorio-01.webp";
-import dorm2 from "@/assets/balok/dormitorio-02.webp";
-import banho from "@/assets/balok/banho.webp";
-import sacada from "@/assets/balok/sacada.webp";
-
-const imageKeys = [
-  { src: sala1, caption: "Sala integrada" },
-  { src: sala2, caption: "Cozinha planejada" },
-  { src: dorm1, caption: "Dormitório casal" },
-  { src: dorm2, caption: "Dormitório solteiro" },
-  { src: banho, caption: "Banheiro moderno" },
-  { src: sacada, caption: "Sacada privativa" },
-];
 
 export function GallerySection() {
   const c = useContent();

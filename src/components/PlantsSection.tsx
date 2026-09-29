@@ -1,3 +1,4 @@
+import { useContent } from "@/content/store";
 import { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -9,7 +10,7 @@ import planta40 from "@/assets/balok/planta-40.webp";
 import planta43 from "@/assets/balok/planta-43.webp";
 import plantaGarden from "@/assets/balok/planta-garden.webp";
 
-const plants = [
+const basePlants = [
   {
     label: "43,8 m²",
     name: "Apartamento Padrão",
@@ -56,6 +57,8 @@ const plants = [
 ];
 
 export function PlantsSection() {
+  const c = useContent();
+  const plants = basePlants.map((p, i) => ({ ...p, src: c[`plants.img${i + 1}`] }));
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true },
     [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]
