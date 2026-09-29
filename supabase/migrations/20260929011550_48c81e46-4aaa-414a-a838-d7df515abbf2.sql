@@ -1,0 +1,2 @@
+revoke execute on function public.has_role(uuid, app_role) from public, anon;
+create policy "Admins read site images" on storage.objects for select to authenticated using (bucket_id = 'site-images' and public.has_role(auth.uid(), 'admin'));
